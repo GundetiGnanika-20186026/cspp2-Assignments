@@ -13,7 +13,7 @@ public class Solution {
         for(int i=1;i <= n;i++) {
             int num = i;
             while(num != 0) {
-        	if ((i % 10) == 7) count = count + 1;
+        	if ((num % 10) == 7) count = count + 1;
             num = num / 10;
             }
         }
