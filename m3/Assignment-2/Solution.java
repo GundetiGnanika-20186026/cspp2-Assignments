@@ -14,7 +14,7 @@ final class Solution {
      * @brief [brief description]
      * @details [long description]
      * 
-     * @param String [description]
+     * @param args [description]
      */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
