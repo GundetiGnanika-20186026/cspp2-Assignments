@@ -16,23 +16,25 @@ final class Solution {
     /*
     Need to write the gcd function and print the output.
     */
-    static int gcd(int n1,  int n2) {
-        if (n1 < n2) {
-            int temp = n2;
-            n2 = n1;
-            n1 = temp;
+    static int gcd(final int n1, final int n2) {
+        int a = n1;
+        int b = n2;
+        if (a < b) {
+            int temp = b;
+            b = n1;
+            a = temp;
         }
-        if (n1 > n2) {
+        if (a > b) {
 
             int rem = 1;
             while (rem != 0) {
-                int quo = n1 / n2;
-                    rem = n1 % n2;
-                n1 = n2;
-                n2 = rem;
+                int quo = a / b;
+                    rem = a % b;
+                a = b;
+                b = rem;
             }
         }
-        return n1;
+        return a;
 
         }
 
