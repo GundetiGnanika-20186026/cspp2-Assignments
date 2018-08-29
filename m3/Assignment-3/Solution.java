@@ -4,7 +4,17 @@ import java.util.Scanner;
     Do not modify this main function.
     */
 final class Solution {
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     */
     private Solution() { }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param String [description]
+     */
 
     public static void main(final String[] args) {
 
@@ -13,9 +23,16 @@ final class Solution {
         int n2 = s.nextInt();
         System.out.println(gcd(n1, n2));
     }
-    /*
-    Need to write the gcd function and print the output.
-    */
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param int [description]
+     * @param int [description]
+     * 
+     * @return [description]
+     */
+    
     static int gcd(final int n1, final int n2) {
         int a = n1;
         int b = n2;
