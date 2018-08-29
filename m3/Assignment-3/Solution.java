@@ -6,7 +6,7 @@ import java.util.Scanner;
 class Solution {
     private Solution() { }
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
@@ -16,7 +16,7 @@ class Solution {
     /*
     Need to write the gcd function and print the output.
     */
-    static int gcd( int n1,  int n2) {
+    static int gcd(int n1,  int n2) {
         if (n1 < n2) {
             int temp = n2;
             n2 = n1;
