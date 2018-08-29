@@ -5,7 +5,17 @@ import java.util.Scanner;
 */
 final class Solution {
 /* Fill the main function to print the number of 7's between 1 to n*/
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     */
     private Solution() { }
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * 
+     * @param String [description]
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
