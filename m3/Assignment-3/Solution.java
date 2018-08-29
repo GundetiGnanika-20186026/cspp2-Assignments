@@ -10,12 +10,8 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * @brief [brief description]
-     * @details [long description]
-     * 
      * @param args [description]
      */
-
     public static void main(final String[] args) {
 
         Scanner s = new Scanner(System.in);
@@ -24,15 +20,10 @@ final class Solution {
         System.out.println(gcd(n1, n2));
     }
     /**
-     * @brief [brief description]
-     * @details [long description]
-     * 
      * @param n1 [description]
      * @param n2 [description]
-     * 
      * @return [description]
      */
-    
     static int gcd(final int n1, final int n2) {
         int a = n1;
         int b = n2;
@@ -54,7 +45,5 @@ final class Solution {
         return a;
 
         }
-
-
     }
 
