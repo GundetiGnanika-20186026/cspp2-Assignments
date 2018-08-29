@@ -10,9 +10,9 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * @param args [description]
+     * @param args1 [main method]
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args1) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
