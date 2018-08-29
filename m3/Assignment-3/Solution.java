@@ -1,8 +1,7 @@
-
 import java.util.Scanner;
-/*
-    Do not modify this main function.
-    */
+/**
+* Do not modify this main function.
+**/
 final class Solution {
     /**
      * @brief [brief description]
