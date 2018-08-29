@@ -15,10 +15,12 @@ public class Solution {
             final int ten = 10;
             final int seven = 7;
             while(num != 0) {
-            if ((num % ten) == seven) count = count + 1;
+            if ((num % ten) == seven) {
+             count = count + 1;
+            }  
             num = num / ten;
-            }
-        }
+            } 
+        } 
         System.out.println(count);
     }
 }
