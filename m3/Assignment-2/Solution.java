@@ -17,9 +17,11 @@ public class Solution {
             while(num != 0) {
             if ((num % ten) == seven) {
              count = count + 1;
-            } 
+            }
+
             num = num / ten;
             }
+            
         }
         System.out.println(count);
     }
