@@ -13,7 +13,7 @@ final class Solution {
      * @brief [brief description]
      * @details [long description]
      * 
-     * @param String [description]
+     * @param args [description]
      */
 
     public static void main(final String[] args) {
@@ -27,8 +27,8 @@ final class Solution {
      * @brief [brief description]
      * @details [long description]
      * 
-     * @param int [description]
-     * @param int [description]
+     * @param n1 [description]
+     * @param n2 [description]
      * 
      * @return [description]
      */
