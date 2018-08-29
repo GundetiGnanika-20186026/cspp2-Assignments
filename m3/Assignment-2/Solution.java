@@ -11,9 +11,6 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * @brief [brief description]
-     * @details [long description]
-     * 
      * @param args [description]
      */
     public static void main(final String[] args) {
