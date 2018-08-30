@@ -11,9 +11,9 @@ public class Solution
 		int arr[];
 		int max = 0;
 		arr = new int[size];
-		for (int i=0; i < size; i++) { 
+		for (int i = 0; i < size; i++) { 
 			arr[i] = sc.nextInt();
-			if (max < arr[i]) max=arr[i];
+			if (max < arr[i]) max = arr[i];
         }
         System.out.println(max);
 		  
