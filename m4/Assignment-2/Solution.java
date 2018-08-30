@@ -9,23 +9,24 @@ public class Solution {
 		int size2 = scn.nextInt();
 		arr1 = new int[size1][size2];
 		for (int i = 0;i<size1;i++)
-			for(int j = 0;j<arr1[i].length;j++)
+			for(int j = 0; j < arr1[i].length; j++)
 				arr1[i][j] = scn.nextInt();
         
         int size11 = scn.nextInt();
 		int size22 = scn.nextInt();
 		arr2 = new int[size11][size22];
-        for (int i = 0;i<size11;i++)
-			for(int j = 0;j<arr2[i].length;j++)
+        for (int i = 0; i < size11; i++)
+			for(int j = 0; j < arr2[i].length; j++)
 				arr2[i][j] = scn.nextInt();
         
-        for (int i = 0;i<size1;i++)
-			for(int j = 0;j<arr1[i].length;j++)
-				arr1[i][j] = arr1[i][j]+arr2[i][j];
+        for (int i = 0; i < size1; i++)
+			for(int j = 0; j < arr1[i].length; j++)
+				arr1[i][j] = arr1[i][j] + arr2[i][j];
         
-		for (int i = 0;i<size11;i++) {
-			for(int j = 0;j<arr1[i].length;j++) {
-				System.out.print(arr1[i][j]+" ");
+		for (int i = 0; i < size11; i++) {
+			for(int j = 0; j < arr1[i].length; j++) {
+				System.out.print(arr1[i][j]);
+				if (j == 0 && j==1) System.out.print(" ");
 			}
 			System.out.println();
 		}
