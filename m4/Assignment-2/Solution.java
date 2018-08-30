@@ -25,6 +25,6 @@ public class Solution {
         
 		for (int i = 0;i<size11;i++)
 			for(int j = 0;j<arr1[i].length;j++)
-				System.out.println(arr1[i][j]);
+				System.out.print(arr1[i][j]);
 	}
 }
