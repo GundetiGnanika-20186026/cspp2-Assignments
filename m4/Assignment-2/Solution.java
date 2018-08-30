@@ -1,6 +1,7 @@
-import java.util.*;
-public class Solution {
+import java.util.Scanner;
+final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
+    private Solution() { }
     public static void main(String[] args) {
         int[][] arr1;
         int[][] arr2;
@@ -9,7 +10,7 @@ public class Solution {
         int size2 = scn.nextInt();
         arr1 = new int[size1][size2];
         for (int i = 0; i < size1; i++) {
-            for (int j = 0; j < arr1[i].length; j++){
+            for (int j = 0; j < arr1[i].length; j++) {
                 arr1[i][j] = scn.nextInt();
             }
         }
