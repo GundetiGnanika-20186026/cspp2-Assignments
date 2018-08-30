@@ -21,7 +21,9 @@ public class Solution {
 			}
         }
         
-        if ((size1 != size11) || (size2 != size22)) System.out.println("not possible");
+        if ((size1 != size11) || (size2 != size22)) {
+         System.out.println("not possible");
+        }
 		else {
         for (int i = 0; i < size1; i++) {
 			for (int j = 0; j < arr1[i].length; j++) {
@@ -33,7 +35,9 @@ public class Solution {
 		for (int i = 0; i < size11; i++) {
 			for (int j = 0; j < arr1[i].length; j++) {
 				System.out.print(arr1[i][j]);
-				if (j == 0 || j == 1) System.out.print(" ");
+				if (j == 0 || j == 1) { 
+					System.out.print(" ");
+				}
 			}
 			System.out.println();
 		}
