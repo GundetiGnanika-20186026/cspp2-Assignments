@@ -24,8 +24,7 @@ final class Solution {
         }
         if ((size1 != size11) || (size2 != size22)) {
          System.out.println("not possible");
-        }
-        else {
+        } else {
         for (int i = 0; i < size1; i++) {
             for (int j = 0; j < arr1[i].length; j++) {
                 arr1[i][j] = arr1[i][j] + arr2[i][j];
@@ -34,7 +33,7 @@ final class Solution {
         for (int i = 0; i < size11; i++) {
             for (int j = 0; j < arr1[i].length; j++) {
                 System.out.print(arr1[i][j]);
-                if (j == 0 || j == 1) { 
+                if (j == 0 || j == 1) {
                     System.out.print(" ");
                 }
             }
