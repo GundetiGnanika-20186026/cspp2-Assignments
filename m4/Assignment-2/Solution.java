@@ -23,6 +23,6 @@ public class Solution {
 			for(int j = 0;j<arr1[i].length;j++)
 				arr1[i][j] = arr1[i][j]+arr2[i][j];
         
-		
+		System.out.println(Arrays.toString(arr1));
 	}
 }
