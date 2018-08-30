@@ -1,10 +1,15 @@
 import java.util.Scanner;
+/**
+ * finding the max element in an array.
+ */
 final class Solution {
-    /*
-    Fill this main function to print maximum of given array
-    */
+    /**
+     * constructor
+     */
     private Solution() { }
-
+    /**
+     * @param args [description]
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         int size = sc.nextInt();
