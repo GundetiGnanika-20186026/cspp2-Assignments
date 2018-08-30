@@ -1,6 +1,6 @@
 import java.util.*;
-final class Solution
-{/*
+final class Solution {
+    /*
     Fill this main function to print maximum of given array
     */
     private Solution() { }
@@ -19,7 +19,5 @@ final class Solution
             }
         }
         System.out.println(max);
-          
-        
-    }
+        }
 }
