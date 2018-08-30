@@ -1,8 +1,17 @@
 import java.util.Scanner;
+/**
+ * Addition of two matrices.
+ */
 final class Solution {
     /* Fill the main function to print resultant of addition of matrices*/
+    /**
+     * @brief [constructor]
+     */
     private Solution() { }
-    public static void main(String[] args) {
+    /**
+     * @param args [description]
+     */
+    public static void main(final String[] args) {
         int[][] arr1;
         int[][] arr2;
         Scanner scn = new Scanner(System.in);
