@@ -19,7 +19,7 @@ public class Solution {
 			for(int j = 0; j < arr2[i].length; j++)
 				arr2[i][j] = scn.nextInt();
         
-        if ((size1 != size11) || (size2 !=size22)) System.out.println("not posible");
+        if ((size1 != size11) || (size2 !=size22)) System.out.println("not possible");
 		else {
         for (int i = 0; i < size1; i++)
 			for(int j = 0; j < arr1[i].length; j++)
