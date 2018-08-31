@@ -1,8 +1,8 @@
-import java.util.*;
+import java.util.Scanner;
 /**
  * converting binary to decimal.
  */
-public class Solution {
+final class Solution {
 	/**
 	 * @constructor.
 	 */
@@ -25,7 +25,7 @@ public class Solution {
 	 */
 	static String binaryToDecimal(final String s) {
         int sum = 0;
-        for (int i = 0 , j = s.length() - 1; i < s.length(); i++, j--) {
+        for (int i = 0, j = s.length() - 1; i < s.length(); i++, j--) {
         	char val = s.charAt(i);
         	String was = Character.toString(val);
         	int k = Integer.parseInt(was);
