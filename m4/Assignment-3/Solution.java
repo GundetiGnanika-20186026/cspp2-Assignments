@@ -16,7 +16,7 @@ public class Solution{
 		int n = Integer.parseInt(sc.nextLine());
 		for(int i = 0; i < n; i++) {
 			String s = sc.nextLine();
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			String res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 	}
@@ -26,9 +26,9 @@ public class Solution{
 	 */
 	static String binaryToDecimal(final String s) {
         int sum = 0;
-        for (int i = 0 ,j = s.length() - 1; i < s.length(); i++, j--) {
+        for (int i = 0 , j = s.length() - 1; i < s.length(); i++, j--) {
         	char val = s.charAt(i);
-        	String was =Character.toString(val);
+        	String was = Character.toString(val);
         	int k = Integer.parseInt(was);
         	sum += k * Math.pow(2, j);
         }
