@@ -23,7 +23,7 @@ public class Solution
         	char val = s.charAt(i);
         	String was =Character.toString(val);
         	int k = Integer.parseInt(was);
-        	sum += k * Math.pow(2, s.indexOf(j));
+        	sum += k * Math.pow(2, j);
 
         }
         String result = Integer.toString(sum);
