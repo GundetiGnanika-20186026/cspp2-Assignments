@@ -13,11 +13,11 @@ final class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
-        String reverse = reverseString(s);  
+        String reverse = reverseString(s);
         System.out.println(reverse);
     }
     /**
-     * @param S [sending a string s]
+     * @param s [sending a string s]
      * @return [description]
      */
     static String reverseString(final String s) {
