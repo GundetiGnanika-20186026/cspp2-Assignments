@@ -38,7 +38,9 @@ final class Solution {
                 final int threefifty = 350;
                 final int fourfifty = 450;
                 final int fivefifty = 550;
-                if ((a[i][j] > 0) && (a[i][j] < fifty)) a[i][j] = 0;
+                if ((a[i][j] > 0) && (a[i][j] < fifty)) {
+                    a[i][j] = 0;
+                }
                 if ((a[i][j] >= fifty) && (a[i][j] < onefifty)) {
                     a[i][j] = hun1;
                 }
