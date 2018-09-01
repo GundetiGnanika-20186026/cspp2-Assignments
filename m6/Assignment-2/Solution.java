@@ -27,12 +27,33 @@ final class Solution {
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < columns; j++) {
-                if ((a[i][j] > 0) && (a[i][j] < 50)) a[i][j] = 0;
-                else if ((a[i][j] >= 50) && (a[i][j] < 150)) a[i][j] = 100;
-                else if ((a[i][j] >= 150) && (a[i][j] < 250)) a[i][j] = 200;
-                else if ((a[i][j] >= 250) && (a[i][j] < 350)) a[i][j] = 300;
-                else if ((a[i][j] >= 350) && (a[i][j] < 450)) a[i][j] = 400;
-                else if ((a[i][j] >= 450) && (a[i][j] < 550)) a[i][j] = 500;
+                final int fifty = 50;
+                final int hun1 = 100;
+                final int hun2 = 200;
+                final int hun3 = 300;
+                final int hun4 = 400;
+                final int hun5 = 500;
+                final int onefifty = 150;
+                final int twofifty = 250;
+                final int threefifty = 350;
+                final int fourfifty = 450;
+                final int fivefifty = 550;
+                if ((a[i][j] > 0) && (a[i][j] < fifty)) a[i][j] = 0;
+                if ((a[i][j] >= fifty) && (a[i][j] < onefifty)) {
+                    a[i][j] = hun1;
+                }
+                if ((a[i][j] >= onefifty) && (a[i][j] < twofifty)) {
+                    a[i][j] = hun2;
+                }
+                if ((a[i][j] >= twofifty) && (a[i][j] < threefifty)) {
+                    a[i][j] = hun3;
+                }
+                if ((a[i][j] >= threefifty) && (a[i][j] < fourfifty)) {
+                    a[i][j] = hun4;
+                }
+                if ((a[i][j] >= fourfifty) && (a[i][j] < fivefifty)) {
+                    a[i][j] = hun5;
+                }
             }
         }
         return a;
