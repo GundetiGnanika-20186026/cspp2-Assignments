@@ -26,8 +26,17 @@ class InputValidator {
         return false;
     }
 }
+/**
+ * main class.
+ */
 final class Solution {
+    /**
+     * constructor.
+     */
     private Solution() { }
+    /**
+     * @param args [description]
+     */
 
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
