@@ -1,9 +1,8 @@
 import java.util.*;
-class InputValidator
-{
+class InputValidator {
 	String data;
 	int length;
-    InputValidator(final String input){
+    InputValidator(final String input) {
 		data = input;
 		length = input.length();
 	}
@@ -15,10 +14,8 @@ class InputValidator
 		}
     }
 }
-public class Solution
-{
-	public static void main(final String args[])
-    {
+public class Solution {
+	public static void main(final String[] args) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
     	InputValidator i = new InputValidator(input);    	
