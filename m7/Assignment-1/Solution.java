@@ -6,7 +6,7 @@ class InputValidator {
     private String data;
     private int length;
     /**
-     * @param String [description]
+     * @param input [description]
      */
     InputValidator(final String input) {
         data = input;
