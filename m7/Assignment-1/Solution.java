@@ -1,7 +1,7 @@
 import java.util.Scanner;
 class InputValidator {
-    String data;
-    int length;
+    private String data;
+    private int length;
     InputValidator(final String input) {
         data = input;
         length = input.length();
