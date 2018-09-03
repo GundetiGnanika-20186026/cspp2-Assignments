@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.Scanner;
 class InputValidator {
 	String data;
 	int length;
