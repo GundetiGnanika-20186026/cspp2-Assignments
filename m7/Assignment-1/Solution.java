@@ -14,7 +14,7 @@ class InputValidator {
         return false;
     }
 }
-public class Solution {
+final class Solution {
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
