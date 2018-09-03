@@ -4,22 +4,22 @@ import java.util.Scanner;
  */
 class InputValidator {
     /**
-     * @param data [description]
+     * @param data [given data]
      */
     private String data;
     /**
-     * @param length [descripti0n]
+     * @param length [the length of given input]
      */
     private int length;
     /**
-     * @param input [description]
+     * @param input [the string we enter]
      */
     InputValidator(final String input) {
         data = input;
         length = input.length();
     }
     /**
-     * @return [description]
+     * @return [true if valid and false if not valid]
      */
     public  boolean validateData() {
         final int six = 6;
@@ -38,9 +38,8 @@ final class Solution {
      */
     private Solution() { }
     /**
-     * @param args [description]
+     * @param args [main method]
      */
-
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         String input = s.next();
