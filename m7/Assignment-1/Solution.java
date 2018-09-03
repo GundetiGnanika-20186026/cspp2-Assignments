@@ -3,6 +3,9 @@ import java.util.Scanner;
  * class to check wether the input is valid or not.
  */
 class InputValidator {
+    /**
+     * @param data [description]
+     */
     private String data;
     private int length;
     /**
