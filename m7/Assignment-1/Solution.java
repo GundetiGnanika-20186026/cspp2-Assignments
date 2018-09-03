@@ -18,6 +18,9 @@ class InputValidator {
         data = input;
         length = input.length();
     }
+    /**
+     * @return [description]
+     */
     public  boolean validateData() {
         final int six = 6;
         if (length >= six) {
