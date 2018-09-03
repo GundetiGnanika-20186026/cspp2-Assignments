@@ -7,6 +7,9 @@ class InputValidator {
      * @param data [description]
      */
     private String data;
+    /**
+     * @param length [descripti0n]
+     */
     private int length;
     /**
      * @param input [description]
