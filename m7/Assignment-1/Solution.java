@@ -9,9 +9,8 @@ class InputValidator {
     public  boolean validateData() {
 		if (length >= 6) {
 			return true;
-		} else {
-			return false;
-		}
+		} 
+		return false;
     }
 }
 public class Solution {
