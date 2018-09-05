@@ -40,7 +40,7 @@ public class Fibonacci
             b = sum;
         }
 
-        System.out.println(List);
+        System.out.println(Arrays.tostring(List));
     }
 
 	public static void main(String[] args) {
