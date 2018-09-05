@@ -30,7 +30,7 @@ class Fibonacci {
     /**
      * constructor.
      */
-    public Fibonacci() { }
+    private Fibonacci() { }
     /**
      * @param n [the no. of fibonnaci numbers]
      * @return [the object of list]
