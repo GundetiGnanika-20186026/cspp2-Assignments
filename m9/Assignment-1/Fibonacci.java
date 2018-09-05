@@ -27,6 +27,7 @@ class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    public Fibonacci() { }
     /**
      * @param n [the no. of fibonnaci numbers]
      * @return [the object of list]
