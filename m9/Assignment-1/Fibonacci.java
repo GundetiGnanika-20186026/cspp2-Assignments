@@ -33,7 +33,7 @@ public class Fibonacci
         List main = new List()
         main.add(a);
         main.add(b);
-        for(int i = 2; i < n;i++ ) {
+        for(int i = 2; i < n; i++) {
             sum = a + b;
             main.add(sum);
             a = b;
