@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Arrays;
+//import java.util.Arrays;
 
 /*
  * In the previous module you have created List ADT.
@@ -41,7 +41,7 @@ public class Fibonacci
             b = sum;
         }
 
-        System.out.println(Arrays.toString(List));
+        return main;
     }
 
 	public static void main(String[] args) {
