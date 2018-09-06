@@ -315,52 +315,52 @@ public class Solution {
 				String[] tokens = line.split(" ");
 // based on the list operation invoke
 // the corresponding method
-				switch (tokens[0]) {
-				case "add":
-					listStudent.add(new Student(tokens[1]));
-					break;
-				case "addAll":
-					if (tokens.length == 2) {
-						String[] t1 = tokens[1].split(",");
-						Student[] temp = new Student[t1.length];
-						for (int i = 0; i < t1.length ; i++ ) {
-							temp[i] = new Student(t1[i]);
-						}
-						listStudent.addAll(temp);
-					}
-					break;
-				case "size":
-					// invoke size method and print the list size
-					// BTW, list size is not the array size
-					// it is the number of items in the list
-					System.out.println(listStudent.size());
-					break;
-				case "print":
-					// print the list (implement toString in List class
-					//for this to work)
-					// expected format is [item-1,item-2,...,item-n]
-					// review the output testcase file
-					System.out.println(listStudent);
-					break;
-				case "remove":
-					listStudent.remove(Integer.parseInt(tokens[1]));
-					break;
-				case "indexOf":
-					System.out.println(listStudent.indexOf(new Student(tokens[1])));
-					break;
-				case "get":
-					System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
-					break;
-				case "contains":
-					System.out.println(listStudent.contains(new Student(tokens[1])));
-					break;
-				default:
-				}
-			}
-			break;
-		default:
-			break;
-		}
+switch (tokens[0]) {
+	case "add":
+	listStudent.add(new Student(tokens[1]));
+	break;
+	case "addAll":
+	if (tokens.length == 2) {
+	String[] t1 = tokens[1].split(",");
+	Student[] temp = new Student[t1.length];
+	for (int i = 0; i < t1.length ; i++ ) {
+	temp[i] = new Student(t1[i]);
+	}
+	listStudent.addAll(temp);
+	}
+	break;
+	case "size":
+	// invoke size method and print the list size
+	// BTW, list size is not the array size
+	// it is the number of items in the list
+	System.out.println(listStudent.size());
+	break;
+    case "print":
+	// print the list (implement toString in List class
+	//for this to work)
+	// expected format is [item-1,item-2,...,item-n]
+	// review the output testcase file
+	System.out.println(listStudent);
+	break;
+	case "remove":
+	listStudent.remove(Integer.parseInt(tokens[1]));
+	break;
+	case "indexOf":
+	System.out.println(listStudent.indexOf(new Student(tokens[1])));
+	break;
+	case "get":
+	System.out.println(listStudent.get(Integer.parseInt(tokens[1])));
+	break;
+	case "contains":
+	System.out.println(listStudent.contains(new Student(tokens[1])));
+	break;
+	default:
+	}
+	}
+	break;
+	default:
+	break;
+	}
 	}
 }
 
