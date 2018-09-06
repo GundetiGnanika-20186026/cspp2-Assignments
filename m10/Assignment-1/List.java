@@ -232,7 +232,7 @@ public class List {
      *
      */
     public String toString() {
-        System.out.println("size" + size);
+        //System.out.println("size" + size);
         if (size == 0){
             return "[]";
         }
