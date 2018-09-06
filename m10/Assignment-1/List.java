@@ -101,7 +101,7 @@ public class List {
      *
      */
     /**
-     * @param capacity
+     * @param capacity to give specific size.
      */
     public List(final int capacity) {
         size = 0;
@@ -318,16 +318,15 @@ public class List {
      * @param index [description]
      * @param item [description]
      */
-    public void add(final int index,final int item) {
+    public void add(final int index, final int item) {
         for (int i = size; i > index; i--) {
             list[i] = list[i - 1];
         }
         list[index] = item;
         size++;
     }
-
     /* Returns the count of occurances of a given item in the list*/
-    /** 
+    /**
      * @param item [description]
      * @return [integer]
      */
@@ -341,7 +340,7 @@ public class List {
         return count1;
     }
     /**
-     * @param String [description]
+     * @param args [description]
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
@@ -374,7 +373,7 @@ public class List {
             case "addAll":
                 if (tokens.length == 2) {
                     String[] t1 = tokens[1].split(",");
-                    int temp[] = new int[t1.length];
+                    int[] temp = new int[t1.length];
                     for (int i = 0; i < temp.length; i++) {
                         temp[i] = Integer.parseInt(t1[i]);
                     }
