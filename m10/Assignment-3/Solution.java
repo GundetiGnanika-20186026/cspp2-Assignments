@@ -55,8 +55,13 @@ class Student {
 /**
  * solution class.
  */
-public final  class Solution {
-    /**
+public final class Solution {
+   /**
+    * constructor.
+    */
+
+    private Solution() { }
+     /**
      * @param args [description]
      */
     public static void main(final String[] args) {
