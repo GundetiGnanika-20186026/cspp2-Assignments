@@ -232,8 +232,10 @@ public class List {
      *
      */
     public String toString() {
-        if (size == 0)
+        System.out.println("size" + size);
+        if (size == 0){
             return "[]";
+        }
         String str = "[";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
