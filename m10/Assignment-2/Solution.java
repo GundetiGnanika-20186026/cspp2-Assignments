@@ -5,6 +5,10 @@ import java.util.Scanner;
  */
 final class Solution {
     /**
+     * constructor.
+     */
+    private Solution() { }
+    /**
      * @param args [description]
      */
     public static void main(final String[] args) {
