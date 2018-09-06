@@ -21,7 +21,6 @@ public class StringList implements StringListInterface {
      * So, assume we are only going to have strings in the list
      * We need to create an array of strings to store the items
      * added to the list.
-     *
      * Create a variable of the type String[]
      * Use the private access specifier
      * Why private access specifier and why not public?
