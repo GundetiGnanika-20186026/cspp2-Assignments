@@ -4,16 +4,22 @@ import java.util.Scanner;
 class Student {
 	private String name;
 
-	public Student(String name) {//A constructor used to initialize the instance variables
+	public Student(String name) {
+		//A constructor used to initialize
+		// the instance variables
 		this.name = name;
 	}
 
-	public String getName() {//Getter method which returns the value of instance variable
+	public String getName() {
+		//Getter method which returns
+		// the value of instance variable
 		return this.name;
 	}
 
 	@Override
-	public boolean equals(Object other) { //This method is to check if two students names are equal or not
+	public boolean equals(Object other) {
+		//This method is to check if
+		// two students names are equal or not
 		if (!(other instanceof Student)) {
 			return false;
 		}
@@ -31,19 +37,20 @@ public class Solution {
 
 
 	public static void main(String[] args) {
-		// create an object of the list to invoke methods on it
+// create an object of the list to invoke methods on it
 		Scanner stdin = new Scanner(new BufferedInputStream(System.in));
 		String objectType = stdin.nextLine();
 
 		switch (objectType) {
-		case "S"://This case will be executed for String type list
+		case "S":
+			//This case will be executed for String type list
 			List<String> listString = new List();
 			while (stdin.hasNext()) {
 				// read the line
 				String line = stdin.nextLine();
 				// split the line using space
 				String[] tokens = line.split(" ");
-				// based on the list operation invoke the corresponding method
+// based on the list operation invoke the corresponding method
 				switch (tokens[0]) {
 				case "add":
 					listString.add(tokens[1]);
@@ -83,7 +90,8 @@ public class Solution {
 			}
 			break;
 
-		case "I"://This case will be executed for Integer type list
+		case "I":
+			//This case will be executed for Integer type list
 			List<Integer> listInteger = new List();
 			while (stdin.hasNext()) {
 				// read the line
@@ -134,14 +142,15 @@ public class Solution {
 			}
 			break;
 
-		case "F"://This case will be executed for Float type list
+		case "F":
+			//This case will be executed for Float type list
 			List<Float> listFloat = new List();
 			while (stdin.hasNext()) {
 				// read the line
 				String line = stdin.nextLine();
 				// split the line using space
 				String[] tokens = line.split(" ");
-				// based on the list operation invoke the corresponding method
+// based on the list operation invoke the corresponding method
 				switch (tokens[0]) {
 				case "add":
 					listFloat.add(Float.parseFloat(tokens[1]));
@@ -185,14 +194,15 @@ public class Solution {
 			}
 			break;
 
-		case "C"://This case will be executed for Character type list
+		case "C":
+			//This case will be executed for Character type list
 			List<Character> listCharacter = new List();
 			while (stdin.hasNext()) {
 				// read the line
 				String line = stdin.nextLine();
 				// split the line using space
 				String[] tokens = line.split(" ");
-				// based on the list operation invoke the corresponding method
+// based on the list operation invoke the corresponding method
 				switch (tokens[0]) {
 				case "add":
 					listCharacter.add(tokens[1].charAt(0));
@@ -236,14 +246,15 @@ public class Solution {
 			}
 			break;
 
-		case "D"://This case will be executed for Double type list
+		case "D":
+			//This case will be executed for Double type list
 			List<Double> listDouble = new List();
 			while (stdin.hasNext()) {
 				// read the line
 				String line = stdin.nextLine();
 				// split the line using space
 				String[] tokens = line.split(" ");
-				// based on the list operation invoke the corresponding method
+// based on the list operation invoke the corresponding method
 				switch (tokens[0]) {
 				case "add":
 					listDouble.add(Double.parseDouble(tokens[1]));
@@ -265,7 +276,8 @@ public class Solution {
 					System.out.println(listDouble.size());
 					break;
 				case "print":
-					// print the list (implement toString in StringList class
+					// print the list
+					//(implement toString in StringList class
 					//for this to work)
 					// expected format is [item-1,item-2,...,item-n]
 					// review the output testcase file
@@ -287,14 +299,17 @@ public class Solution {
 			}
 			break;
 
-		case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+		case "O":
+//This case will be executed for Student type
+			//list i.e to store List of Student Objects
 			List<Student> listStudent = new List();
 			while (stdin.hasNext()) {
 				// read the line
 				String line = stdin.nextLine();
 				// split the line using space
 				String[] tokens = line.split(" ");
-				// based on the list operation invoke the corresponding method
+// based on the list operation invoke
+// the corresponding method
 				switch (tokens[0]) {
 				case "add":
 					listStudent.add(new Student(tokens[1]));

@@ -19,7 +19,8 @@ public class List<E> {
     //Constructor
     public List() {
         // Create a variable of the type Object[]
-        list = ((E[])new Object[10]);//Object is the base class for all the classes
+        list = ((E[])new Object[10]);
+        //Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
@@ -75,7 +76,8 @@ public class List<E> {
     }
     /*
      * The remove method does what the name suggests.
-     * Removes a String item, specified by the index argument, from the list
+     * Removes a String item, specified by the index argument,
+     *  from the list
      * It also does an additional step.
      * Think about what happens when
      * an item is removed from the middle of the list
@@ -85,10 +87,12 @@ public class List<E> {
      * moved to the left by one position.
      * Here is an example:
      * array = [1,2,3,0,0,0,0,0,0,0]
-     * remove(1) would remove the item 2 which is at index position 1.
+     * remove(1) would remove the item 2 which is at
+     *  index position 1.
      * But how do you remove the item from an array?
      * Well, the way to remove it is to move all
-     * the items, that are to the right of the removed item, to the left
+     * the items, that are to the right of the removed item,
+     *  to the left
      * So, the new array looks like this.
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
@@ -116,7 +120,7 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-        if(index < 0 || index > size){
+        if (index < 0 || index > size) {
             System.out.println("invalid position Exception");
             return null;
         }
