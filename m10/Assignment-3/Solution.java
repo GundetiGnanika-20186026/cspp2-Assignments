@@ -10,7 +10,7 @@ class Student {
      */
     private String name;
     /**
-     * @param name [description]
+     * @param name1 [description]
      */
     public Student(final String name1) {
         //A constructor used to initialize
