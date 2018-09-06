@@ -9,10 +9,10 @@ class Student {
      * name.
      */
     private String name;
-    /** 
+    /**
      * @param name [description]
      */
-    protected Student(String name) {
+    protected Student(final String name) {
         //A constructor used to initialize
         // the instance variables
         this.name = name;
@@ -27,7 +27,7 @@ class Student {
     }
 
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         //This method is to check if
         // two students names are equal or not
         if (!(other instanceof Student)) {
