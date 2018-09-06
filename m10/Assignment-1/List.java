@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+/**
+ * main class.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -29,6 +31,9 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+    /**
+     * array list.
+     */
     private int[] list;
     /*
      * What are the other class variables needed for creating a list?
@@ -53,15 +58,17 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
+    /**
+     * size declaration.
+     */
     private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-
-
-
+    /**
+     * constructor.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -69,7 +76,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -92,11 +100,13 @@ public class List {
      * constructor.
      *
      */
+    /**
+     * @param capacity 
+     */
     public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
-
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -107,6 +117,9 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
+     */
+    /**
+     * @param item [description]
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
@@ -132,16 +145,15 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an 
+     * Create a method called resize(). Resize should create an
      * new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
-     *
      * When should the resize method be invoked and from where?
      * Will the client invoke resize or is it internal to List class?
      * Should the resize be public method or private?
      * Should the resize method return any values?
-     * You know enough of Object Oriented Programming to 
+     * You know enough of Object Oriented Programming to
      * answer these questions :-)
      *
      */
@@ -154,6 +166,9 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * @return [size]
      */
     public int size() {
         return size;
@@ -179,7 +194,9 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
+    /**
+     * @param index [description]
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -192,7 +209,6 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -204,6 +220,10 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * @param index [description]
+     * @return [value at that index]
+     */
     public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
@@ -211,7 +231,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -231,6 +250,9 @@ public class List {
      * toString should only return the items in the list and
      * not all the elements of the array.
      *
+     */
+    /**
+     * @return [string]
      */
     public String toString() {
         //System.out.println("size" + size);
@@ -252,6 +274,10 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /** 
+     * @param item [description]
+     * @return [boolean value]
+     */
     public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
@@ -260,6 +286,10 @@ public class List {
      * Returns the index of the first occurrence
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
+     */
+    /**
+     * @param item [description]
+     * @return [index of value]
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
@@ -270,6 +300,9 @@ public class List {
     }
     /*Inserts all the elements of specified int
      array to the end of list*/
+    /**
+     * @param items[] [description]
+     */
     public void addAll(final int items[]) {
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
@@ -282,6 +315,10 @@ public class List {
     by moving all the elements to the right.
            The method returns void (nothing)
         */
+    /**
+     * @param index [description]
+     * @param item [description]
+     */
     public void add(final int index,final int item) {
         for (int i = size; i > index; i--) {
             list[i] = list[i - 1];
@@ -291,6 +328,10 @@ public class List {
     }
 
     /* Returns the count of occurances of a given item in the list*/
+    /** 
+     * @param item [description]
+     * @return [integer]
+     */
     public int count(final int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
@@ -300,12 +341,12 @@ public class List {
         }
         return count1;
     }
-
-
+    /**
+     * @param String [description]
+     */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
