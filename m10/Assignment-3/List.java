@@ -116,7 +116,10 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-        //Write logic for get method
+        if(index < 0 || index > size){
+            System.out.println("invalid position Exception");
+            return null;
+        }
         return list[index];
     }
     /*
@@ -159,12 +162,13 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        for (int i = 0 ; i < list.length-1; i++) {
-            if (list[i].equals(item)) {
-                return true;
-            }
-        }
-        return false;
+        // for (int i = 0 ; i < list.length-1; i++) {
+        //     if (list[i].equalsto(item)) {
+        //         return true;
+        //     }
+        // }
+        // return false;
+        return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence
