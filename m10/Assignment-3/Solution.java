@@ -25,8 +25,11 @@ class Student {
         // the value of instance variable
         return this.name;
     }
-
     //@Override
+    /**
+     * @param other [description]
+     * @return [description]
+     */
     public boolean equals(final Object other) {
         //This method is to check if
         // two students names are equal or not
