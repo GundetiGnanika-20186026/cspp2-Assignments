@@ -42,7 +42,6 @@ public class List<E> {
             resize();
         }
         list[size++] = item;
-
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
