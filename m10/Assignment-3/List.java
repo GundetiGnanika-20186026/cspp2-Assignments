@@ -47,7 +47,7 @@ public class List<E> {
     array to the end of list*/
     public void addAll(E[] items) {
         //Write logic for addAll method
-        if (items.length > (list.length-size)) {
+        if (items.length > (list.length - size)) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
@@ -159,8 +159,8 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        for(int i = 0 ; i < list.length;i++) {
-            if (list[i].equals(item)){
+        for (int i = 0 ; i < list.length-1; i++) {
+            if (list[i].equals(item)) {
                 return true;
             }
         }
