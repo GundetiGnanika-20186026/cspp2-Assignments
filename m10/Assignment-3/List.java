@@ -61,7 +61,7 @@ public class List<E> {
         //int[] list1 = new list1[2*size]
         //java.lang.System.arraycopy(list, 0, list1, 0, size);
         //list = list1;
-        list = Arrays.copyOf(list, 2 * list.length);
+        list = Arrays.copyOf(list, 2 * size);
     }
     /*
      * The size method returns the value of the size.
