@@ -101,7 +101,7 @@ public class List {
      *
      */
     /**
-     * @param capacity 
+     * @param capacity
      */
     public List(final int capacity) {
         size = 0;
@@ -256,7 +256,7 @@ public class List {
      */
     public String toString() {
         //System.out.println("size" + size);
-        if (size == 0){
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
@@ -274,7 +274,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    /** 
+    /**
      * @param item [description]
      * @return [boolean value]
      */
@@ -293,17 +293,16 @@ public class List {
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item == list[i]) {
                 return i;
+            }
         }
         return -1;
     }
-    /*Inserts all the elements of specified int
-     array to the end of list*/
     /**
-     * @param items[] [description]
+     * @param items [description]
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
