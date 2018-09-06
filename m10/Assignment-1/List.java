@@ -158,7 +158,9 @@ public class List {
      * answer these questions :-)
      *
      */
-
+    /**
+     * resize method.
+     */
     private void resize() {
         //int[] list1 = new list1[2*size]
         //java.lang.System.arraycopy(list, 0, list1, 0, size);
