@@ -25,7 +25,12 @@ class Student {
         // the value of instance variable
         return this.name;
     }
-    //@Override
+
+     @Override
+ public int hashCode() {
+    return 0;
+ }
+    @Override
     /**
      * @param other [description]
      * @return [description]
