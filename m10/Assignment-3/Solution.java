@@ -55,7 +55,7 @@ class Student {
 /**
  * solution class.
  */
-public class Solution {
+public final  class Solution {
     /**
      * @param args [description]
      */
