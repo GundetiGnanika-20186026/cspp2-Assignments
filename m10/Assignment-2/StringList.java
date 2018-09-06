@@ -130,7 +130,7 @@ public class StringList implements StringListInterface{
         //int[] list1 = new list1[2*size]
         //java.lang.System.arraycopy(list, 0, list1, 0, size);
         //list = list1;
-        list = Arrays.copyOf(list, 2 * size);
+        list = Arrays.copyOf(list, 2 * list.length);
     }
 
 
@@ -147,7 +147,7 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(final String[] items) {
-        if(items.length > size) {
+        if(items.length > list.length) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
