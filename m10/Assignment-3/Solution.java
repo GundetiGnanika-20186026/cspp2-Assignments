@@ -26,7 +26,7 @@ class Student {
         return this.name;
     }
 
-    @Override
+    //@Override
     public boolean equals(final Object other) {
         //This method is to check if
         // two students names are equal or not
