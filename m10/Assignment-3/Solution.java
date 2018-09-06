@@ -4,7 +4,7 @@ import java.util.Scanner;
 class Student {
 	private String name;
 
-	public Student(String name) {
+	protected Student(String name) {
 		//A constructor used to initialize
 		// the instance variables
 		this.name = name;
@@ -267,7 +267,7 @@ switch (tokens[0]) {
 	if (tokens.length == 2) {
 	String[] t1 = tokens[1].split(",");
 	Double[] temp = new Double[t1.length];
-	for (int i = 0; i < t1.length ; i++ ) {
+	for (int i = 0; i < t1.length; i++) {
 	temp[i] = Double.parseDouble(t1[i]);
 	}
 	listDouble.addAll(temp);
