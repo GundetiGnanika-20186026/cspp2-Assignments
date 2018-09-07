@@ -73,6 +73,11 @@ public class List {
         list = new int[ten];
         size = 0;
     }
+
+    public List(final int capacity) {
+        list = new int[capacity];
+        size = 0;
+    }
     
     /*
      * The add method does what the name suggests. Add an int item to the list.
@@ -226,17 +231,26 @@ public class List {
     */
     public List subList(int start, int end) 
     {
-    // write the logic for subList
-    return new List();
+       if ((start < 0 || start >= size) || (end < 0 || end >= size)) {
+        System.out.println("Index Out of Bounds Exception");
+        return null;
+       }  
+       List new1 = new List(end-start);
+       for(int i = start; i < end; i++) {
+           new1.add(list[i]);
+       }
+        return new1;
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list ) 
+    public boolean equals(List list1 ) 
     {
-    // Replace the code below
-    return true;
+      if (list.equals(list1)) {
+        return true;
+       }
+       return false;
     }
     /*
     * Removes all the elements from list
