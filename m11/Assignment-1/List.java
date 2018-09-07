@@ -111,7 +111,7 @@ public class List {
         //int[] list1 = new list1[2*size]
         //java.lang.System.arraycopy(list, 0, list1, 0, size);
         //list = list1;
-        list = Arrays.copyOf(list, 2 * list.length);
+        list = Arrays.copyOf(list, 2 * size);
     }
 
     /*
@@ -152,9 +152,10 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
+            for (int i = index; i < size-1; i++) {
                 list[i] = list[i + 1];
             }
+            list[size-1] = 0;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
@@ -225,7 +226,7 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -316,8 +317,8 @@ public class List {
             for(int j = 0; j < size; j++) {
                 if (this.list[i] == list1.list[j]) {
                     count ++;
+                }
             }
-         }
         }
         if (count == size) {
             return true;
