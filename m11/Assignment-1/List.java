@@ -1,5 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
+import java.util.Arrays;
 /**
  * list class.
  */
@@ -98,7 +99,19 @@ public class List {
      */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
+        if (size == list.length) {
+            resize();
+        }
         list[size++] = item;
+    }
+    /**
+     * resize.
+     */
+    private void resize() {
+        //int[] list1 = new list1[2*size]
+        //java.lang.System.arraycopy(list, 0, list1, 0, size);
+        //list = list1;
+        list = Arrays.copyOf(list, 2 * size);
     }
 
     /*
@@ -238,6 +251,9 @@ public class List {
      * @param items [description]
      */
     public void addAll(final int[] items) {
+        if (items.length > list.length-items.length) {
+            resize();
+        }
         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
