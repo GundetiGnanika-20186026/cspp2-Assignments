@@ -326,6 +326,8 @@ public class List {
         }
         return false;
     }
+
+    //return this.toString().equals(list1.toString;
     /*
     * Removes all the elements from list
     * Think about this case and make the method
