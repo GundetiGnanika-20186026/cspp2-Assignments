@@ -273,7 +273,7 @@ public class List {
      * @return [description]
      */
     public List subList(final int start, final int end) {
-        if (start < 0 || end < 0 || end < start) {
+        if (start < 0 || end < 0 || start > end) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
