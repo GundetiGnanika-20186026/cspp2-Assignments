@@ -255,10 +255,12 @@ public class List {
         if (items.length > (list.length - size)) {
              resize();
          }
-         for (int i = 0; i < items.length; i++) {
-            list[size] = items[i];
-            size++;
-        }
+         // for (int i = 0; i < items.length; i++) {
+         //    list[size] = items[i];
+         //    size++;
+         for (int i : items) {
+            list[size++] = i;
+         }
 
     }
     /*
