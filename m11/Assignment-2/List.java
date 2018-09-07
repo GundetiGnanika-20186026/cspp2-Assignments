@@ -47,7 +47,7 @@ public class List<E> {
         if (items.length > (list.length - size)) {
             resize();
         }
-        for (E i : items){
+        for (E i : items) {
             list[size] = i;
             size++;
         }
@@ -55,7 +55,7 @@ public class List<E> {
     /**
      * { function_description }
      */
-    private void resize(){
+    private void resize() {
         list = Arrays.copyOf(list, 2 * size);
     }
 
@@ -67,7 +67,7 @@ public class List<E> {
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
-    	return size;
+        return size;
     }
     /*
      * The remove method does what the name suggests.
@@ -113,7 +113,7 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
+        //Write logic for get method
         // return list[index];
         return list[index];
     }
@@ -139,7 +139,7 @@ public class List<E> {
      */
     public String toString() {
 
-       if (size == 0) {
+        if (size == 0) {
             return "[]";
         }
         String str = "[";
@@ -157,7 +157,7 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-		//Write logic for contains method
+        //Write logic for contains method
         return indexOf(item) != -1;
 
     }
@@ -168,7 +168,7 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
+        //Write logic for indexOf method
         for (int i = 0; i < size; i++) {
             if (item.equals(list[i])) {
                 return i;
@@ -180,9 +180,8 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] item)
-    {
-            for (int i = 0; i < size; i++) {
+    public void removeAll(E[] item) {
+        for (int i = 0; i < size; i++) {
             for (int j = 0; j < item.length; j++) {
                 if (list[i] == item[j]) {
                     remove(i);
@@ -213,14 +212,12 @@ public class List<E> {
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
-    public boolean equals(List<E> listdata)
-    {
+    public boolean equals(List<E> listdata) {
         return this.toString().equals(listdata.toString());
 
     }
     /*Removes all the elements from list*/
-    public void clear()
-    {
+    public void clear() {
         size = 0;
     }
 }
