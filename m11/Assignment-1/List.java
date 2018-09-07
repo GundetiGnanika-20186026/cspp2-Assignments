@@ -252,7 +252,7 @@ public class List {
      * @param items [description]
      */
     public void addAll(final int[] items) {
-        if (items.length > list.length-size) {
+        if (items.length > list.length - size) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
@@ -271,7 +271,7 @@ public class List {
         for (int i = 0; i < item.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (item[i] == list[j]) {
-                    remove(j);
+                    remove(0);
                 }
             }
         }
