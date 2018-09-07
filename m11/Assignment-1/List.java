@@ -251,7 +251,7 @@ public class List {
      * @param items [description]
      */
     public void addAll(final int[] items) {
-        if (items.length > list.length-items.length) {
+        if (items.length > list.length-size) {
             resize();
         }
         for (int i = 0; i < items.length; i++) {
