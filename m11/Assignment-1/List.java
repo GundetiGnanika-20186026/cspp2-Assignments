@@ -252,16 +252,16 @@ public class List {
      * @param items [description]
      */
     public void addAll(final int[] items) {
-        if (items.length > (list.length - size)) {
-             resize();
+        if (items.length < (list.length - size)) {
+              for (int i : items) {
+            list[size++] = i;
+         }
          }
          // for (int i = 0; i < items.length; i++) {
          //    list[size] = items[i];
          //    size++;
-         for (int i : items) {
-            list[size++] = i;
-         }
 
+        resize();
     }
     /*
      Removes all of its elements that are contained in the specified int
