@@ -297,15 +297,15 @@ public class List {
         }
         int count = 0;
         for (int i = 0; i < size; i++) {
-            for(int j = 0;j<size;j++) {
-            if (this.list[i] == list1.list[i]) {
-                count ++;
+            for(int j = 0; j<size; j++) {
+                if (this.list[j] == list1.list[j]) {
+                    count ++;
 
             }
+         }
         }
-    }
         if (count == size) {
-        return true;
+            return true;
         }
         return false;
     }
