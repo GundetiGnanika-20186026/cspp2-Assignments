@@ -253,12 +253,13 @@ public class List {
      */
     public void addAll(final int[] items) {
         if (items.length > list.length - size) {
-            resize();
-        }
-        for (int i = 0; i < items.length; i++) {
+             resize();
+         }
+         for (int i = 0; i < items.length; i++) {
             list[size] = items[i];
             size++;
         }
+
     }
     /*
      Removes all of its elements that are contained in the specified int
