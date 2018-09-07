@@ -51,7 +51,6 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -296,13 +295,19 @@ public class List {
         if (this.size != list1.size) {
             return false;
         }
+        int count = 0;
         for (int i = 0; i < size; i++) {
-            if (this.list[i] != list1.list[i]) {
-                return false;
+            for(int j = 0;j<size;j++) {
+            if (this.list[i] == list1.list[i]) {
+                count ++;
 
             }
         }
+    }
+        if (count == size) {
         return true;
+        }
+        return false;
     }
     /*
     * Removes all the elements from list
@@ -398,15 +403,16 @@ public class List {
                 String[] arrstring3 = tokens[1].split(",");
                 List object = l.subList(Integer.parseInt(arrstring3[0]),
                                         Integer.parseInt(arrstring3[1]));
-                if (object != null)
+                if (object != null) {
                     System.out.println(object);
+                }
                 break;
             }
             case "equals":
                 if (tokens.length == 2) {
                     String[] lt = tokens[1].split(",");
                     List l2 = new List();
-                    for (int k = 0; k < lt.length; k++ ) {
+                    for (int k = 0; k < lt.length; k++) {
                         l2.add(Integer.parseInt(lt[k]));
                     }
                     System.out.println(l.equals(l2));
