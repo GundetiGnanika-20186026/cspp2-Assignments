@@ -212,7 +212,7 @@ public class List {
         for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
-        str = str + list[i] + "]";
+        str = str + list[size-1] + "]";
         return str;
     }
     /*
@@ -271,7 +271,7 @@ public class List {
         for (int i = 0; i < item.length; i++) {
             for (int j = 0; j < size; j++) {
                 if (item[i] == list[j]) {
-                    remove(0);
+                    remove(j);
                 }
             }
         }
