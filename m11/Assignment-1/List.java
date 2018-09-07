@@ -290,7 +290,8 @@ public class List {
      * @return [description]
      */
     public List subList(final int start, final int end) {
-        if (start < 0 || end < 0 || start > end) {
+
+        if (start < 0 || end < 0 || start > end||size == 0||end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
@@ -335,7 +336,6 @@ public class List {
      */
     public void clear() {
         // write the logic for clear.
-        list = new int[0];
         size = 0;
     }
     /**
