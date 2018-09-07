@@ -334,7 +334,7 @@ public class List {
      */
     public void clear() {
         // write the logic for clear.
-
+        list = new int[0];
         size = 0;
     }
     /**
