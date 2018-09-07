@@ -121,11 +121,11 @@ public class List {
      * The method returns an int. Empty list should return 0.
      *
      */
-   /**
-    * @brief [brief description]
-    * @details [long description]
-    * @return [description]
-    */
+    /**
+     * @brief [brief description]
+     * @details [long description]
+     * @return [description]
+     */
     public int size() {
         // replace the code below to implement the size method
         return size;
@@ -152,10 +152,10 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
-            for (int i = index; i < size-1; i++) {
+            for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
-            list[size-1] = 0;
+            list[size - 1] = 0;
             size--;
         } else {
             System.out.println("Invalid Position Exception");
@@ -212,7 +212,7 @@ public class List {
         for (i = 0; i < size - 1; i++) {
             str = str + list[i] + ",";
         }
-        str = str + list[size-1] + "]";
+        str = str + list[size - 1] + "]";
         return str;
     }
     /*
@@ -264,14 +264,16 @@ public class List {
      Removes all of its elements that are contained in the specified int
      array.
     */
-     /**
-      * @param item [description]
-      */
+    /**
+     * @param item [description]
+     */
     public void removeAll(final int[] item) {
-        for (int i = 0; i < item.length; i++) {
-            for (int j = 0; j < size; j++) {
-                if (item[i] == list[j]) {
-                    remove(j);
+        for (int i = 0; i < size; i++) {
+            for (int j = 0; j < item.length; j++) {
+                if (list[i] == item[j]) {
+                    remove(i);
+                    i--;
+                    break;
                 }
             }
         }
@@ -291,7 +293,7 @@ public class List {
      */
     public List subList(final int start, final int end) {
 
-        if (start < 0 || end < 0 || start > end||size == 0||end > size) {
+        if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
