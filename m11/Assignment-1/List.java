@@ -310,21 +310,29 @@ public class List {
      * @return [description]
      */
     public boolean equals(final List list1) {
-        if (this.size != list1.size) {
+        if (size() != list1.size()) {
             return false;
         }
-        int count = 0;
+        // int count = 0;
+        // for (int i = 0; i < size; i++) {
+        //     for(int j = 0; j < size; j++) {
+        //         if (this.list[i] == list1.list[j]) {
+        //             count ++;
+        //         }
+        //     }
+        // }
+        // if (count == size) {
+        //     return true;
+        // }
+        // return false;
+
         for (int i = 0; i < size; i++) {
-            for(int j = 0; j < size; j++) {
-                if (this.list[i] == list1.list[j]) {
-                    count ++;
-                }
+            if (list[i] != list1.list[i]) {
+                return false;
             }
         }
-        if (count == size) {
-            return true;
-        }
-        return false;
+
+        return true;
     }
 
     //return this.toString().equals(list1.toString;
