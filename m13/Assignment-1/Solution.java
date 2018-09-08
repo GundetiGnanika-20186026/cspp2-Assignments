@@ -57,7 +57,7 @@ class Set {
         }
         String res = "{";
         for(int i = 0;i < size-1; i++) {
-            res = res + set[i] + ",";
+            res = res + set[i] + ", ";
         }
         return res+set[size-1]+"}";
     }
