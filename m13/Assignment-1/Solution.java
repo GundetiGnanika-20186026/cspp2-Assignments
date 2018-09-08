@@ -129,7 +129,7 @@ class Set {
         if (size == 0) {
             return null;
         }
-        int arr[][] = new int [size][items.set.length];
+        int[][] arr = new int [size][items.set.length];
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < items.set.length; j++) {
                 String str = "[";
