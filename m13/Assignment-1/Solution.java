@@ -51,7 +51,7 @@ class Set {
 
 
 
-    public String tostring() {
+    public String toString() {
     	if(size == 0) {
     		return "{}";
         }
