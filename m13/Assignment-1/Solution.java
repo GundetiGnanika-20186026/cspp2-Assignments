@@ -131,7 +131,7 @@ class Set {
          for(int i = 0; i < size; i++) {
              for(int j = 0; j < items.set.length; j++) {
                  String str = "[";
-                 str = str +set[i]+","+items.set[j]+"]";
+                 str = str +set[i]+", "+items.set[j]+"]";
                  arr[i][j] = Integer.parseInt(str);
              }
 
