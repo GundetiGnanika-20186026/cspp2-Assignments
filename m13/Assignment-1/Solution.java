@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
+import java.lang.*;
+
 /**
  * Class for set.
  * @author :Gnanika.
