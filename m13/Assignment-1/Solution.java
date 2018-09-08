@@ -48,7 +48,7 @@ class Set {
 			resize();
 		}
 		int count = 0;
-		for (int i = 0; i < size; i++) {
+		for (int i = 0;i < size; i++) {
 			if (set[i] == item)
 				count ++;
 		}
@@ -166,13 +166,14 @@ public final class Solution {
 			String line = stdin.nextLine();
 			// split the line using space
 			String[] tokens = line.split(" ");
-			// based on the list operation invoke the corresponding method
+			// based on the list operation invoke the
+			// corresponding method
 			switch (tokens[0]) {
 			case "size":
 				System.out.println(s.size());
 				break;
 			case "contains":
-				System.out.println(s.contains(Integer.parseInt(tokens[1])));
+System.out.println(s.contains(Integer.parseInt(tokens[1])));
 				break;
 			case "print":
 				System.out.println(s);
@@ -208,7 +209,7 @@ public final class Solution {
 			// s.add(intArray);
 			// intArray = intArray(tokens[2]);
 			// t.add(intArray);
-			// System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+// System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
 			// break;
 			default:
 				break;
