@@ -92,7 +92,8 @@ class Set {
         return false;
     }
     /**
-     *
+     * @param set1 [which is a object]
+     * @return [ the set]
      */
     public Set intersection(final Set set1) {
         Set setres = new Set(set1.size);
@@ -120,6 +121,22 @@ class Set {
         }
         return setres;
     }
+
+
+    // public int[][] cartesianProduct(final Set items) {
+    //     if (size == 0) {
+    //         return null;
+    //     }
+    //     int arr[][] = new int [size][items.length];
+    //     for(int i = 0; i < size; i++) {
+    //         for(int j = 0; j < items.length; j++) {
+    //             arr[i][j] = [set[i], items[j]];
+    //         }
+
+    //     }
+    //     return arr;
+
+    // }
 
 }
 /**
@@ -203,15 +220,15 @@ System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
-            // case "cartesianProduct":
-            // s = new Set();
-            // t = new Set();
-            // intArray = intArray(tokens[1]);
-            // s.add(intArray);
-            // intArray = intArray(tokens[2]);
-            // t.add(intArray);
-// System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
-            // break;
+ //             case "cartesianProduct":
+ //             s = new Set();
+ //             t = new Set();
+ //             intArray = intArray(tokens[1]);
+ //             s.add(intArray);
+ //             intArray = intArray(tokens[2]);
+ //             t.add(intArray);
+ // System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+ //             break;
             default:
                 break;
             }
