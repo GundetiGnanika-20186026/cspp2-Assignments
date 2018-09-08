@@ -79,10 +79,10 @@ class Set {
 
     public Set intersection(final Set set1) {
     	Set setres = new Set(set1.size);
-    	for(int i = 0; i < set1.size; i++) {
-    		for (int j = 0; j < size ; j++) {
-    			if (set1.set[i] == set[j]) {
-                    setres.add(set[j]);
+    	for(int i = 0; i < size; i++) {
+    		for (int j = 0; j < set1.size ; j++) {
+    			if (set1.set[j] == set[i]) {
+                    setres.add(set[i]);
     			}
     		}
     	}
