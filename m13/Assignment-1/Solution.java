@@ -88,6 +88,15 @@ class Set {
     	}
     	return setres;
     }
+    public Set  retainAll(final int[] items) {
+    	Set setres = new Set(items.length);
+    	for(int i = 0; i < items.length; i++) {
+    		if(items[i] == set[i]) {
+    			setres.add(set[i]);
+    		}
+    	}
+    	return setres;
+    }
 
 }
 /**
@@ -163,13 +172,13 @@ public final class Solution {
                  t.add(intArray);
                  System.out.println(s.intersection(t));
                  break;
-                // case "retainAll":
-                // s = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // System.out.println(s.retainAll(intArray));
-                // break;
+                 case "retainAll":
+                 s = new Set();
+                 intArray = intArray(tokens[1]);
+                 s.add(intArray);
+                 intArray = intArray(tokens[2]);
+                 System.out.println(s.retainAll(intArray));
+                 break;
                 // case "cartesianProduct":
                 // s = new Set();
                 // t = new Set();
