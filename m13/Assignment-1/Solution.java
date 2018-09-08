@@ -1,37 +1,48 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
  * Class for set.
- * @author :
+ * @author :Gnanika.
  */
 class Set {
+	/**
+	 * set array.
+	 */
     private int[] set;
+    /**
+     * size declaration.
+     */
     private int size;
-
-
+    /**
+     * constructor.
+     */
     public Set() {
     	set = new int[10];
     	size = 0;
     }
+    /**
+     * @param capacity [parameterised constructor]
+    */
     public Set(int capacity) {
     	set = new int[capacity];
     	size = 0;
     }
-
-
+    /**
+     * @return size of the set
+     */
     public int size() {
     	return size;
     }
-
-
+    /**
+     * resize method.
+     */
     public void resize() {
        set = Arrays.copyOf(set, 2 * size);
     }
-
-
-
+    /**
+     * @param item [add method]
+     */
     public void add(final int item){
     	if (size == set.length){
     		resize();
@@ -45,16 +56,17 @@ class Set {
             set[size++] = item;
     	}
     }
-
-
+    /**
+     * @param items [adding array of items to set]
+     */
     public void add(final int[] items) {
     	for(int i = 0; i < items.length;i++){
     		add(items[i]);
     	}
     }
-
-
-
+    /**
+     * @return [string of set elements]
+     */
     public String toString() {
     	if(size == 0) {
     		return "{}";
@@ -65,9 +77,10 @@ class Set {
         }
         return res+set[size-1]+"}";
     }
-
-
-
+    /**
+     * @param item [the value]
+     * @return [boolean]
+     */
     public boolean contains(final int item) {
     	for(int i = 0; i < size; i++){
     		if (set[i] == item) {
@@ -76,7 +89,10 @@ class Set {
     	}
     	return false;
     }
-
+    /**
+     * @param Set1 [description]
+     * @return [a set]
+     */
     public Set intersection(final Set set1) {
     	Set setres = new Set(set1.size);
     	for(int i = 0; i < size; i++) {
@@ -88,6 +104,10 @@ class Set {
     	}
     	return setres;
     }
+    /**
+     * @param items [description]
+     * @return [set]
+     */
     public Set  retainAll(final int[] items) {
     	Set setres = new Set(items.length);
     	for(int i = 0; i < size; i++) {
