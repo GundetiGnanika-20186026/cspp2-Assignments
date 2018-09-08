@@ -90,7 +90,7 @@ class Set {
     }
     public Set  retainAll(final int[] items) {
     	Set setres = new Set(items.length);
-    	for(int i = 0; i < items.length; i++) {
+    	for(int i = 0; i < size; i++) {
     		if(items[i] == set[i]) {
     			setres.add(set[i]);
     		}
