@@ -15,6 +15,10 @@ class Set {
     	set = new int[10];
     	size = 0;
     }
+    public Set(int capacity) {
+    	set = new int[capacity];
+    	size = 0;
+    }
 
 
     public int size() {
@@ -71,6 +75,18 @@ class Set {
     		}
     	}
     	return false;
+    }
+
+    public Set intersection(final Set set1) {
+    	Set setres = new Set(set1.size);
+    	for(int i = 0; i < set1.size; i++) {
+    		for (int j = 0; j < size ; j++) {
+    			if (set1.set[i] == set[j]) {
+                    setres.add(set[j]);
+    			}
+    		}
+    	}
+    	return setres;
     }
 
 }
@@ -138,15 +154,15 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(s.intersection(t));
-                // break;
+                 case "intersection":
+                 s = new Set();
+                 Set t = new Set();
+                 intArray = intArray(tokens[1]);
+                 s.add(intArray);
+                 intArray = intArray(tokens[2]);
+                 t.add(intArray);
+                 System.out.println(s.intersection(t));
+                 break;
                 // case "retainAll":
                 // s = new Set();
                 // intArray = intArray(tokens[1]);
