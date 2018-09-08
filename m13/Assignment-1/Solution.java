@@ -92,8 +92,7 @@ class Set {
         return false;
     }
     /**
-     * @param Set1 [description]
-     * @return [description]
+     *
      */
     public Set intersection(final Set set1) {
         Set setres = new Set(set1.size);
