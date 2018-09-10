@@ -22,7 +22,7 @@ class Sortedset extends Set {
         }
     }
     /**
-     * Function to get the elements from start to  given to element
+     * Function to get the elements from start to  given to element.
      * @param  toelement  The toelement
      * @return Set of elements .
      */
