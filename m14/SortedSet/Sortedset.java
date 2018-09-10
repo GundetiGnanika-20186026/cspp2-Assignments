@@ -5,11 +5,11 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * @author : Gnanika
+ * @author : Gnanika.
  */
 class Sortedset extends Set {
     /**
-     * Function to find the last element in the set
+     * Function to find the last element in the set.
      *
      * @return  item in the set
      */
@@ -24,7 +24,7 @@ class Sortedset extends Set {
     /**
      * Function to get the elements from start to  given to element
      * @param  toelement  The toelement
-     * @return Set of elements upto the required element that is passed as
+     * @return Set of elements .
      */
     public int[] headset(final int toelement) {
         return subSet(get(0), toelement);
