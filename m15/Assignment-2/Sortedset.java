@@ -7,6 +7,12 @@ import java.util.Arrays;
 /**
  * @author : Gnanika
  */
+class SetEmptyException extends Exception {
+    SetEmptyException(String s) {
+        super(s);
+    }
+}
+
 class Sortedset extends Set {
     /**
      * Function to find the last element in the set
@@ -30,8 +36,14 @@ class Sortedset extends Set {
      * @return Set of elements upto the required element that is passed as
      */
 
-    public int[] headset(final int toelement) {
-        return subSet(get(0), toelement);
+    public int[] headset(final int toelement) throws SetEmptyException {
+        //return subSet(get(0), toelement);
+        int[] arr = subSet(get(0), toelement);
+         if(arr.length == 0){
+            throw new SetEmptyException("Set Empty Exception");
+         } else {
+            return subSet(get(0), toelement);
+         }
     }
 
     /**
@@ -141,11 +153,15 @@ class Sortedset extends Set {
                 }
                 break;
             case "headSet":
+                try {
                 int[] headarray = s.headset(Integer.parseInt(tokens[1]));
                 Sortedset headset = new Sortedset();
                 headset.add(headarray);
                 if (headset != null) {
                     System.out.println(headset);
+                }
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
                 break;
             case "last":
