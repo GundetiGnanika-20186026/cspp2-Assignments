@@ -163,7 +163,7 @@ public class List {
      *
      */
     /**
-     * @param int [description]
+     * @param index [description]
      * @throws Exception[description]
      */
     public void remove(final int index) throws Exception {
@@ -289,7 +289,7 @@ public class List {
     */
 
     /**
-     * @param int [description]
+     * @param item [description]
      * @throws Exception [exception decription]
      */
     public void removeAll(final int[] item) throws Exception {
@@ -312,8 +312,8 @@ public class List {
     and also if start is greater than end.
     */
     /**
-     * @param int [description]
-     * @param int [description]
+     * @param start [description]
+     * @param end [description]
      * @return [description]
      * @throws Exception[description]
      */
