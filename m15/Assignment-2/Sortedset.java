@@ -43,8 +43,7 @@ class Sortedset extends Set {
 
     public int[] headset(final int toelement) throws SetEmptyException, InvalidSubsetSelectionException {
         //return subSet(get(0), toelement);
-        int[] arr = subSet(get(0), toelement);
-        if (arr.length == 0) {
+        if (toelement <= this.get(0)) {
             throw new SetEmptyException("Set Empty Exception");
         } else {
             return subSet(get(0), toelement);
