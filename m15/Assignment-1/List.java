@@ -330,7 +330,7 @@ public class List {
         return new1;
     }
     } catch(Exception e) {
-        System.out.println("Index Out Of Bounds Exception");
+        System.out.println("Index Out of Bounds Exception");
         return null;
     }
 
