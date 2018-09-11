@@ -169,7 +169,7 @@ public class List {
             }
             list[size - 1] = 0;
             size--;
-            //throw new InvalidPositionException("Invalid Position Exception");
+            throw new InvalidPositionException("Invalid Position Exception");
         }
           catch (Exception e) {
 
