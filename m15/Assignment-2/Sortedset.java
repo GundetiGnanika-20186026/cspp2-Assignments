@@ -19,7 +19,7 @@ class SetEmptyException extends Exception {
  * Exception for signaling invalid subset selection errors.
  */
 class InvalidSubsetSelectionException extends Exception {
-    InvalidSubsetSelectionException(String s) {
+    InvalidSubsetSelectionException(final String s) {
         super(s);
     }
 }
@@ -46,7 +46,7 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      toelement                        The toelement
      *
