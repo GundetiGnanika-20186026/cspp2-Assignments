@@ -386,7 +386,7 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
      * @param item [description]
      * @return [description]
      */
-    public int count(int item) {
+    public int count(final int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
             if (list[i] == item) {
@@ -506,4 +506,5 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
         }
     }
 }
+
 
