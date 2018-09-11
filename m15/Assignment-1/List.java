@@ -163,20 +163,19 @@ public class List {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         try {
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
+            if (index >= 0 && index < size) {
+                for (int i = index; i < size - 1; i++) {
+                    list[i] = list[i + 1];
+                }
+                list[size - 1] = 0;
+                size--;
+            } else {
+                throw new InvalidPositionException("Invalid Position Exception");
             }
-            list[size - 1] = 0;
-            size--;
-        } else {
-            throw new InvalidPositionException("Invalid Position Exception");
-           }
-        }
-          catch (Exception e) {
+        } catch (Exception e) {
 
             System.out.println("Invalid Position Exception");
-         }
+        }
     }
 
     /*
@@ -270,13 +269,13 @@ public class List {
      */
     public void addAll(final int[] items) {
         if (items.length < (list.length - size)) {
-              for (int i : items) {
-            list[size++] = i;
-         }
-         }
-         // for (int i = 0; i < items.length; i++) {
-         //    list[size] = items[i];
-         //    size++;
+            for (int i : items) {
+                list[size++] = i;
+            }
+        }
+        // for (int i = 0; i < items.length; i++) {
+        //    list[size] = items[i];
+        //    size++;
 
         resize();
     }
@@ -317,24 +316,24 @@ public class List {
         //List new1 = new List(end - start);
         try {
 
-        if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
-            throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
+            if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
+                throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
+            }
+
+            else {
+
+                List new1 = new List();
+                for (int i = start; i < end; i++) {
+                    new1.add(list[i]);
+                }
+                return new1;
+            }
+        } catch (Exception e) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
         }
 
-        else {
-
-        List new1 = new List();
-        for (int i = start; i < end; i++) {
-            new1.add(list[i]);
-        }
-        return new1;
     }
-    } catch(Exception e) {
-        System.out.println("Index Out of Bounds Exception");
-        return null;
-    }
-
-}
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
