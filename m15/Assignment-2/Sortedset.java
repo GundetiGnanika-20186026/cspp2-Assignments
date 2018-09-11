@@ -17,7 +17,12 @@ import java.util.Arrays;
  * Exception for signaling set empty errors.
  */
 class SetEmptyException extends Exception {
-    SetEmptyException(String s) {
+    /**
+     * Constructs the object.
+     *
+     * @param      s     { parameter_description }
+     */
+    SetEmptyException(final String s) {
         super(s);
     }
 }
@@ -25,6 +30,11 @@ class SetEmptyException extends Exception {
  * Exception for signaling invalid subset selection errors.
  */
 class InvalidSubsetSelectionException extends Exception {
+   /**
+    * Constructs the object.
+    *
+    * @param      s     { parameter_description }
+    */
     InvalidSubsetSelectionException(final String s) {
         super(s);
     }
