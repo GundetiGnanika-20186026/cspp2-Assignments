@@ -170,15 +170,15 @@ class Sortedset extends Set {
                     System.out.println(e.getMessage());
                 }
                 break;
-            // case "intersection":
-            //     s = new Sortedset();
-            //     Sortedset t = new Sortedset();
-            //     intArray = intArray(tokens[1]);
-            //     s.add(intArray);
-            //     intArray = intArray(tokens[2]);
-            //     t.add(intArray);
-            //     System.out.println(s.intersection(t));
-            //     break;
+            case "intersection":
+                s = new Sortedset();
+                 Sortedset t = new Sortedset();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                 intArray = intArray(tokens[2]);
+                 t.add(intArray);
+                 System.out.println(s.intersection(t));
+                 break;
             default:
                 break;
             }
