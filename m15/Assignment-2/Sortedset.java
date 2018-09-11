@@ -72,7 +72,7 @@ class Sortedset extends Set {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      fromelement                      The fromelement
      * @param      toelement                        The toelement
