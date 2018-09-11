@@ -363,6 +363,19 @@ public class List {
         size = 0;
     }
     /**
+     * @param item [description]
+     * @return [description]
+     */
+    public int count(int item) {
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (list[i] == item) {
+                count1 += 1;
+            }
+        }
+        return count1;
+    }
+    /**
      * @param args [description]
      */
     public static void main(final String[] args) {
@@ -401,6 +414,12 @@ public class List {
             case "indexOf":
                 if (tokens.length == 2) {
                     System.out.println(l.indexOf(
+                                           Integer.parseInt(tokens[1])));
+                }
+                break;
+            case "count":
+                if (tokens.length == 2) {
+                    System.out.println(l.count(
                                            Integer.parseInt(tokens[1])));
                 }
                 break;
