@@ -4,6 +4,11 @@ import java.util.Arrays;
 /**
  * list class.
  */
+class InvalidPositionException extends Exception {
+    InvalidPositionException(String s) {
+        super(s);
+    }
+}
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
@@ -157,17 +162,19 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try{
-       // if (index >= 0 && index < size) {
+         try {
+        //if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             list[size - 1] = 0;
             size--;
-        //}
-        } catch(Exception e){
-            System.out.println("Invalid Position Exception");
+            //throw new InvalidPositionException("Invalid Position Exception");
         }
+          catch (Exception e) {
+
+            System.out.println("Invalid Position Exception");
+         }
     }
 
     /*
