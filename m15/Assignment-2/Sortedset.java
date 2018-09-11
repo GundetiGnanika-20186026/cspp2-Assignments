@@ -85,8 +85,8 @@ class Sortedset extends Set {
     public int[] subSet(final int fromelement, final int toelement)
     throws InvalidSubsetSelectionException {
         if (fromelement > toelement) {
-            throw new InvalidSubsetSelectionException
-            ("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException(
+            "Invalid Arguments to Subset Exception");
         }
         int fromindex = getIndex(fromelement);
         int toindex = getIndex(toelement);
