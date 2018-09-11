@@ -173,7 +173,7 @@ public class List {
                 list[size - 1] = 0;
                 size--;
             } else {
-                throw new InvalidPositionException("Invalid Position Exception");
+throw new InvalidPositionException("Invalid Position Exception");
             }
         } catch (Exception e) {
 
@@ -319,11 +319,9 @@ public class List {
         //List new1 = new List(end - start);
         try {
 
-            if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
-                throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
-            }
-
-            else {
+if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
+throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
+            } else {
 
                 List new1 = new List();
                 for (int i = start; i < end; i++) {
