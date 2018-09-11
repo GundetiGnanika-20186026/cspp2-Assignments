@@ -164,7 +164,7 @@ public class List {
      */
     /**
      * @param index [description]
-     * @throws Exception[description]
+     * @throws Exception [description].
      */
     public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
