@@ -5,6 +5,9 @@ import java.util.Arrays;
  * list class.
  */
 class InvalidPositionException extends Exception {
+    /**
+     * @param s [description]
+     */
     InvalidPositionException(final String s) {
         super(s);
     }
@@ -162,10 +165,10 @@ public class List {
     /**
      * @param index [description]
      */
-    public void remove(final int index) {
+    public void remove(final int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try {
+
             if (index >= 0 && index < size) {
                 for (int i = index; i < size - 1; i++) {
                     list[i] = list[i + 1];
@@ -173,13 +176,10 @@ public class List {
                 list[size - 1] = 0;
                 size--;
             } else {
-throw new InvalidPositionException("Invalid Position Exception");
+                throw new Exception("Invalid Position Exception");
             }
-        } catch (Exception e) {
-
-            System.out.println("Invalid Position Exception");
         }
-    }
+
 
     /*
      * Get method has to return the items that is at the index position passed
@@ -289,7 +289,7 @@ throw new InvalidPositionException("Invalid Position Exception");
     /**
      * @param item [description]
      */
-    public void removeAll(final int[] item) {
+    public void removeAll(final int[] item) throws Exception {
         for (int i = 0; i < size; i++) {
             for (int j = 0; j < item.length; j++) {
                 if (list[i] == item[j]) {
@@ -313,15 +313,14 @@ throw new InvalidPositionException("Invalid Position Exception");
      * @param end [description]
      * @return [description]
      */
-    public List subList(final int start, final int end) {
+    public List subList(final int start, final int end) throws Exception {
 
 
         //List new1 = new List(end - start);
-        try {
 
-if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
-throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
-            } else {
+        if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
+                 throw new Exception("Index Out of Bounds Exception");
+        } else {
 
                 List new1 = new List();
                 for (int i = start; i < end; i++) {
@@ -329,12 +328,7 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
                 }
                 return new1;
             }
-        } catch (Exception e) {
-            System.out.println("Index Out of Bounds Exception");
-            return null;
         }
-
-    }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
@@ -427,8 +421,12 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
                 System.out.println(l);
                 break;
             case "remove":
+                try {
                 if (tokens.length == 2) {
                     l.remove(Integer.parseInt(tokens[1]));
+                }
+                }catch(Exception e){
+                    System.out.println(e.getMessage());
                 }
                 break;
             case "indexOf":
@@ -466,6 +464,7 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
                 }
                 break;
             case "removeAll":
+                try {
                 if (tokens.length == 2) {
                     String[] t2 = tokens[1].split(",");
                     int[] a = new int[t2.length];
@@ -474,8 +473,13 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
                     }
                     l.removeAll(a);
                 }
+            } catch(Exception e) {
+                System.out.println(e.getMessage());
+              }
                 break;
+
             case "subList":
+                try {
                 if (tokens.length != 2) {
                     break;
                 }
@@ -484,6 +488,9 @@ throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
                                         Integer.parseInt(arrstring3[1]));
                 if (object != null) {
                     System.out.println(object);
+                }
+                } catch(Exception e) {
+                    System.out.println(e.getMessage());
                 }
                 break;
 
