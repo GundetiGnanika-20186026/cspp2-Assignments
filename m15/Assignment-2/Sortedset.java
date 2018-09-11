@@ -63,7 +63,7 @@ class Sortedset extends Set {
      */
 
     public int[] headset(final int toelement) throws SetEmptyException,
-    InvalidSubsetSelectionException {
+        InvalidSubsetSelectionException {
         //return subSet(get(0), toelement);
         if (toelement <= this.get(0)) {
             throw new SetEmptyException("Set Empty Exception");
@@ -82,10 +82,11 @@ class Sortedset extends Set {
      * @throws  InvalidSubsetSelectionException  { exception_description }
      */
 
-public int[] subSet(final int fromelement, final int toelement)
- throws InvalidSubsetSelectionException {
+    public int[] subSet(final int fromelement, final int toelement)
+    throws InvalidSubsetSelectionException {
         if (fromelement > toelement) {
-throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+            throw new InvalidSubsetSelectionException
+            ("Invalid Arguments to Subset Exception");
         }
         int fromindex = getIndex(fromelement);
         int toindex = getIndex(toelement);
