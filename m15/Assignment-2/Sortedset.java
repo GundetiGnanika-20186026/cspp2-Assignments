@@ -179,6 +179,13 @@ class Sortedset extends Set {
                  t.add(intArray);
                  System.out.println(s.intersection(t));
                  break;
+            case "retainAll":
+                s = new Sortedset();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
             default:
                 break;
             }
