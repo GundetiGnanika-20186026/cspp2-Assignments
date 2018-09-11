@@ -162,14 +162,17 @@ public class List {
     public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-         try {
-        //if (index >= 0 && index < size) {
+        try {
+        if (index >= 0 && index < size) {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i + 1];
             }
             list[size - 1] = 0;
             size--;
-            //throw new InvalidPositionException("Invalid Position Exception");
+        } else {
+            throw new InvalidPositionException("Invalid Position Exception");
+
+        }
         }
           catch (Exception e) {
 
