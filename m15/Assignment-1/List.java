@@ -5,10 +5,13 @@ import java.util.Arrays;
  * list class.
  */
 class InvalidPositionException extends Exception {
-    InvalidPositionException(String s) {
+    InvalidPositionException(final String s) {
         super(s);
     }
 }
+/**
+ * new class.
+ */
 public class List {
     //Implement all the methods mentioned to build a ListADT
 
