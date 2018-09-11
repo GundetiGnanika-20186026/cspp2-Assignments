@@ -171,8 +171,7 @@ public class List {
             size--;
         } else {
             throw new InvalidPositionException("Invalid Position Exception");
-
-        }
+           }
         }
           catch (Exception e) {
 
@@ -313,18 +312,27 @@ public class List {
      * @return [description]
      */
     public List subList(final int start, final int end) {
-        if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
-            System.out.println("Index Out of Bounds Exception");
-             return null;
-         }
+
 
         //List new1 = new List(end - start);
+        try {
+
+        if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
+            throw new InvalidPositionException("Index Out of Bounds Exception");
+        }
+
+        else {
 
         List new1 = new List();
         for (int i = start; i < end; i++) {
             new1.add(list[i]);
         }
         return new1;
+    }
+    } catch(Exception e) {
+        System.out.println("Index Out Of Bounds Exception");
+        return null;
+    }
 
     }
     /*
