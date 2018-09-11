@@ -334,7 +334,7 @@ public class List {
         return null;
     }
 
-    }
+}
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
