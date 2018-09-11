@@ -3,11 +3,11 @@
  */
 import java.io.BufferedInputStream;
 /**
- * { item_description }
+ * { taking input package }
  */
 import java.util.Scanner;
 /**
- * { item_description }
+ * { importing arrays }
  */
 import java.util.Arrays;
 /**
