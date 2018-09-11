@@ -22,10 +22,9 @@ class Sortedset extends Set {
     public Sortedset() {
         super();
     }
-    public int last() {
+    public int last() throws SetEmptyException {
         if (size() == 0) {
-            System.out.println("Set Empty Exception");
-            return -1;
+            throw new SetEmptyException("Set Empty Exception");
         } else {
             return get(size() - 1);
         }
@@ -165,7 +164,11 @@ class Sortedset extends Set {
                 }
                 break;
             case "last":
+                try {
                 System.out.println(s.last());
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
             // case "intersection":
             //     s = new Sortedset();
