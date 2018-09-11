@@ -23,9 +23,7 @@ class InvalidSubsetSelectionException extends Exception {
  */
 class Sortedset extends Set {
     /**
-     * Function to find the last element in the set
-     *
-     * @return  item in the set
+     * Function to find the last element in the set.
      */
     public Sortedset() {
         super();
@@ -43,9 +41,14 @@ class Sortedset extends Set {
         }
     }
     /**
-     * Function to get the elements from start to  given to element
-     * @param  toelement  The toelement
-     * @return Set of elements upto the required element that is passed as
+     * { function_description }
+     *
+     * @param      toelement                        The toelement
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException                { exception_description }
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
 
     public int[] headset(final int toelement) throws SetEmptyException,
@@ -57,11 +60,15 @@ class Sortedset extends Set {
             return subSet(get(0), toelement);
         }
     }
-
     /**
-     * @param  fromelement  The fromelement
-     * @param  toelement    The toelement
-     * @return  integer array
+     * { function_description }
+     *
+     * @param      fromelement                      The fromelement
+     * @param      toelement                        The toelement
+     *
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     InvalidSubsetSelectionException  { exception_description }
      */
 
 public int[] subSet(final int fromelement, final int toelement) throws InvalidSubsetSelectionException {
