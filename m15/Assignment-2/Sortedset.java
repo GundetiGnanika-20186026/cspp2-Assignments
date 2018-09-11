@@ -18,7 +18,9 @@ class InvalidSubsetSelectionException extends Exception {
         super(s);
     }
 }
-
+/**
+ * Class for sortedset.
+ */
 class Sortedset extends Set {
     /**
      * Function to find the last element in the set
@@ -28,6 +30,11 @@ class Sortedset extends Set {
     public Sortedset() {
         super();
     }
+    /**
+     * @return     { description_of_the_return_value }
+     *
+     * @throws     SetEmptyException  { exception_description }
+     */
     public int last() throws SetEmptyException {
         if (size() == 0) {
             throw new SetEmptyException("Set Empty Exception");
@@ -41,7 +48,8 @@ class Sortedset extends Set {
      * @return Set of elements upto the required element that is passed as
      */
 
-    public int[] headset(final int toelement) throws SetEmptyException, InvalidSubsetSelectionException {
+    public int[] headset(final int toelement) throws SetEmptyException,
+    InvalidSubsetSelectionException {
         //return subSet(get(0), toelement);
         if (toelement <= this.get(0)) {
             throw new SetEmptyException("Set Empty Exception");
@@ -56,9 +64,9 @@ class Sortedset extends Set {
      * @return  integer array
      */
 
-    public int[] subSet(final int fromelement, final int toelement) throws InvalidSubsetSelectionException {
+public int[] subSet(final int fromelement, final int toelement) throws InvalidSubsetSelectionException {
         if (fromelement > toelement) {
-            throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
+throw new InvalidSubsetSelectionException("Invalid Arguments to Subset Exception");
         }
         int fromindex = getIndex(fromelement);
         int toindex = getIndex(toelement);
@@ -148,7 +156,7 @@ class Sortedset extends Set {
                     String[] arrstring = tokens[1].split(",");
                     // if (Integer.parseInt(arrstring[0])
                     //       > Integer.parseInt(arrstring[1])) {
-                    //     //System.out.println("Invalid Arguments to Subset Exception");
+//     //System.out.println("Invalid Arguments to Subset Exception");
                     // } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
                                               Integer.parseInt(arrstring[1]));
