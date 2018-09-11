@@ -13,6 +13,12 @@ class SetEmptyException extends Exception {
     }
 }
 
+class InvalidSubsetSelectionException extends Exception {
+    InvalidSubsetSelectionException(String s) {
+        super(s);
+    }
+}
+
 class Sortedset extends Set {
     /**
      * Function to find the last element in the set
@@ -35,14 +41,14 @@ class Sortedset extends Set {
      * @return Set of elements upto the required element that is passed as
      */
 
-    public int[] headset(final int toelement) throws SetEmptyException {
+    public int[] headset(final int toelement) throws SetEmptyException, InvalidSubsetSelectionException {
         //return subSet(get(0), toelement);
         int[] arr = subSet(get(0), toelement);
-         if(arr.length == 0){
+        if (arr.length == 0) {
             throw new SetEmptyException("Set Empty Exception");
-         } else {
+        } else {
             return subSet(get(0), toelement);
-         }
+        }
     }
 
     /**
@@ -51,14 +57,16 @@ class Sortedset extends Set {
      * @return  integer array
      */
 
-    public int[] subSet(final int fromelement, final int toelement) {
-
+    public int[] subSet(final int fromelement, final int toelement) throws InvalidSubsetSelectionException {
+        if (fromelement > toelement) {
+            throw new InvalidSubsetSelectionException("Invalid Subset Selection Exception");
+        }
         int fromindex = getIndex(fromelement);
         int toindex = getIndex(toelement);
         int[] subset = new int[toindex - fromindex];
         int k = 0;
         for (int i = fromindex; i < toindex; i++) {
-                subset[k++] = this.get(i);
+            subset[k++] = this.get(i);
         }
         return subset;
     }
@@ -99,8 +107,8 @@ class Sortedset extends Set {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
 
     /**
@@ -123,7 +131,7 @@ class Sortedset extends Set {
                 break;
             case "contains":
                 System.out.println(s.
-                    contains(Integer.parseInt(tokens[1])));
+                                   contains(Integer.parseInt(tokens[1])));
                 break;
             case "print":
                 System.out.println(s);
@@ -137,48 +145,52 @@ class Sortedset extends Set {
                 }
                 break;
             case "subSet":
-                String[] arrstring = tokens[1].split(",");
-                if (Integer.parseInt(arrstring[0])
-                      > Integer.parseInt(arrstring[1])) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                } else {
+                try {
+                    String[] arrstring = tokens[1].split(",");
+                    // if (Integer.parseInt(arrstring[0])
+                    //       > Integer.parseInt(arrstring[1])) {
+                    //     //System.out.println("Invalid Arguments to Subset Exception");
+                    // } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
-                            Integer.parseInt(arrstring[1]));
+                                              Integer.parseInt(arrstring[1]));
                     Sortedset subset = new Sortedset();
                     subset.add(subarray);
                     if (subset != null) {
                         System.out.println(subset);
                     }
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
                 }
+
                 break;
             case "headSet":
                 try {
-                int[] headarray = s.headset(Integer.parseInt(tokens[1]));
-                Sortedset headset = new Sortedset();
-                headset.add(headarray);
-                if (headset != null) {
-                    System.out.println(headset);
-                }
+                    int[] headarray = s.headset(Integer.parseInt(tokens[1]));
+                    Sortedset headset = new Sortedset();
+                    headset.add(headarray);
+                    if (headset != null) {
+                        System.out.println(headset);
+                    }
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
             case "last":
                 try {
-                System.out.println(s.last());
+                    System.out.println(s.last());
                 } catch (Exception e) {
                     System.out.println(e.getMessage());
                 }
                 break;
             case "intersection":
                 s = new Sortedset();
-                 Sortedset t = new Sortedset();
+                Sortedset t = new Sortedset();
                 intArray = intArray(tokens[1]);
                 s.add(intArray);
-                 intArray = intArray(tokens[2]);
-                 t.add(intArray);
-                 System.out.println(s.intersection(t));
-                 break;
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
             case "retainAll":
                 s = new Sortedset();
                 intArray = intArray(tokens[1]);
@@ -192,3 +204,5 @@ class Sortedset extends Set {
         }
     }
 }
+
+
