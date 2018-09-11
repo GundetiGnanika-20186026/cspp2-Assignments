@@ -7,12 +7,17 @@ import java.util.Arrays;
 /**
  * @author : Gnanika
  */
+/**
+ * Exception for signaling set empty errors.
+ */
 class SetEmptyException extends Exception {
     SetEmptyException(String s) {
         super(s);
     }
 }
-
+/**
+ * Exception for signaling invalid subset selection errors.
+ */
 class InvalidSubsetSelectionException extends Exception {
     InvalidSubsetSelectionException(String s) {
         super(s);
