@@ -46,7 +46,7 @@ class Sortedset extends Set {
     /**
      * Function to find the last element in the set.
      */
-    public Sortedset() {
+    Sortedset() {
         super();
     }
     /**
