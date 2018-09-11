@@ -318,7 +318,7 @@ public class List {
         try {
 
         if (start < 0 || end < 0 || start > end || size == 0 || end > size) {
-            throw new InvalidPositionException("Index Out of Bounds Exception");
+            throw new IndexOutOfBoundsException("Index Out of Bounds Exception");
         }
 
         else {
