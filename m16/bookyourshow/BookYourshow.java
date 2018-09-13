@@ -13,12 +13,13 @@ public class BookYourshow {
     }
 	public Show getAShow(final String argmoviename,final String argdatetime) {
 		for(int i = 0; i < size; i++) {
-		 if(showslist[i] != null) {
+		if(showslist[i] != null) {
            if (showslist[i].moviename.equals(argmoviename)&&showslist[i].dateandTime.equals(argdatetime)) {
            	return showslist[i];
            }
        }
-		}
+   }
+
 		return null;
     }
     public void bookAShow(String argmoviename,String argdatetime,Patron obj,String[] argseats) {
@@ -60,8 +61,10 @@ public class BookYourshow {
 	}
 	public void showAll(){
 		for(Show s:showslist) {
+			if(s != null) {
 
 		}
+	}
 
 	}
 
