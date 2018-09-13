@@ -46,9 +46,10 @@ public class BookYourshow {
     	if(showslist[i] != null) {
            if (showslist[i].moviename.equals(argmoviename)&&showslist[i].dateandTime.equals(argdatetime)) {
                for(int j =0;j<showslist[i].booked.length;j++) {
+               	if(showslist[i].booked[j] != null) {
                	if(showslist[i].booked[j].mobile.equals(mobilenum)) {
                		res = true;
-
+                 }
                	}
                }
 
