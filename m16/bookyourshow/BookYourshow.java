@@ -57,7 +57,7 @@ public class BookYourshow {
        }
        }
        if(res){
-       	System.out.println("");
+       	System.out.println(mobilenum+" "+argmoviename+" "+argdatetime);
        }
 	}
 	public void showAll(){
