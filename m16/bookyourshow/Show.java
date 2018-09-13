@@ -9,8 +9,8 @@ public class Show {
 		seats = argseats;
 		booked = new Patron[argseats.length];
 	}
-	public String toString(){
-		return moviename+","+dateandTime;
+	public String toString() {
+		return moviename + "," + dateandTime;
 	}
 
 
