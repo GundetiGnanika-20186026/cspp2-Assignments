@@ -33,15 +33,15 @@ public final class Solution {
                     bys.addAShow(new Show(check[1], tokens[1], seats));
                 break;
 
-                // case "book":
-                //     k = 2 + 2;
-                //     seats = new String[tokens.length - 2 - 2];
-                //     for (int j = 0; j < seats.length; j++) {
-                //         seats[j] = tokens[k++];
-                //     }
-                //     bys.bookAShow(check[1], tokens[1],
-                //         new Patron(tokens[2], tokens[2 + 1]), seats);
-                // break;
+                case "book":
+                    k = 2 + 2;
+                    seats = new String[tokens.length - 2 - 2];
+                    for (int j = 0; j < seats.length; j++) {
+                        seats[j] = tokens[k++];
+                    }
+                    bys.bookAShow(check[1], tokens[1],
+                        new Patron(tokens[2], tokens[2 + 1]), seats);
+                break;
 
                 case "get":
                     Show show = bys.getAShow(check[1], tokens[1]);
@@ -52,13 +52,13 @@ public final class Solution {
                     }
                 break;
 
-                // case "print":
-                //     bys.printTicket(check[1], tokens[1], tokens[2]);
-                // break;
+                case "print":
+                    bys.printTicket(check[1], tokens[1], tokens[2]);
+                break;
 
-                // case "showAll":
-                //     bys.showAll();
-                // break;
+                case "showAll":
+                    bys.showAll();
+                break;
 
                 default:
                 break;
