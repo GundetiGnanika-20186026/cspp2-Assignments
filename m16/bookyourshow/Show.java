@@ -7,6 +7,9 @@ public class Show {
 		dateandTime = argdateandTime;
 		seats = argseats;
 	}
+	public String toString(){
+		return moviename+","+dateandTime;
+	}
 
 
 

@@ -11,9 +11,9 @@ public class BookYourshow {
 		size++;
 
     }
-	public Show getAShow(final String moviename,final String datetime) {
+	public Show getAShow(final String argmoviename,final String argdatetime) {
 		for(int i = 0; i < size; i++) {
-           if (showslist[i].moviename.equals(moviename)&&showslist[i].dateandTime.equals(datetime)) {
+           if (showslist[i].moviename.equals(argmoviename)&&showslist[i].dateandTime.equals(argdatetime)) {
            	return showslist[i];
            }
 		}
