@@ -27,6 +27,9 @@ public class BookYourshow {
         	System.out.println("No show");
         	return;
         }
+        if (getAShow(argmoviename,argdatetime) == null){
+        	System.out.println("No show");
+        }
         for(int i = 0; i < size; i++) {
         if(showslist[i] != null) {
            if (showslist[i].moviename.equals(argmoviename)&&showslist[i].dateandTime.equals(argdatetime)) {
