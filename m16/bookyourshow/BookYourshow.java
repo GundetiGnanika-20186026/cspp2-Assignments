@@ -23,6 +23,9 @@ public class BookYourshow {
 		return null;
     }
     public void bookAShow(String argmoviename,String argdatetime,Patron obj,String[] argseats) {
+        if(size == 0) {
+        	System.out.println("No show");
+        }
         for(int i = 0; i < size; i++) {
         if(showslist[i] != null) {
            if (showslist[i].moviename.equals(argmoviename)&&showslist[i].dateandTime.equals(argdatetime)) {
