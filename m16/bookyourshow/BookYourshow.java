@@ -58,6 +58,8 @@ public class BookYourshow {
        }
        if(res){
        	System.out.println(mobilenum+" "+argmoviename+" "+argdatetime);
+       } else {
+       	System.out.println("invalid");
        }
 	}
 	public void showAll(){
