@@ -46,10 +46,10 @@ class Solution {
 				break;
 
 			case "totalAmount":
-				System.out.println("totalAmount: " + obj.getTotalAmount());
+	System.out.println("totalAmount: " + obj.getTotalAmount());
 				break;
 			case "payableAmount":
-				System.out.println("Payable amount: " + obj.getPayableAmount());
+	System.out.println("Payable amount: " + obj.getPayableAmount());
 				break;
 			case "print":
 				obj.printInvoice();
