@@ -1,9 +1,9 @@
 import java.util.Scanner;
 class Item {
 	String productname;
-	double quantity;
+	int quantity;
 	double unitprice;
-	Item(String pname,double qmeasure,double umoney) {
+	Item(String pname,int qmeasure,double umoney) {
        this.productname = pname;
        this.quantity = qmeasure;
        this.unitprice = umoney;
@@ -63,7 +63,7 @@ class Solution {
         	switch(tokens[0]){
         		case "Item":
         		String[] items = tokens[1].split(",");
-        		Item itemobj = new Item(items[0],Double.parseDouble(items[1]),Double.parseDouble(items[2]));
+        		Item itemobj = new Item(items[0],Integer.parseInt(items[1]),Double.parseDouble(items[2]));
         		obj.addToCatalog(itemobj);
         		case "catalog":
         		obj.catalog();
