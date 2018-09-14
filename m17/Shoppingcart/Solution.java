@@ -44,6 +44,12 @@ class Shoppingcart {
 	// public double getPayableAmount(){
 
 	// }
+	public void catalog(){
+		for(int i = 0; i < sizecatalog; i++){
+			System.out.println(catalogarray[i]);
+		}
+	}
+
 }
 class Solution {
 	Solution() {
@@ -59,7 +65,10 @@ class Solution {
         		String[] items = tokens[1].split(",");
         		Item itemobj = new Item(items[0],Double.parseDouble(items[1]),Double.parseDouble(items[2]));
         		obj.addToCatalog(itemobj);
+        		case "catalog":
+
         		default:
+
 
         	}
         }
