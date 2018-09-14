@@ -46,7 +46,7 @@ class Shoppingcart {
 	// }
 	public void catalog(){
 		for(int i = 0; i < sizecatalog; i++){
-			System.out.println(catalogarray[i]);
+			System.out.println(catalogarray[i].productname+" "+catalogarray[i].quantity+" "+catalogarray[i].unitprice);
 		}
 	}
 
