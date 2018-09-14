@@ -14,8 +14,8 @@ class Item {
 		this.quantity = Integer.parseInt(qmeasure);
 	}
 
-	public boolean equals(Item other){
-		if(this.productname.equals(other.productname)){
+	public boolean equals(Item other) {
+		if (this.productname.equals(other.productname)) {
 			return true;
 
 		}
@@ -46,17 +46,17 @@ class Shoppingcart {
 	}
 
 	public void addTOCart(Item item) {
-        if(!incart(item)){
-		if (checkcatalog(item)) {
-			cartarray[sizecart++] = item;
+		if (!incart(item)) {
+			if (checkcatalog(item)) {
+				cartarray[sizecart++] = item;
+			}
 		}
-	  }
 	}
 	boolean incart(Item item) {
-		for(Item s:cartarray){
-			if(s!=null){
-				if(s.equals(item)){
-					s.quantity = s.quantity+item.quantity;
+		for (Item s : cartarray) {
+			if (s != null) {
+				if (s.equals(item)) {
+					s.quantity = s.quantity + item.quantity;
 					return true;
 				}
 			}
@@ -84,9 +84,9 @@ class Shoppingcart {
 
 
 	public void removeFromCart(Item item) {
-		for(int i = 0;i<sizecart;i++){
-			if(item.equals(cartarray[i])){
-				cartarray[i].quantity = cartarray[i].quantity-item.quantity;
+		for (int i = 0; i < sizecart; i++) {
+			if (item.equals(cartarray[i])) {
+				cartarray[i].quantity = cartarray[i].quantity - item.quantity;
 			}
 		}
 
@@ -95,22 +95,22 @@ class Shoppingcart {
 
 
 	public void showCart() {
-		for(Item i : cartarray){
-			if( i != null ){
-				if(i.quantity != 0) {
-			System.out.println(i.productname + " " + i.quantity);
-		}
+		for (Item i : cartarray) {
+			if ( i != null ) {
+				if (i.quantity != 0) {
+					System.out.println(i.productname + " " + i.quantity);
+				}
 
-	}
-	}
+			}
+		}
 
 	}
 	public void showCatalog() {
 		for (Item i : catalogarray) {
-			if(i != null){
-			System.out.println(i.productname + " " + i.quantity + " " + i.unitprice);
+			if (i != null) {
+				System.out.println(i.productname + " " + i.quantity + " " + i.unitprice);
+			}
 		}
-	}
 	}
 
 
@@ -129,10 +129,10 @@ class Shoppingcart {
 				if (i.equals(given)) {
 					return i.unitprice;
 
-					}
-
 				}
+
 			}
+		}
 		return 0.0;
 
 	}
@@ -145,46 +145,46 @@ class Shoppingcart {
 				valid = true;
 			}
 		}
-		if(!valid){
+		if (!valid) {
 			System.out.println("Invalid coupon");
 			return;
 		}
-		if(coupanApplied){
+		if (coupanApplied) {
 			return;
 		}
 		for (String s : validCoupans) {
 			if (s.equals(cou)) {
 				int num = Integer.parseInt(cou.substring(3));
-				discount = getTotalAmount() / 100*num;
+				discount = getTotalAmount() / 100 * num;
 				coupanApplied = true;
 
 			}
 		}
 
 	}
-    public double getPayableAmount(){
-    	double total  = getTotalAmount();
-    	double newtotal = total - discount;
-    	double tax = newtotal * 15/100;
-    	return newtotal+tax;
+	public double getPayableAmount() {
+		double total  = getTotalAmount();
+		double newtotal = total - discount;
+		double tax = newtotal * 15 / 100;
+		return newtotal + tax;
 
 	}
-	void printInvoice(){
+	void printInvoice() {
 		System.out.println("Name   quantity   Price");
-		for(Item s:cartarray) {
-			if(s != null){
-				if(s.quantity != 0) {
-			System.out.println(s.productname+" "+s.quantity+" "+getprice(s));
-        }
-        }
-    }
-        double total  = getTotalAmount();
-    	double newtotal = total - discount;
-    	double tax = newtotal * 15/100;
-        System.out.println("Total:"+getTotalAmount());
-        System.out.println("Disc%:"+discount);
-        System.out.println("Tax:"+tax);
-        System.out.println("Payable amount: "+getPayableAmount());
+		for (Item s : cartarray) {
+			if (s != null) {
+				if (s.quantity != 0) {
+					System.out.println(s.productname + " " + s.quantity + " " + getprice(s));
+				}
+			}
+		}
+		double total  = getTotalAmount();
+		double newtotal = total - discount;
+		double tax = newtotal * 15 / 100;
+		System.out.println("Total:" + getTotalAmount());
+		System.out.println("Disc%:" + discount);
+		System.out.println("Tax:" + tax);
+		System.out.println("Payable amount: " + getPayableAmount());
 	}
 
 
@@ -233,9 +233,9 @@ class Solution {
 				System.out.println("Payable amount: " + obj.getPayableAmount());
 				break;
 			case "print":
-                 obj.printInvoice();
+				obj.printInvoice();
 				break;
-            default:
+			default:
 
 
 			}
