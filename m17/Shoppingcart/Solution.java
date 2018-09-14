@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * main class.
  */
-public class Solution {
+class Solution {
     /**
      * Constructs the object.
      */
@@ -14,7 +14,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Shoppingcart obj = new Shoppingcart();
         Scanner scn = new Scanner(System.in);
         while (scn.hasNext()) {
