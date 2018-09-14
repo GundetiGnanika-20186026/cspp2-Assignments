@@ -1,19 +1,40 @@
 import java.util.Scanner;
-////////////////////////////////////////////////////////////////////////////
+/**
+ * Class for item.
+ */
 class Item {
 	String productname;
 	int quantity;
 	double unitprice;
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      pname     The pname
+	 * @param      qmeasure  The qmeasure
+	 * @param      umoney    The umoney
+	 */
 	Item(String pname, String qmeasure, String umoney) {
 		this.productname = pname;
 		this.quantity = Integer.parseInt(qmeasure);
 		this.unitprice = Double.parseDouble(umoney);
 	}
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      pname     The pname
+	 * @param      qmeasure  The qmeasure
+	 */
 	Item(String pname, String qmeasure) {
 		this.productname = pname;
 		this.quantity = Integer.parseInt(qmeasure);
 	}
-
+	/**
+	 * equals method.
+	 *
+	 * @param      other  The other
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public boolean equals(Item other) {
 		if (this.productname.equals(other.productname)) {
 			return true;
@@ -23,7 +44,9 @@ class Item {
 
 	}
 }
-/////////////////////////////////////////////////////////////////////
+/**
+ * Class for shoppingcart.
+ */
 class Shoppingcart {
 	Item[] catalogarray;
 	Item[] cartarray;
@@ -32,6 +55,9 @@ class Shoppingcart {
 	String[] validCoupans = {"IND10", "IND20", "IND30", "IND50"};
 	static double discount = 0.0;
 	static boolean coupanApplied = false;
+	/**
+	 * Constructs the object.
+	 */
 	Shoppingcart() {
 		catalogarray = new Item[50];
 		cartarray = new Item[50];
@@ -39,12 +65,21 @@ class Shoppingcart {
 		sizecart = 0;
 
 	}
+	/**
+	 * Adds to catalog.
+	 *
+	 * @param      item  The item
+	 */
 	public void addToCatalog(Item item) {
 
 		catalogarray[sizecatalog++] = item;
 
 	}
-
+	/**
+	 * Adds to cartesian.
+	 *
+	 * @param      item  The item
+	 */
 	public void addTOCart(Item item) {
 		if (!incart(item)) {
 			if (checkcatalog(item)) {
@@ -52,6 +87,12 @@ class Shoppingcart {
 			}
 		}
 	}
+	/**
+	 *
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	boolean incart(Item item) {
 		for (Item s : cartarray) {
 			if (s != null) {
@@ -63,7 +104,12 @@ class Shoppingcart {
 		}
 		return false;
 	}
-
+	/**
+	 *checking the catalog.
+	 * @param      item  The item
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	private boolean checkcatalog(Item item) {
 		for (Item i : catalogarray) {
 			if (i != null) {
@@ -80,7 +126,11 @@ class Shoppingcart {
 		return false;
 	}
 
-
+	/**
+	 * Removes a from cartesian.
+	 *
+	 * @param      item  The item
+	 */
 
 
 	public void removeFromCart(Item item) {
@@ -92,7 +142,9 @@ class Shoppingcart {
 
 	}
 
-
+	/**
+	 * Shows the cartesian.
+	 */
 
 	public void showCart() {
 		for (Item i : cartarray) {
@@ -105,6 +157,9 @@ class Shoppingcart {
 		}
 
 	}
+	/**
+	 * Shows the catalog.
+	 */
 	public void showCatalog() {
 		for (Item i : catalogarray) {
 			if (i != null) {
@@ -113,7 +168,11 @@ class Shoppingcart {
 		}
 	}
 
-
+	/**
+	 * Gets the total amount.
+	 *
+	 * @return     The total amount.
+	 */
 	public double getTotalAmount() {
 		double total = 0;
 		for (int i = 0; i < sizecart; i++) {
@@ -122,7 +181,13 @@ class Shoppingcart {
 		return total;
 
 	}
-
+	/**
+	 * gets the price.
+	 *
+	 * @param      given  The given
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	double getprice(Item given) {
 		for (Item i : catalogarray) {
 			if (i != null) {
@@ -137,7 +202,11 @@ class Shoppingcart {
 
 	}
 
-
+	/**
+	 * applying the coupon.
+	 *
+	 * @param      cou   The cou
+	 */
 	public void applyCoupen(String cou) {
 		boolean valid = false;
 		for (String s : validCoupans) {
@@ -162,6 +231,11 @@ class Shoppingcart {
 		}
 
 	}
+	/**
+	 * Gets the payable amount.
+	 *
+	 * @return     The payable amount.
+	 */
 	public double getPayableAmount() {
 		double total  = getTotalAmount();
 		double newtotal = total - discount;
@@ -169,6 +243,9 @@ class Shoppingcart {
 		return newtotal + tax;
 
 	}
+	/**
+	 * printing the required fields.
+	 */
 	void printInvoice() {
 		System.out.println("Name   quantity   Price");
 		for (Item s : cartarray) {
