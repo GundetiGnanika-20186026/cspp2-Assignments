@@ -1,8 +1,19 @@
+/**
+ * main class.
+ */
 import java.util.Scanner;
 class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	Solution() {
 
 	}
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
 		Shoppingcart obj = new Shoppingcart();
 		Scanner scn = new Scanner(System.in);
