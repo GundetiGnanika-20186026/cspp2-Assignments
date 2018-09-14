@@ -1,4 +1,5 @@
 import java.util.Scanner;
+////////////////////////////////////////////////////////////////////////////
 class Item {
 	String productname;
 	int quantity;
@@ -9,6 +10,20 @@ class Item {
        this.unitprice = umoney;
 	}
 }
+/////////////////////////////////////////////////////////////////////
+// class Cartitem{
+//    String productname;
+//    int
+// }
+
+
+
+
+
+
+
+
+
 class Shoppingcart {
 	Item[] catalogarray;
 	Item[] cartarray;
