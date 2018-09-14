@@ -66,6 +66,7 @@ class Solution {
         		Item itemobj = new Item(items[0],Double.parseDouble(items[1]),Double.parseDouble(items[2]));
         		obj.addToCatalog(itemobj);
         		case "catalog":
+        		obj.catalog();
 
         		default:
 
