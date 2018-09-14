@@ -25,17 +25,21 @@ class Shoppingcart {
 		catalogarray[sizecatalog++] = item;
 
 	}
-	public void addTOCart(Item item){
-		cartarray[sizecart++] = item;
+	// public void addTOCart(Item item){
+	// 	cartarray[sizecart++] = item;
 
-    }
-	// public void removeFromCart(Item item){
+ //    }
+	// // public void removeFromCart(Item item){
 
 	// }
 	// public void showCart(){
 
 	// }
-	// public void showCatalog(){
+	 public void showCatalog(){
+	 for(int i = 0; i < sizecatalog; i++){
+			System.out.println(catalogarray[i].productname+" "+catalogarray[i].quantity+" "+catalogarray[i].unitprice);
+		}
+	}
 
 	// }
 	// public double getTotalAmount(){
@@ -44,11 +48,8 @@ class Shoppingcart {
 	// public double getPayableAmount(){
 
 	// }
-	public void catalog(){
-		for(int i = 0; i < sizecatalog; i++){
-			System.out.println(catalogarray[i].productname+" "+catalogarray[i].quantity+" "+catalogarray[i].unitprice);
-		}
-	}
+
+
 
 }
 class Solution {
@@ -66,7 +67,7 @@ class Solution {
         		Item itemobj = new Item(items[0],Integer.parseInt(items[1]),Double.parseDouble(items[2]));
         		obj.addToCatalog(itemobj);
         		case "catalog":
-        		obj.catalog();
+        		obj.showCatalog();
 
         		default:
 
