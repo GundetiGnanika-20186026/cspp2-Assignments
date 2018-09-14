@@ -65,9 +65,11 @@ class Solution {
         		case "Item":
         		String[] items = tokens[1].split(",");
         		Item itemobj = new Item(items[0],Integer.parseInt(items[1]),Double.parseDouble(items[2]));
-        		obj.addToCatalog(itemobj);
+                obj.addToCatalog(itemobj);
+                break;
         		case "catalog":
         		obj.showCatalog();
+        		break;
 
         		default:
 
