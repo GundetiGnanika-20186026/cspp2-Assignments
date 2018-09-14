@@ -13,6 +13,15 @@ class Item {
 		this.productname = pname;
 		this.quantity = Integer.parseInt(qmeasure);
 	}
+
+	public boolean equals(Item other){
+		if(this.productname.equals(other.productname)){
+			return true;
+
+		}
+		return false;
+
+	}
 }
 /////////////////////////////////////////////////////////////////////
 class Shoppingcart {
@@ -37,17 +46,30 @@ class Shoppingcart {
 	}
 
 	public void addTOCart(Item item) {
+        if(!incart(item)){
 		if (checkcatalog(item)) {
 			cartarray[sizecart++] = item;
 		}
+	  }
+	}
+	boolean incart(Item item) {
+		for(Item s:cartarray){
+			if(s!=null){
+				if(s.equals(item)){
+					s.quantity = s.quantity+item.quantity;
+					return true;
+				}
+			}
+		}
+		return false;
 	}
 
-	private boolean checkcatalog(Item given) {
+	private boolean checkcatalog(Item item) {
 		for (Item i : catalogarray) {
 			if (i != null) {
-				if (i.productname.equals(given.productname)) {
-					if (given.quantity <= i.quantity) {
-						i.quantity = i.quantity - given.quantity;
+				if (i.equals(item)) {
+					if (item.quantity <= i.quantity) {
+						i.quantity = i.quantity - item.quantity;
 						return true;
 					}
 
@@ -62,25 +84,40 @@ class Shoppingcart {
 
 
 	public void removeFromCart(Item item) {
+		for(int i = 0;i<sizecart;i++){
+			if(item.equals(cartarray[i])){
+				cartarray[i].quantity = cartarray[i].quantity-item.quantity;
+			}
+		}
 
 	}
+
+
+
 	public void showCart() {
-		for (int i = 0; i < sizecart; i++) {
-			System.out.println(cartarray[i].productname + " " + cartarray[i].quantity);
+		for(Item i : cartarray){
+			if( i != null ){
+				if(i.quantity != 0) {
+			System.out.println(i.productname + " " + i.quantity);
 		}
+
+	}
+	}
 
 	}
 	public void showCatalog() {
-		for (int i = 0; i < sizecatalog; i++) {
-			System.out.println(catalogarray[i].productname + " " + catalogarray[i].quantity + " " + catalogarray[i].unitprice);
+		for (Item i : catalogarray) {
+			if(i != null){
+			System.out.println(i.productname + " " + i.quantity + " " + i.unitprice);
 		}
+	}
 	}
 
 
 	public double getTotalAmount() {
 		double total = 0;
 		for (int i = 0; i < sizecart; i++) {
-			total = cartarray[i].quantity * getprice(cartarray[i]);
+			total += cartarray[i].quantity * getprice(cartarray[i]);
 		}
 		return total;
 
@@ -89,39 +126,66 @@ class Shoppingcart {
 	double getprice(Item given) {
 		for (Item i : catalogarray) {
 			if (i != null) {
-				if (i.productname.equals(given.productname)) {
-					if (given.quantity <= i.quantity) {
-						i.quantity = i.quantity - given.quantity;
-						return i.unitprice;
+				if (i.equals(given)) {
+					return i.unitprice;
 
 					}
 
 				}
 			}
-		}
 		return 0.0;
+
 	}
 
 
 	public void applyCoupen(String cou) {
-		if (coupanApplied) {
-			System.out.println("Invalid coupon");
-			return;
-		}
 		boolean valid = false;
 		for (String s : validCoupans) {
 			if (s.equals(cou)) {
-				int num = Integer.parseInt(cou.substring(3));
-				discount = getTotalAmount() * num / 100;
-				coupanApplied = true;
 				valid = true;
+			}
+		}
+		if(!valid){
+			System.out.println("Invalid coupon");
+			return;
+		}
+		if(coupanApplied){
+			return;
+		}
+		for (String s : validCoupans) {
+			if (s.equals(cou)) {
+				int num = Integer.parseInt(cou.substring(3));
+				discount = getTotalAmount() / 100*num;
+				coupanApplied = true;
+
 			}
 		}
 
 	}
-	// public double getPayableAmount(){
+    public double getPayableAmount(){
+    	double total  = getTotalAmount();
+    	double newtotal = total - discount;
+    	double tax = newtotal * 15/100;
+    	return newtotal+tax;
 
-	// }
+	}
+	void printInvoice(){
+		System.out.println("Name   quantity   Price");
+		for(Item s:cartarray) {
+			if(s != null){
+				if(s.quantity != 0) {
+			System.out.println(s.productname+" "+s.quantity+" "+getprice(s));
+        }
+        }
+    }
+        double total  = getTotalAmount();
+    	double newtotal = total - discount;
+    	double tax = newtotal * 15/100;
+        System.out.println("Total:"+getTotalAmount());
+        System.out.println("Disc%:"+discount);
+        System.out.println("Tax:"+tax);
+        System.out.println("Payable amount:"+getPayableAmount());
+	}
 
 
 
@@ -163,17 +227,15 @@ class Solution {
 				break;
 
 			case "totalAmount":
-				obj.getTotalAmount();
+				System.out.println("totalAmount: " + obj.getTotalAmount());
 				break;
-			// case "payableAmount":
-			// 	obj.getPayableAmount();
-			// 	break;
+			case "payableAmount":
+				System.out.println("Payable amount: " + obj.getPayableAmount());
+				break;
 			case "print":
-
+                 obj.printInvoice();
 				break;
-
-
-			default:
+            default:
 
 
 			}
