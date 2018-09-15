@@ -103,7 +103,7 @@ public final class Solution {
         	// 	String newchoice =quiz.choicesarray[i];
         	// 	System.out.print(newchoice);
         	// }
-        	System.out.println(quiz.choicesarray[i]);
+        	System.out.println(quiz.choicesarray[i].replace("[","").replace("]",""));
         }
 
     }
