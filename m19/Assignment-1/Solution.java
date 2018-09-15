@@ -68,12 +68,13 @@ public final class Solution {
 		} else  {
 			for (int i = 0; i < questionCount; i++) {
 				String[] tockens = s.nextLine().split(":");
+
 				if (tockens.length != 5) {
 					System.out.println("Error! Malformed question");
 
 				} else if ((Integer.parseInt(tockens[3]) < 0)) {
 					System.out.println("Invalid max marks for " + tockens[0]);
-				} else if ((Integer.parseInt(tockens[4]) < 0)) {
+				} else if ((Integer.parseInt(tockens[4]) > 0)) {
 					System.out.println("Invalid penalty for " + tockens[0]);
 
 				} else {
