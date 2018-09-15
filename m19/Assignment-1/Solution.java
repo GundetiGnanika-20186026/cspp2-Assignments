@@ -99,10 +99,11 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
-        	for(int j = 0 ; j < quiz.length-1; j++){
-        		String newchoice =quiz.choicesarray[i];
-        		System.out.print(newchoice);
-        	}
+        	// for(int j = 0 ; j < quiz.length-1; j++){
+        	// 	String newchoice =quiz.choicesarray[i];
+        	// 	System.out.print(newchoice);
+        	// }
+        	System.out.println(quiz.choicesarray[i]);
         }
 
     }
