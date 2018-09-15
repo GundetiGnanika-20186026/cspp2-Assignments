@@ -102,9 +102,9 @@ public final class Solution {
         	System.out.println(quiz.questionsarray[i]);
 
         	quiz.choicesarray[i].replace("[","").replace("]","");
-        	String[] newchoice =quiz.choicesarray[i].split(",");
+        	String[] newchoice =(quiz.choicesarray[i].split(","));
         	for(int j = 0 ; j < quiz.length-1; j++){
-        	 	System.out.print(newchoice[j]+ "	");
+        	 	System.out.print((newchoice[j].replace("[","").replace("]",""))+ "	");
             }
 
         	 System.out.println(newchoice[quiz.length-1]);
