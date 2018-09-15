@@ -34,12 +34,12 @@ public final class Solution {
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
-                // case "START_QUIZ":
-                // System.out.println("|------------|");
-                // System.out.println("| Start Quiz |");
-                // System.out.println("|------------|");
-                // startQuiz(s, q, Integer.parseInt(tokens[1]));
-                // break;
+                case "START_QUIZ":
+                System.out.println("|------------|");
+                System.out.println("| Start Quiz |");
+                System.out.println("|------------|");
+                startQuiz(s, q, Integer.parseInt(tokens[1]));
+                break;
                 // case "SCORE_REPORT":
                 // System.out.println("|--------------|");
                 // System.out.println("| Score Report |");
@@ -84,19 +84,23 @@ public final class Solution {
     }
 
 
-    // /**
-    //  * Starts a quiz.
-    //  *
-    //  * @param      s            The scanner object for user input
-    //  * @param      quiz         The quiz object
-    //  * @param      answerCount  The answer count
-    //  */
-    // public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
-    //     // write your code here to display the quiz questions
-    //     // read the user responses from the console
-    //     // store the user respones in the quiz object
+    /**
+     * Starts a quiz.
+     *
+     * @param      s            The scanner object for user input
+     * @param      quiz         The quiz object
+     * @param      answerCount  The answer count
+     */
+    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+        // write your code here to display the quiz questions
+        // read the user responses from the console
+        // store the user respones in the quiz object
+        quiz.rightanswer = answerCount;
+        for(int i = 0; i < quiz.size ;i++) {
+        	System.out.println(quiz.questionsarray[i]);
+        }
 
-    // }
+    }
 
     // /**
     //  * Displays the score report
@@ -111,6 +115,7 @@ class Quiz {
 	public String[] questionsarray;
 	public String[] choicesarray;
 	int size;
+	int rightanswer;
 	Quiz() {
 		questionsarray = new String[50];
 		choicesarray = new String[100];
