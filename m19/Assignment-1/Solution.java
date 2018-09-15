@@ -76,7 +76,7 @@ public final class Solution {
             quiz.choicesarray[i] = tokens[1];
             }
         }
-        if(!tokenssize){
+        if(tokenssize){
            System.out.println(questionCount+" are added to the quiz");
         }
      }
