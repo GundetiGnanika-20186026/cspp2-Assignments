@@ -102,10 +102,12 @@ public final class Solution {
         	System.out.println(quiz.questionsarray[i]);
 
         	quiz.choicesarray[i].replace("[","").replace("]","");
+        	String[] newchoice =quiz.choicesarray[i].split(",");
         	for(int j = 0 ; j < quiz.length-1; j++){
-            	String[] newchoice =quiz.choicesarray[i].split(",");
         	 	System.out.print(newchoice[j]+ "	");
-        	 }
+            }
+
+        	 System.out.println(newchoice[quiz.length-1]);
         }
 
     }
@@ -127,7 +129,7 @@ class Quiz {
 	int length;
 	Quiz() {
 		questionsarray = new String[50];
-		choicesarray = new String[100];
+		choicesarray = new String[500];
 		length = 0;
 		size = 0;
     }
