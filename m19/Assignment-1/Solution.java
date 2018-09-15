@@ -74,6 +74,7 @@ public final class Solution {
             } else{
             quiz.questionsarray[i] = tokens[0]+"("+tokens[3]+")";
             quiz.choicesarray[i] = (Arrays.toString((tokens[1]).split(",")));
+            quiz.length = quiz.length + 1;
             quiz.size = quiz.size+1;
             }
         }
@@ -98,9 +99,9 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
-        	//for(int j = 0 ; j < quiz.choicesarray[i]; j++){
-        		System.out.print(quiz.choicesarray[i]);
-        	//}
+        	for(int j = 0 ; j < quiz.length-1; j++){
+        		System.out.print(quiz.choicesarray[i]+ "	");
+        	}
         }
 
     }
@@ -119,9 +120,11 @@ class Quiz {
 	public String[] choicesarray;
 	int size;
 	int rightanswer;
+	int length;
 	Quiz() {
 		questionsarray = new String[50];
 		choicesarray = new String[100];
+		length = 0;
 		size = 0;
     }
 
