@@ -40,12 +40,12 @@ public final class Solution {
                 System.out.println("|------------|");
                 startQuiz(s, q, Integer.parseInt(tokens[1]));
                 break;
-                // case "SCORE_REPORT":
-                // System.out.println("|--------------|");
-                // System.out.println("| Score Report |");
-                // System.out.println("|--------------|");
-                // displayScore(q);
-                // break;
+                case "SCORE_REPORT":
+                System.out.println("|--------------|");
+                System.out.println("| Score Report |");
+                System.out.println("|--------------|");
+                //displayScore(q);
+                break;
                 default:
                 break;
             }
@@ -97,6 +97,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        if(quiz.length <= 2) {
+        	System.out.println("");
+        }
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
