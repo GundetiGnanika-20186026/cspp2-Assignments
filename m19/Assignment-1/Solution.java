@@ -65,16 +65,19 @@ public final class Solution {
         boolean tockenssize = true;
         if(questionCount == 0) {
         	System.out.println("Quiz does not have questions");
-        } else {
+        } else  {
           for(int i = 0; i < questionCount; i++) {
             String[] tockens = s.nextLine().split(":");
-              if((Integer.parseInt(tockens[4]) < 0)){
-           	     System.out.println("Invalid penalty for "+tockens[1]);
-              }
-          }
-        //       else if (tockens.length != 5){
-        // 	   System.out.println("Error! Malformed question");
-        // 	   tockenssize = false;
+               if (tockens.length != 5){
+                  System.out.println("Error! Malformed question");
+        	       tockenssize = false;
+        	    }
+        	    else if ((Integer.parseInt(tockens[4]) < 0)){
+           	     System.out.println("Invalid penalty for "+tockens[0]);
+           	    }
+           	 }
+
+
         //        } else{
         //         quiz.questionsarray[i] = tockens[0]+"("+tockens[3]+")";
         //         quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
