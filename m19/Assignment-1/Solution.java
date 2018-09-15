@@ -98,7 +98,9 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
-        	System.out.println(quiz.choicesarray[i]);
+        	//for(int j = 0 ; j < quiz.choicesarray[i]; j++){
+        		System.out.print(quiz.choicesarray[i]);
+        	//}
         }
 
     }
