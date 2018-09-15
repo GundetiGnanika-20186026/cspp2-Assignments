@@ -66,24 +66,25 @@ public final class Solution {
         if(questionCount == 0) {
         	System.out.println("Quiz does not have questions");
         } else {
-        for(int i = 0; i < questionCount; i++) {
+          for(int i = 0; i < questionCount; i++) {
             String[] tockens = s.nextLine().split(":");
-           if((Integer.parseInt(tockens[4]) < 0)){
-           	System.out.println("Invalid penalty for "+tockens[1]);
-           }
-           else if (tockens.length != 5){
-        	   System.out.println("Error! Malformed question");
-        	   tockenssize = false;
-            } else{
-            quiz.questionsarray[i] = tockens[0]+"("+tockens[3]+")";
-            quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
-            quiz.length = quiz.length + 1;
-            quiz.size = quiz.size+1;
-            }
-        }
-        if(tockenssize){
-           System.out.println(questionCount+" are added to the quiz");
-        }
+              if((Integer.parseInt(tockens[4]) < 0)){
+           	     System.out.println("Invalid penalty for "+tockens[1]);
+              }
+          }
+        //       else if (tockens.length != 5){
+        // 	   System.out.println("Error! Malformed question");
+        // 	   tockenssize = false;
+        //        } else{
+        //         quiz.questionsarray[i] = tockens[0]+"("+tockens[3]+")";
+        //         quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
+        //         quiz.length = quiz.length + 1;
+        //          quiz.size = quiz.size+1;
+        //       }
+        //   }
+        //  if(tockenssize){
+        //    System.out.println(questionCount+" are added to the quiz");
+        // }
      }
 
     }
