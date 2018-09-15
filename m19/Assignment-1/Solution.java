@@ -67,9 +67,13 @@ public final class Solution {
         } else {
         for(int i = 0; i < questionCount; i++) {
         String[] tokens = s.nextLine().split(":");
+        if(tokens.length != 5){
+        	System.out.println("Error! Malformed question");
+        } else{
         quiz.questionsarray[i] = tokens[0]+"("+tokens[3]+")";
         quiz.choicesarray[i] = tokens[1];
         }
+    }
         System.out.println(questionCount+" are added to the quiz");
     }
     }
