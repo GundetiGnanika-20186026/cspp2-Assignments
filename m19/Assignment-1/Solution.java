@@ -77,10 +77,9 @@ public final class Solution {
 				} else if ((Integer.parseInt(tockens[4]) > 0)) {
 					System.out.println("Invalid penalty for " + tockens[0]);
 
-				} else if((Integer.parseInt(tockens[2]) > 4 )){
-					System.out.println("Error! Correct answer choice number is out of range for "+ tockens[0]);
-				}
-				else {
+				} else if ((Integer.parseInt(tockens[2]) > 4 )) {
+					System.out.println("Error! Correct answer choice number is out of range for " + tockens[0]);
+				} else {
 					quiz.questionsarray[i] = tockens[0] + "(" + tockens[3] + ")";
 					quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
 					quiz.length = quiz.length + 1;
