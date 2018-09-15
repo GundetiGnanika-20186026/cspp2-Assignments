@@ -78,18 +78,18 @@ public final class Solution {
         	    else if ((Integer.parseInt(tockens[4]) < 0)){
            	     System.out.println("Invalid penalty for "+tockens[0]);
 
-           	    }else{
+           	    } else {
                     quiz.questionsarray[i] = tockens[0]+"("+tockens[3]+")";
                     quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
                     quiz.length = quiz.length + 1;
                     quiz.size = quiz.size+1;
-                    tockenssize = false;
+
 
               }
           }
-         if(tockenssize){
-           System.out.println(questionCount+" are added to the quiz");
-        }
+        //  if(tockenssize){
+        //    System.out.println(questionCount+" are added to the quiz");
+        // }
      }
 
     }
