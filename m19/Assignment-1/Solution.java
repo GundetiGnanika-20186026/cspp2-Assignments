@@ -107,21 +107,21 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        if(quiz.length <= 2) {
-        	System.out.println("");
-        }
-        quiz.rightanswer = answerCount;
-        for(int i = 0; i < quiz.size ;i++) {
-        	System.out.println(quiz.questionsarray[i]);
+        // if(quiz.length <= 2) {
+        // 	System.out.println("");
+        // }
+        // quiz.rightanswer = answerCount;
+        // for(int i = 0; i < quiz.size ;i++) {
+        // 	System.out.println(quiz.questionsarray[i]);
 
-        	quiz.choicesarray[i].replace("[","").replace("]","");
-        	String[] newchoice =(quiz.choicesarray[i].split(","));
-        	for(int j = 0 ; j < quiz.length-1; j++){
-        	 	System.out.print(newchoice[j]+ "	");
-            }
+        // 	quiz.choicesarray[i].replace("[","").replace("]","");
+        // 	String[] newchoice =(quiz.choicesarray[i].split(","));
+        // 	for(int j = 0 ; j < quiz.length-1; j++){
+        // 	 	System.out.print(newchoice[j]+ "	");
+        //     }
 
-        	 System.out.println(newchoice[quiz.length-1]);
-        }
+        // 	 System.out.println(newchoice[quiz.length-1]);
+        // }
 
     }
 
