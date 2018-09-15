@@ -34,12 +34,12 @@ public final class Solution {
                 System.out.println("|----------------|");
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
                 break;
-                case "START_QUIZ":
-                System.out.println("|------------|");
-                System.out.println("| Start Quiz |");
-                System.out.println("|------------|");
-                startQuiz(s, q, Integer.parseInt(tokens[1]));
-                break;
+                // case "START_QUIZ":
+                // System.out.println("|------------|");
+                // System.out.println("| Start Quiz |");
+                // System.out.println("|------------|");
+                // startQuiz(s, q, Integer.parseInt(tokens[1]));
+                // break;
                 // case "SCORE_REPORT":
                 // System.out.println("|--------------|");
                 // System.out.println("| Score Report |");
@@ -82,6 +82,7 @@ public final class Solution {
            System.out.println(questionCount+" are added to the quiz");
         }
      }
+
     }
 
 
@@ -99,11 +100,12 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
-        	// for(int j = 0 ; j < quiz.length-1; j++){
-        	// 	String newchoice =quiz.choicesarray[i];
-        	// 	System.out.print(newchoice);
-        	// }
-        	System.out.println(quiz.choicesarray[i].replace("[","").replace("]",""));
+
+        	quiz.choicesarray[i].replace("[","").replace("]","");
+        	for(int j = 0 ; j < quiz.length-1; j++){
+            	String[] newchoice =quiz.choicesarray[i].split(",");
+        	 	System.out.print(newchoice[j]+ "	");
+        	 }
         }
 
     }
