@@ -44,7 +44,7 @@ public final class Solution {
                 System.out.println("|--------------|");
                 System.out.println("| Score Report |");
                 System.out.println("|--------------|");
-                //displayScore(q);
+                displayScore(q);
                 break;
                 default:
                 break;
@@ -68,7 +68,10 @@ public final class Solution {
         } else {
         for(int i = 0; i < questionCount; i++) {
             String[] tokens = s.nextLine().split(":");
-           if(tokens.length != 5){
+           if((Integer.parseInt(tokens[4]) < 0)){
+           	System.out.println("Invalid penalty for "+tokens[1]);
+           }
+           else if (tokens.length != 5){
         	   System.out.println("Error! Malformed question");
         	   tokenssize = false;
             } else{
@@ -115,14 +118,14 @@ public final class Solution {
 
     }
 
-    // /**
-    //  * Displays the score report
-    //  *
-    //  * @param      quiz     The quiz object
-    //  */
-    // public static void displayScore(final Quiz quiz) {
-    //     // write your code here to display the score report
-    // }
+    /**
+     * Displays the score report
+     *
+     * @param      quiz     The quiz object
+     */
+    public static void displayScore(final Quiz quiz) {
+
+    }
 }
 class Quiz {
 	public String[] questionsarray;
