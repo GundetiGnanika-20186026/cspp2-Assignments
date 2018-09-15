@@ -98,6 +98,7 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
+        	System.out.println(quiz.choicesarray[i].split(","));
         }
 
     }
