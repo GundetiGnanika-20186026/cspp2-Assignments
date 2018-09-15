@@ -70,13 +70,14 @@ public final class Solution {
             String[] tockens = s.nextLine().split(":");
                if (tockens.length != 5){
                   System.out.println("Error! Malformed question");
-        	       tockenssize = false;
+
         	    }
         	    else if ((Integer.parseInt(tockens[3]) < 0)){
         	    	System.out.println("Invalid max marks for "+tockens[0]);
         	    }
         	    else if ((Integer.parseInt(tockens[4]) < 0)){
            	     System.out.println("Invalid penalty for "+tockens[0]);
+           	     tockenssize = false;
            	    }else{
                 quiz.questionsarray[i] = tockens[0]+"("+tockens[3]+")";
                 quiz.choicesarray[i] = (Arrays.toString((tockens[1]).split(",")));
