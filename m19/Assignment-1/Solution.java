@@ -73,7 +73,7 @@ public final class Solution {
         	       tockenssize = false;
         	    }
         	    else if ((Integer.parseInt(tockens[3]) < 0)){
-        	    	System.out.println("Invalid max marks for for "+tockens[0]);
+        	    	System.out.println("Invalid max marks for "+tockens[0]);
         	    }
         	    else if ((Integer.parseInt(tockens[4]) < 0)){
            	     System.out.println("Invalid penalty for "+tockens[0]);
