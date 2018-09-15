@@ -74,7 +74,7 @@ public final class Solution {
             } else{
             quiz.questionsarray[i] = tokens[0]+"("+tokens[3]+")";
             quiz.choicesarray[i] = tokens[1];
-            quiz.size = quiz.size++;
+            quiz.size = quiz.size+1;
             }
         }
         if(tokenssize){
