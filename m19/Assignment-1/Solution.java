@@ -100,7 +100,8 @@ public final class Solution {
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
         	for(int j = 0 ; j < quiz.length-1; j++){
-        		System.out.print(quiz.choicesarray[i]+ "	");
+        		String newchoice =quiz.choicesarray[i];
+        		System.out.print(newchoice);
         	}
         }
 
