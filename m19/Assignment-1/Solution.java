@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Arrays;
 /**
  * Solution class for code-eval.
  */
@@ -73,7 +73,7 @@ public final class Solution {
         	   tokenssize = false;
             } else{
             quiz.questionsarray[i] = tokens[0]+"("+tokens[3]+")";
-            quiz.choicesarray[i] = tokens[1];
+            quiz.choicesarray[i] = (Arrays.toString((tokens[1]).split(",")));
             quiz.size = quiz.size+1;
             }
         }
@@ -98,7 +98,7 @@ public final class Solution {
         quiz.rightanswer = answerCount;
         for(int i = 0; i < quiz.size ;i++) {
         	System.out.println(quiz.questionsarray[i]);
-        	System.out.println(quiz.choicesarray[i].split(","));
+        	System.out.println(quiz.choicesarray[i]);
         }
 
     }
@@ -122,6 +122,7 @@ class Quiz {
 		choicesarray = new String[100];
 		size = 0;
     }
+
 
 
 
