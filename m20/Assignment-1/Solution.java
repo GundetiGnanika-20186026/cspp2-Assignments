@@ -272,8 +272,9 @@ public final class Solution {
         	           Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
                        quiz.addQuestion(obj);
             }
-            System.out.println(q+" are added to the quiz");
+
         }
+        System.out.println(q+" are added to the quiz");
 
 
 
