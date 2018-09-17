@@ -249,7 +249,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-
+        boolean res = false;
         if(q <= 0) {
         	System.out.println("Quiz does not have questions");
         } else {
@@ -268,13 +268,16 @@ public final class Solution {
 				       } else if ((Integer.parseInt(first[2]) > 4 )) {
 					    System.out.println("Error! Correct answer choice number is out of range for " + first[0]);
                        } else{
-                       	System.out.println(q+" are added to the quiz");
+                       	   res = true;
                        }
 
                     }
 
-        	           Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
-                       quiz.addQuestion(obj);
+        	        Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
+                    quiz.addQuestion(obj);
+            }
+            if(res){
+            	System.out.println(q+" are added to the quiz");
             }
 
         }
