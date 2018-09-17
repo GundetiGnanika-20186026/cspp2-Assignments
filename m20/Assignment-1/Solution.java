@@ -379,12 +379,12 @@ public final class Solution {
          	if(!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())){
             int total = quiz.questionarray()[i].getPenalty();
             totalvalue += total;
-            System.out.println("Wrong Answer! - Penalty: "+ total);
+            System.out.println(" Wrong Answer! - Penalty: "+ total);
             choose = true;
 		 } else{
 			int total = quiz.questionarray()[i].getMaxMarks();
 			totalvalue += total;
-			System.out.println("Correct Answer! - Marks Awarded: "+ total);
+			System.out.println(" Correct Answer! - Marks Awarded: "+ total);
 			choose = true;
 
 		}
