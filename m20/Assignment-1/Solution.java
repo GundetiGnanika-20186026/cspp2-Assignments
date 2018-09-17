@@ -219,10 +219,10 @@ class Quiz {
 		int total = 0;
 		if(!questions[i].evaluateResponse(questions[i].getResponse())){
             total += questions[i].getPenalty();
-            return "Wrong Answer! - Penalty: "+total;
+            return "Wrong Answer! - Penalty: "+ total;
 		} else{
 			total += questions[i].getMaxMarks();
-			return "Correct Answer! - Marks Awarded: "+total;
+			return "Correct Answer! - Marks Awarded: "+ total;
 		}
 
 	}
