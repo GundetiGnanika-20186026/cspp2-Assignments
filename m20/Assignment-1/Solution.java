@@ -214,9 +214,17 @@ class Quiz {
 	 *
 	 * @return     { description_of_the_return_value }
 	 */
-	public String showReport() {
+	public String showReport(int i) {
 		String s = "";
-		return s;
+		int total = 0;
+		if(!questions[i].evaluateResponse(questions[i].getResponse())){
+            total += questions[i].getPenalty();
+            return "Wrong Answer! - Penalty: "+total;
+		} else{
+			total += questions[i].getMaxMarks();
+			return "Correct Answer! - Marks Awarded: "+total;
+		}
+
 	}
 
 }
@@ -360,6 +368,7 @@ public final class Solution {
 		// write your code here to display the score report using quiz object.
          for( int i = 0; i < quiz.getsize(); i++){
          	System.out.println(quiz.questionarray()[i].getQuestionText());
+         	System.out.println(quiz.showReport(i));
          }
 
 
