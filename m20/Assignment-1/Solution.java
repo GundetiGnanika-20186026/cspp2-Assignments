@@ -153,6 +153,8 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
+    	questions = new Question[50];
+    	size = 0;
 
     }
     /**
