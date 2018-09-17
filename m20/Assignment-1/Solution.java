@@ -337,6 +337,7 @@ public final class Solution {
 	 		// str = str + quiz.questions[i].getChoice()[i]+ "	";
 	 		// System.out.println(str);
             System.out.println(quiz.toString(i));
+            System.out.println();
             String ans = scan.nextLine();
 
 
