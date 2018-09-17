@@ -264,8 +264,13 @@ public final class Solution {
 					    System.out.println("Invalid penalty for " + first[0]);
 				    } else {
 				       System.out.println(q+" are added to the quiz");
+				       String[] choicesarr = first[1].split(",");
+				       if(choicesarr.length <= 2){
+				       	System.out.println(first[0]+" does not have enough answer choices");
+				       } else{
         	           Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
                        quiz.addQuestion(obj);
+                   }
                     }
             }
 
