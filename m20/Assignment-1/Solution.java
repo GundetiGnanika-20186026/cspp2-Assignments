@@ -195,8 +195,8 @@ class Quiz {
     public String toString(final int i) {
         String s = ""; //= queobj.getQuestionText() + "("
          //+ queobj.getMaxMarks() + ")"+'\n';
-s = questions[i].getQuestionText() + "(" +
- questions[i].getMaxMarks() + ")" + '\n';
+s = questions[i].getQuestionText() + "("
+ + questions[i].getMaxMarks() + ")" + '\n';
         int j = 0;
         for (j = 0; j < questions[i].getChoice().length - 1; j++) {
             s = s + questions[i].getChoice()[j] + "\t";
