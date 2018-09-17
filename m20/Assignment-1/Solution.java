@@ -31,7 +31,7 @@ class Question {
 	 * Constructs the object.
 	 */
 	Question() {
-		choices = new String[10];
+		choices = new String[50];
 
 	}
 	/**
@@ -194,7 +194,7 @@ class Quiz {
 		String f = "";
 
 			s = questions[i].getQuestionText()+"("+questions[i].getMaxMarks() + ")"+'\n';
-		for(int j = 0; j < size-1; j++){
+		for(int j = 0; j < 4; j++){
 			s = s + questions[i].getChoice()[j]+ "	";
 
 		}
