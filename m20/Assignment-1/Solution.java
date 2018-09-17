@@ -60,9 +60,11 @@ class Question {
 	 * @return     { description_of_the_return_value }
 	 */
 	public boolean evaluateResponse(final String choice) {
-		if (Integer.parseInt(choice) == correctAnswer) {
+		//if (Integer.parseInt(choice) == correctAnswer) {
+		if(this.choices[this.correctAnswer].equals(choice)){
 			return true;
 		}
+
 		return false;
 	}
 	/**
@@ -216,12 +218,12 @@ class Quiz {
 	 */
 	public String showReport(int i) {
 		String s = "";
-		int total = 0;
+
 		if(!questions[i].evaluateResponse(questions[i].getResponse())){
-            total += questions[i].getPenalty();
+            int total = questions[i].getPenalty();
             return "Wrong Answer! - Penalty: "+ total;
 		} else{
-			total += questions[i].getMaxMarks();
+			int total = questions[i].getMaxMarks();
 			return "Correct Answer! - Marks Awarded: "+ total;
 		}
 
