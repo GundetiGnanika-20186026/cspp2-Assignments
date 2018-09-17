@@ -345,11 +345,7 @@ public final class Solution {
 			System.out.println();
 			String ans = scan.nextLine();
 			quiz.questionarray()[i].setResponse(ans);
-
-
-
-
-		}
+        }
 
 
 
@@ -362,6 +358,13 @@ public final class Solution {
 	 */
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
+         for( int i = 0; i < quiz.getsize(); i++){
+         	System.out.println(quiz.questionarray()[i].getQuestionText());
+         }
+
+
+
+
 	}
 }
 
