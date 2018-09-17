@@ -45,7 +45,7 @@ class Question {
      * @param      penalty1        The penalty 1
      */
     Question(final String question1, final String[] choices1,
-             final int correctAnswer1, final int maxMarks1, final int penalty1) {
+ final int correctAnswer1, final int maxMarks1, final int penalty1) {
         this.questiontext = question1;
         this.choices = choices1;
         this.correctAnswer = correctAnswer1;
@@ -175,9 +175,9 @@ class Quiz {
         questions[size++] = q;
     }
     /**
-     * {will return the size}
+     * {will return the size}.
      *
-     * @return     { description_of_the_return_value }
+     * @return     { description_of_the_return_value }.
      */
     public int getsize() {
         return size;
@@ -192,6 +192,14 @@ class Quiz {
     // public Question getQuestion(final int index) {
     //  return null;
     // }
+
+    /**
+     * Returns a string representation of the object.
+     *
+     * @param      i     { parameter_description }
+     *
+     * @return     String representation of the object.
+     */
     public String toString(final int i) {
         String s = ""; //= queobj.getQuestionText() + "("
          //+ queobj.getMaxMarks() + ")"+'\n';
