@@ -254,7 +254,7 @@ public final class Solution {
         } else {
             for (int i = 0; i < q; i++){
         	    String[] first = scan.nextLine().split(":");
-        	       if(first.length != 5) {
+        	       if(first.length != 5 || first[0] == "") {
         	    	    System.out.println("Error! Malformed question");
         	        } else if ((Integer.parseInt(first[2]) > 4 )) {
 					    System.out.println("Error! Correct answer choice number is out of range for " + first[0]);
