@@ -309,10 +309,10 @@ public final class Solution {
                 } else {
                     String[] choicesarr = first[1].split(",");
                     if (choicesarr.length < 2) {
-                        System.out.println(first[0] + " does not have enough answer choices");
+        System.out.println(first[0] + " does not have enough answer choices");
                     } else if ((Integer.parseInt(first[2]) > (2 + 2))) {
                         System.out.println(
-                            "Error! Correct answer choice number is out of range for " + first[0]);
+     "Error! Correct answer choice number is out of range for " + first[0]);
                     } else {
                         res = true;
                         continue1 = true;
@@ -320,8 +320,8 @@ public final class Solution {
                 }
                 if (continue1) {
                     Question obj = new Question(first[0], first[1].split(","),
-                                                Integer.parseInt(first[2]), Integer.parseInt(first[2 + 1]),
-                                                Integer.parseInt(first[2 + 2]));
+                    Integer.parseInt(first[2]), Integer.parseInt(first[2 + 1]),
+                                    Integer.parseInt(first[2 + 2]));
                     quiz.addQuestion(obj);
                 }
             }
@@ -368,7 +368,8 @@ public final class Solution {
         for (int i = 0; i < quiz.getsize(); i++) {
             System.out.println(quiz.questionarray()[i].getQuestionText());
             //System.out.println(quiz.showReport(i,totalvalue));
-            if (!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())) {
+            if (!quiz.questionarray()[i].evaluateResponse(
+                quiz.questionarray()[i].getResponse())) {
                 int total = quiz.questionarray()[i].getPenalty();
                 totalvalue += total;
                 System.out.println(" Wrong Answer! - Penalty: " + total);
@@ -376,7 +377,7 @@ public final class Solution {
             } else {
                 int total = quiz.questionarray()[i].getMaxMarks();
                 totalvalue += total;
-                System.out.println(" Correct Answer! - Marks Awarded: " + total);
+        System.out.println(" Correct Answer! - Marks Awarded: " + total);
                 choose = true;
             }
         }
