@@ -192,13 +192,14 @@ class Quiz {
     public String toString(int i) {
 		String s = "" ;//= queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
 		String f = "";
-		//for(int i = 0; i < size-1; i++){
+
 			s = questions[i].getQuestionText()+"("+questions[i].getMaxMarks() + ")"+'\n';
-			s = s + questions[i].getChoice()[i]+ "	";
+		for(int j = 0; j < size-1; j++){
+			s = s + questions[i].getChoice()[j]+ "	";
 
-		//}
+		}
 
-		return s ;//+ questions[i].getChoice()[size-1];
+		return s + questions[i].getChoice()[size-1];
 	}
 
 
