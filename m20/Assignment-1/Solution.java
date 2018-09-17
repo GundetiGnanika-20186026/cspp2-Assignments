@@ -371,6 +371,8 @@ public final class Solution {
 	public static void displayScore(final Quiz quiz) {
 		// write your code here to display the score report using quiz object.
 		 int totalvalue = 0;
+		 boolean choose = false;
+
          for( int i = 0; i < quiz.getsize(); i++){
          	System.out.println(quiz.questionarray()[i].getQuestionText());
          	//System.out.println(quiz.showReport(i,totalvalue));
@@ -378,12 +380,17 @@ public final class Solution {
             int total = quiz.questionarray()[i].getPenalty();
             totalvalue += total;
             System.out.println("Wrong Answer! - Penalty: "+ total);
+            choose = true;
 		 } else{
 			int total = quiz.questionarray()[i].getMaxMarks();
 			totalvalue += total;
 			System.out.println("Correct Answer! - Marks Awarded: "+ total);
+			choose = true;
 
 		}
+    }
+    if(choose){
+    	System.out.println("Total Score: "+totalvalue);
     }
 
 
