@@ -127,11 +127,15 @@ class Question {
 	 *
 	 * @return     String representation of the object.
 	 */
-	public String toString() {
-		String s = questiontext + "(" + maxMarks + ")"+'\n';
+	// public String toString() {
+	// 	String s = questiontext + "(" + maxMarks + ")"+'\n';
+	// 	for(int i = 0; i < choices.length - 1; i++){
+	// 		s = s + choices[i]+ "	";
 
-		return s;
-	}
+	// 	}
+
+	// 	return s + choices[choices.length-1];
+	// }
 }
 
 
@@ -164,10 +168,15 @@ class Quiz {
 	 *
 	 * @param      q     The question
 	 */
+	Question queobj = new Question();
 	public void addQuestion(final Question q) {
 		questions[size++] = q;
 
 
+	}
+
+	public int getsize(){
+		return size;
 	}
 	/**
 	 * Gets the question.
@@ -179,7 +188,20 @@ class Quiz {
 	public Question getQuestion(final int index) {
 		return null;
 	}
-	/**
+
+    public String toString() {
+		String s = queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
+		for(int i = 0; i < queobj.getChoice().length-1; i++){
+			s = s + queobj.getChoice()[i]+ "	";
+
+		}
+
+		return s + queobj.getChoice()[queobj.getChoice().length-1];
+	}
+
+
+
+    /**
 	 * Shows the report.
 	 *
 	 * @return     { description_of_the_return_value }
@@ -304,6 +326,9 @@ public final class Solution {
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 
+        for(int i = 0; i < quiz.getsize(); i++) {
+        	System.out.println(quiz);
+        }
 
 
 
