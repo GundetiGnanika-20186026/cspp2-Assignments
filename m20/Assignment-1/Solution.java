@@ -168,7 +168,7 @@ class Quiz {
 	 *
 	 * @param      q     The question
 	 */
-	Question queobj = new Question();
+	//Question queobj = new Question();
 	public void addQuestion(final Question q) {
 		questions[size++] = q;
 
@@ -189,14 +189,16 @@ class Quiz {
 		return null;
 	}
 
-    public String toString() {
-		String s = queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
-		for(int i = 0; i < size-1; i++){
-			s = s + queobj.getChoice()[i]+ "	";
+    public String toString(int i) {
+		String s = "" ;//= queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
+		String f = "";
+		//for(int i = 0; i < size-1; i++){
+			s = questions[i].getQuestionText()+"("+questions[i].getMaxMarks() + ")"+'\n';
+			s = s + questions[i].getChoice()[i]+ "	";
 
-		}
+		//}
 
-		return s + queobj.getChoice()[size-1];
+		return s ;//+ questions[i].getChoice()[size-1];
 	}
 
 
@@ -328,9 +330,13 @@ public final class Solution {
 		// write your code here to display the quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
-
+        String str;
         for(int i = 0; i < quiz.getsize(); i++) {
-        	System.out.println(quiz);
+    //     	str = quiz.questions[i].getQuestionText()+"("+quiz.questions[i].getMaxMarks() + ")"+'\n';
+	 		// str = str + quiz.questions[i].getChoice()[i]+ "	";
+	 		// System.out.println(str);
+            System.out.println(quiz.toString(i));
+
         }
 
 
