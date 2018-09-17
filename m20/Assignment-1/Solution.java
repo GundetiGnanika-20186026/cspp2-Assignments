@@ -195,10 +195,11 @@ class Quiz {
     public String toString(int i) {
         String s = "";//= queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
         s = questions[i].getQuestionText() + "(" + questions[i].getMaxMarks() + ")" + '\n';
-        for (int j = 0; j < questions[i].getChoice().length - 1; j++) {
-            s = s + questions[i].getChoice()[j] + "    ";
+        int j = 0;
+        for (j = 0; j < questions[i].getChoice().length - 1; j++) {
+            s = s + questions[i].getChoice()[j] + "\t";
         }
-        return s + questions[i].getChoice()[questions[i].getChoice().length - 1];
+        return s + questions[i].getChoice()[j];
     }
     /**
      * { will return the question array }
