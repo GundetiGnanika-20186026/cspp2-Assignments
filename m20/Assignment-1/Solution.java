@@ -61,7 +61,7 @@ class Question {
 	 */
 	public boolean evaluateResponse(final String choice) {
 		//if (Integer.parseInt(choice) == correctAnswer) {
-		if(this.choices[this.correctAnswer].equals(choice)){
+		if(this.choices[this.correctAnswer-1].equals(choice)){
 			return true;
 		}
 
@@ -217,7 +217,6 @@ class Quiz {
 	 * @return     { description_of_the_return_value }
 	 */
 	public String showReport(int i) {
-		String s = "";
 
 		if(!questions[i].evaluateResponse(questions[i].getResponse())){
             int total = questions[i].getPenalty();
