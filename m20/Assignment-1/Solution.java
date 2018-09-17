@@ -127,7 +127,7 @@ class Question {
      * @return     String representation of the object.
      */
     public String toString() {
-        String s = "";
+        String s = questiontext + "(" + maxMarks + ")";
         return s;
     }
 }
@@ -161,6 +161,7 @@ class Quiz {
      * @param      q     The question
      */
     public void addQuestion(final Question q) {
+    	questions[size++] = q;
 
 
     }
@@ -255,7 +256,7 @@ public final class Solution {
         } else {
             for (int i = 0; i < q; i++){
         	    String[] first = scan.nextLine().split(":");
-        	       if(first.length != 5 || first[0] == " ") {
+        	       if(first.length != 5 || first[0].equals(" ")) {
         	    	    System.out.println("Error! Malformed question");
         	        } else if ((Integer.parseInt(first[3]) < 0)) {
 					    System.out.println("Invalid max marks for " + first[0]);
@@ -298,6 +299,11 @@ public final class Solution {
         // write your code here to display the quiz questions on the console.
         // read the user responses from the console using scanner object.
         // store the user respone in the question object
+        // for(int i=0;i<quiz.size;i++){
+        // 	System.out.println(quiz.questions[i]);
+        // }
+
+
 
 
     }
