@@ -31,7 +31,8 @@ class Question {
 	 * Constructs the object.
 	 */
 	Question() {
-		choices = new String[50];
+		final int fif = 50;
+		choices = new String[fif];
 
 	}
 	/**
@@ -146,6 +147,7 @@ class Quiz {
 	/**
 	 * { var_description }.
 	 */
+
 	private final int onehundred = 100;
 	/**
 	 * { var_description }.
@@ -159,7 +161,8 @@ class Quiz {
 	 * Constructs the object.
 	 */
 	Quiz() {
-		questions = new Question[50];
+		final int fifty = 50;
+		questions = new Question[fifty];
 		size = 0;
 	}
 	/**
@@ -296,19 +299,19 @@ public final class Solution {
 		} else {
 			for (int i = 0; i < q; i++) {
 				String[] first = scan.nextLine().split(":");
-				if (first.length != 5 || first[0].equals("")) {
+				if (first.length != (2 + 2 + 1) || first[0].equals("")) {
 					System.out.println("Error! Malformed question");
-				} else if ((Integer.parseInt(first[3]) < 0)) {
+				} else if ((Integer.parseInt(first[2 + 1]) < 0)) {
 					System.out.println("Invalid max marks for " + first[0]);
-				} else if ((Integer.parseInt(first[4]) > 0)) {
+				} else if ((Integer.parseInt(first[2 + 2]) > 0)) {
 					System.out.println("Invalid penalty for " + first[0]);
 				} else {
 					String[] choicesarr = first[1].split(",");
 					if (choicesarr.length < 2) {
 						System.out.println(first[0] + " does not have enough answer choices");
-					} else if ((Integer.parseInt(first[2]) > 4 )) {
+					} else if ((Integer.parseInt(first[2]) > (2 + 2) )) {
 						System.out.println(
-				"Error! Correct answer choice number is out of range for " + first[0]);
+						    "Error! Correct answer choice number is out of range for " + first[0]);
 					} else {
 						res = true;
 						continue1 = true;
@@ -316,8 +319,8 @@ public final class Solution {
 				}
 				if (continue1) {
 					Question obj = new Question(first[0], first[1].split(","),
-					 Integer.parseInt(first[2]), Integer.parseInt(first[3]),
-					  Integer.parseInt(first[4]));
+					                            Integer.parseInt(first[2]), Integer.parseInt(first[3]),
+					                            Integer.parseInt(first[2 + 2]));
 					quiz.addQuestion(obj);
 				}
 			}
@@ -336,7 +339,8 @@ public final class Solution {
 	 */
 	public static void startQuiz(final Scanner scan,
 	                             final Quiz quiz, final int q) {
-		// write your code here to display the quiz questions on the console.
+		// write your code here to display the
+		// quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
 		String str;
@@ -363,7 +367,7 @@ public final class Solution {
 		for (int i = 0; i < quiz.getsize(); i++) {
 			System.out.println(quiz.questionarray()[i].getQuestionText());
 			//System.out.println(quiz.showReport(i,totalvalue));
-if (!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())) {
+			if (!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())) {
 				int total = quiz.questionarray()[i].getPenalty();
 				totalvalue += total;
 				System.out.println(" Wrong Answer! - Penalty: " + total);
