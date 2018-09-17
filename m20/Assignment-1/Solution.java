@@ -375,7 +375,7 @@ public final class Solution {
          	System.out.println(quiz.questionarray()[i].getQuestionText());
          	System.out.println(quiz.showReport(i,totalvalue));
          }
-         System.out.println(totalvalue);
+
 
 
 
