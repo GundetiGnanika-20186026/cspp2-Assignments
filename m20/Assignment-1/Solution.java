@@ -194,12 +194,12 @@ class Quiz {
 		String f = "";
 
 			s = questions[i].getQuestionText()+"("+questions[i].getMaxMarks() + ")"+'\n';
-		for(int j = 0; j < 4; j++){
+		for(int j = 0; j < questions[i].getChoice().length-1; j++){
 			s = s + questions[i].getChoice()[j]+ "	";
 
 		}
 
-		return s + questions[i].getChoice()[size-1];
+		return s + questions[i].getChoice()[questions[i].getChoice().length-1];
 	}
 
 
