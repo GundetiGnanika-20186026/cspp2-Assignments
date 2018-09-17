@@ -294,7 +294,7 @@ public final class Solution {
 					System.out.println("Invalid penalty for " + first[0]);
 				} else {
 					String[] choicesarr = first[1].split(",");
-					if (choicesarr.length <= 2) {
+					if (choicesarr.length < 2) {
 						System.out.println(first[0] + " does not have enough answer choices");
 					} else if ((Integer.parseInt(first[2]) > 4 )) {
 						System.out.println("Error! Correct answer choice number is out of range for " + first[0]);
