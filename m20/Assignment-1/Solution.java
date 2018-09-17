@@ -31,7 +31,7 @@ class Question {
 	 * Constructs the object.
 	 */
 	Question() {
-
+		choices = new String[10];
 
 	}
 	/**
