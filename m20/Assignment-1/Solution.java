@@ -320,7 +320,7 @@ public final class Solution {
                 }
                 if (continue1) {
                     Question obj = new Question(first[0], first[1].split(","),
-                                                Integer.parseInt(first[2]), Integer.parseInt(first[2+1]),
+                                                Integer.parseInt(first[2]), Integer.parseInt(first[2 + 1]),
                                                 Integer.parseInt(first[2 + 2]));
                     quiz.addQuestion(obj);
                 }
