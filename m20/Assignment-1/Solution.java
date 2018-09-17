@@ -191,14 +191,9 @@ class Quiz {
     //  */
     // public Question getQuestion(final int index) {
     //  return null;
-    // }.
-    /**
-     * Returns a string representation of the object.
-     *
-     * @param      i     { parameter_description }
-     *
-     * @return     String representation of the object.
-     */
+    // }
+
+
     public String toString(final int i) {
         String s = "";//= queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
         s = questions[i].getQuestionText() + "(" + questions[i].getMaxMarks() + ")" + '\n';
@@ -326,7 +321,7 @@ public final class Solution {
                 }
                 if (continue1) {
                     Question obj = new Question(first[0], first[1].split(","),
-                                                Integer.parseInt(first[2]), Integer.parseInt(first[2 + 1]),
+                                                Integer.parseInt(first[2]), Integer.parseInt(first[2+1]),
                                                 Integer.parseInt(first[2 + 2]));
                     quiz.addQuestion(obj);
                 }
