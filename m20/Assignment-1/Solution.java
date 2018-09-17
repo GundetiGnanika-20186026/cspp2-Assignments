@@ -178,6 +178,7 @@ class Quiz {
 	public int getsize(){
 		return size;
 	}
+
 	/**
 	 * Gets the question.
 	 *
@@ -185,26 +186,30 @@ class Quiz {
 	 *
 	 * @return     The question.
 	 */
-	public Question getQuestion(final int index) {
-		return null;
-	}
+	// public Question getQuestion(final int index) {
+	// 	return null;
+	// }
 
-    public String toString(int i) {
+	public String toString(int i) {
 		String s = "" ;//= queobj.getQuestionText() + "(" + queobj.getMaxMarks() + ")"+'\n';
-		String f = "";
 
-			s = questions[i].getQuestionText()+"("+questions[i].getMaxMarks() + ")"+'\n';
-		for(int j = 0; j < questions[i].getChoice().length-1; j++){
-			s = s + questions[i].getChoice()[j]+ "	";
+
+		s = questions[i].getQuestionText() + "(" + questions[i].getMaxMarks() + ")" + '\n';
+		for (int j = 0; j < questions[i].getChoice().length - 1; j++) {
+			s = s + questions[i].getChoice()[j] + "	";
 
 		}
 
-		return s + questions[i].getChoice()[questions[i].getChoice().length-1];
+		return s + questions[i].getChoice()[questions[i].getChoice().length - 1];
+	}
+
+	public Question[] questionarray(){
+		return questions;
 	}
 
 
 
-    /**
+	/**
 	 * Shows the report.
 	 *
 	 * @return     { description_of_the_return_value }
@@ -304,10 +309,10 @@ public final class Solution {
 					}
 
 				}
-               if(continue1){
-			   Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
-			   quiz.addQuestion(obj);
-			}
+				if (continue1) {
+					Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
+					quiz.addQuestion(obj);
+				}
 			}
 			if (res) {
 				System.out.println(q + " are added to the quiz");
@@ -331,18 +336,20 @@ public final class Solution {
 		// write your code here to display the quiz questions on the console.
 		// read the user responses from the console using scanner object.
 		// store the user respone in the question object
-        String str;
-        for(int i = 0; i < quiz.getsize(); i++) {
-    //     	str = quiz.questions[i].getQuestionText()+"("+quiz.questions[i].getMaxMarks() + ")"+'\n';
-	 		// str = str + quiz.questions[i].getChoice()[i]+ "	";
-	 		// System.out.println(str);
-            System.out.println(quiz.toString(i));
-            System.out.println();
-            String ans = scan.nextLine();
+		String str;
+		for (int i = 0; i < quiz.getsize(); i++) {
+			//str = quiz.questions[i].getQuestionText()+"("+quiz.questions[i].getMaxMarks() + ")"+'\n';
+			// str = str + quiz.questions[i].getChoice()[i]+ "	";
+			// System.out.println(str);
+			System.out.println(quiz.toString(i));
+			System.out.println();
+			String ans = scan.nextLine();
+			quiz.questionarray()[i].setResponse(ans);
 
 
 
-        }
+
+		}
 
 
 
