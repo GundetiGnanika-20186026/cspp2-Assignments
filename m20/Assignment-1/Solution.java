@@ -268,9 +268,9 @@ public final class Solution {
 				       } else if ((Integer.parseInt(first[2]) > 4 )) {
 					    System.out.println("Error! Correct answer choice number is out of range for " + first[0]);
                        }
-                       ans = true;
-                    }
 
+                    }
+                       ans = true;
         	           Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
                        quiz.addQuestion(obj);
             }
