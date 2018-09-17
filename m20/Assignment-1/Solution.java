@@ -258,7 +258,7 @@ public final class Solution {
         } else {
             for (int i = 0; i < q; i++){
         	    String[] first = scan.nextLine().split(":");
-        	       if(first.length != 5 || first[0].equals("")) {
+        	        if(first.length != 5 || first[0].equals("")) {
         	    	    System.out.println("Error! Malformed question");
         	        } else if ((Integer.parseInt(first[3]) < 0)) {
 					    System.out.println("Invalid max marks for " + first[0]);
@@ -276,7 +276,7 @@ public final class Solution {
 
                     }
 
-        	        Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
+        	       // Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
                     //quiz.addQuestion(obj);
             }
             if(res){
