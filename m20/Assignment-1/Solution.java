@@ -307,14 +307,17 @@ public final class Solution {
 					if (choicesarr.length < 2) {
 						System.out.println(first[0] + " does not have enough answer choices");
 					} else if ((Integer.parseInt(first[2]) > 4 )) {
-						System.out.println("Error! Correct answer choice number is out of range for " + first[0]);
+						System.out.println(
+				"Error! Correct answer choice number is out of range for " + first[0]);
 					} else {
 						res = true;
 						continue1 = true;
 					}
 				}
 				if (continue1) {
-					Question obj = new Question(first[0], first[1].split(","), Integer.parseInt(first[2]), Integer.parseInt(first[3]), Integer.parseInt(first[4]));
+					Question obj = new Question(first[0], first[1].split(","),
+					 Integer.parseInt(first[2]), Integer.parseInt(first[3]),
+					  Integer.parseInt(first[4]));
 					quiz.addQuestion(obj);
 				}
 			}
@@ -338,7 +341,8 @@ public final class Solution {
 		// store the user respone in the question object
 		String str;
 		for (int i = 0; i < quiz.getsize(); i++) {
-			//str = quiz.questions[i].getQuestionText()+"("+quiz.questions[i].getMaxMarks() + ")"+'\n';
+			//str = quiz.questions[i].getQuestionText()+
+			//"("+quiz.questions[i].getMaxMarks() + ")"+'\n';
 			// str = str + quiz.questions[i].getChoice()[i]+ "	";
 			// System.out.println(str);
 			System.out.println(quiz.toString(i));
@@ -359,7 +363,7 @@ public final class Solution {
 		for (int i = 0; i < quiz.getsize(); i++) {
 			System.out.println(quiz.questionarray()[i].getQuestionText());
 			//System.out.println(quiz.showReport(i,totalvalue));
-			if (!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())) {
+if (!quiz.questionarray()[i].evaluateResponse(quiz.questionarray()[i].getResponse())) {
 				int total = quiz.questionarray()[i].getPenalty();
 				totalvalue += total;
 				System.out.println(" Wrong Answer! - Penalty: " + total);
