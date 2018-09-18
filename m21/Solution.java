@@ -1,132 +1,308 @@
 import java.util.Scanner;
 import java.util.*;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-
+//import java.text.SimpleDateFormat;
+//import java.util.Date;
+/**
+ * Class for foodlog.
+ */
 class Foodlog {
+    /**
+     * { foodname }.
+     */
     private String foodname;
-    private double quantity;
-    private String dateandtime;
-    Foodlog(String name, double quant, String time1) {
+    /**
+     * { quantity }.
+     */
+    private String quantity;
+    /**
+     * { date }.
+     */
+    private String date;
+    /**
+     * { time }.
+     */
+    private String time;
+    /**
+     * Constructs the object.
+     *
+     * @param      name   The name
+     * @param      quant  The quant
+     * @param      time1  The time 1
+     */
+    Foodlog(String name, String quant, String date1, String time1) {
         this.foodname = name;
         this.quantity = quant;
-        this.dateandtime = time1;
+        this.date = date1;
+        this.time = time1;
     }
 
+    /**
+     * { getting foodname  }.
+     *
+     * @return     { foodname }
+     */
     public String getfoodname() {
         return foodname;
     }
-    public double getquantity() {
+
+    /**
+     * { getting quantity }.
+     *
+     * @return     { quantity }
+     */
+    public String getquantity() {
         return quantity;
     }
-    public String getdateandtime() {
-        return dateandtime;
-    }
-}
-class Waterlog {
-    private double amount;
-    private String dateandtime;
-    Waterlog(double qunt, String datetime) {
-        this.amount = qunt;
-        this.dateandtime = datetime;
+
+    /**
+     * { getting date }.
+     *
+     * @return     { date  }
+     */
+    public String getdate() {
+        return date;
     }
 
-    public double getamount() {
+    /**
+     * { getting time }
+     *
+     * @return     { time }
+     */
+    public String gettime() {
+        return time;
+    }
+
+}
+//////////////////////////////////////////////////////////////////////
+
+/**
+ * Class for waterlog.
+ */
+class Waterlog {
+    /**
+     * { amount of water }.
+     */
+    private String amount;
+    /**
+     * { date and time }.
+     */
+    private String date;
+    /**
+     * { time }
+     */
+    private String time;
+
+    /**
+     * Constructs the object.
+     *
+     * @param      qunt      The qunt
+     * @param      datetime  The datetime
+     */
+    Waterlog(String amount, String date1, String time1) {
+        this.amount = amount;
+        this.date = date1;
+        this.time = time1;
+    }
+
+    /**
+     * { getting amount }.
+     *
+     * @return     { the amount }
+     */
+    public String getamount() {
         return amount;
     }
 
-    public String getdateandtime() {
-        return dateandtime;
+    /**
+     * { date and time }.
+     *
+     * @return     { date and time }
+     */
+    public String getdate() {
+        return date;
+    }
+    /**
+     * { time }
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public String gettime() {
+        return time;
     }
 
 }
-class Physicalact {
+//////////////////////////////////////////////////////////////////
+
+/**
+ * Class for physicalact.
+ */
+class PhysicalActivitylog {
+    /**
+     * { activity }.
+     */
     private String activity;
+    /**
+     * { date }.
+     */
     private String date;
+    /**
+     * { start time }.
+     */
     private String starttime;
+    /**
+     * { end time }.
+     */
     private String endtime;
+    /**
+     * { notes }.
+     */
     private String notes;
-    Physicalact(String act, String date1, String sttime, String endtim) {
+
+    /**
+     * Constructs the object.
+     *
+     * @param      act     The act
+     * @param      date1   The date 1
+     * @param      sttime  The sttime
+     * @param      endtim  The endtim
+     */
+    PhysicalActivitylog(String act, String notes1, String date1, String sttime, String endtim) {
         this.activity = act;
+        this.notes = notes1;
         this.date = date1;
         this.starttime = sttime;
         this.endtime = endtim;
     }
+
+    /**
+     * { get activity }.
+     *
+     * @return     { activity }
+     */
     public String getactivity() {
         return activity;
     }
+
+
+
+    /**
+     * { get date }.
+     *
+     * @return     { getdate }
+     */
     public String getdate() {
         return date;
     }
+
+    /**
+     * { get start time }.
+     *
+     * @return     { return start time }
+     */
     public String getstarttime() {
         return starttime;
     }
+
+    /**
+     * { get end time }.
+     *
+     * @return     {  }
+     */
     public String getendtime() {
         return endtime;
     }
-    public void setnotes(String notes1) {
-        notes = notes1;
+    /**
+     * { return notes }.
+     *
+     * @return     { notes }
+     */
+    public String getnotes() {
+        return notes;
     }
 
 }
-class Weight {
-    private double weightinkg;
-    private double fatpercent;
+////////////////////////////////////////////////////////////////////
+/**
+ * Class for weight.
+ */
+class Weightlog {
+    /**
+     * { var_description }
+     */
     private String date;
-    Weight(double weight1, double percent, String date1) {
+    private String  time;
+    private String weightinkg;
+    private String fatpercent;
+
+    Weightlog(String date1, String time1, String weight1, String percent) {
+        this.date = date1;
+        this.time = time1;
         this.weightinkg = weight1;
         this.fatpercent = percent;
-        this.date = date1;
+
     }
 
-    public double getweightinkg() {
-        return weightinkg;
-    }
-
-    public double getfatpercent() {
-        return fatpercent;
-    }
     public String getdate() {
         return date;
     }
-}
 
-class Sleep {
-    private String datestarttime;
-    private String dateendtime;
-    Sleep(String datest, String dateet) {
-        this.datestarttime = datest;
-        this.dateendtime = dateet;
+    public String gettime() {
+        return time;
     }
 
-    public String getdatestarttime() {
-        return datestarttime;
+    public String getweightinkg() {
+        return weightinkg;
     }
 
-    public String getdateendtime() {
-        return dateendtime;
+    public String getfatpercent() {
+        return fatpercent;
     }
-
 
 }
+/////////////////////////////////////////////////////////
+
+class Sleeplog {
+    private String date;
+    private String starttime;
+    private String endtime;
+    Sleeplog(String date1, String starttime1, String endtime1) {
+        this.date = date1;
+        this.starttime = starttime1;
+        this.endtime = endtime1;
+    }
+
+    public String getdate() {
+        return date;
+    }
+
+    public String getstarttime() {
+        return starttime;
+    }
+
+    public String getendtime() {
+        return endtime;
+    }
+
+
+}
+////////////////////////////////////////////////////
 class Summary {
     Foodlog[] foodarray;
     int foodsize;
     Waterlog[] waterarray;
     int watersize;
-    Physicalact[] activityarray;
+    PhysicalActivitylog[] activityarray;
     int activitysize;
-    Sleep[] sleeparray;
+    Sleeplog[] sleeparray;
     int sleepsize;
-    Weight[] weightarray;
+    Weightlog[] weightarray;
     int weightsize;
     Summary() {
         foodarray = new Foodlog[50];
         waterarray = new Waterlog[50];
-        activityarray = new Physicalact[50];
-        sleeparray = new Sleep[50];
-        weightarray = new Weight[50];
+        activityarray = new PhysicalActivitylog[50];
+        sleeparray = new Sleeplog[50];
+        weightarray = new Weightlog[50];
         foodsize = 0;
         watersize = 0;
         activitysize = 0;
@@ -140,116 +316,175 @@ class Summary {
     public void addwaterarray(Waterlog waterobj1) {
         waterarray[watersize++] = waterobj1;
     }
-    public void addactivityarray(Physicalact actobj1) {
+    public void addactivityarray(PhysicalActivitylog actobj1) {
         activityarray[activitysize++] = actobj1;
     }
-    public void addsleeparray(Sleep slpobj1) {
+    public void addsleeparray(Sleeplog slpobj1) {
         sleeparray[sleepsize++] = slpobj1;
     }
-    public void addweightarray(Weight wobj1) {
+    public void addweightarray(Weightlog wobj1) {
         weightarray[weightsize++] = wobj1;
     }
 
-    public String tostring(String argdate) {
-        String s = "";
-        for (int i = 0; i < foodsize; i++) {
-            String[] datsplit = foodarray[i].getdateandtime().split(" ");
-            if (datsplit[0].equals(argdate)) {
-                s += foodarray[i].getfoodname();
-            } else {
-                s += "\n" + "** no food item **";
-            }
-        }
+    public void printfoodlog() {
+        if(foodsize == 0){
+            System.out.println("None");
+        } else {
+            for (int i = 0 ; i < foodsize ; i++) {
 
-        for (int i = 0; i < watersize; i++) {
-            String[] watsplit = waterarray[i].getdateandtime().split(" ");
-            if (watsplit[0].equals(argdate)) {
-                s += "\n" + waterarray[i].getamount();
-            } else {
-                s += "\n" + "** no water quantity **";
-
-            }
-        }
-
-        for (int i = 0; i < activitysize; i++) {
-            if (activityarray[i].getdate().equals(argdate)) {
-                s += "\n" + activityarray[i].getactivity();
-            } else {
-                s += "\n" + "** no activity **";
-            }
-        }
-
-        for (int i = 0; i < weightsize ; i++) {
-            if (weightarray[i].getdate().equals(argdate)) {
-                s += "\n" + weightarray[i].getweightinkg();
-            } else {
-                s += "\n" + "** no weight **";
-            }
+            System.out.println("Date:" + foodarray[i].getdate());
+            System.out.println("Time:" + foodarray[i].gettime());
+            System.out.println("Name:" + foodarray[i].getfoodname());
+            System.out.println("Quantity:" + foodarray[i].getquantity());
 
         }
+    }
 
+    }
+
+    public void printwaterlog() {
+        if(watersize == 0){
+            System.out.println("None");
+        } else {
+        for (int i = 0 ; i < watersize ; i++) {
+
+            System.out.println("Date:" + waterarray[i].getdate());
+            System.out.println("Quantity:" + waterarray[i].getamount()+"ml");
+        }
+    }
+
+
+    }
+
+    public void printphysicalactivity() {
+        if(activitysize == 0){
+            System.out.println("None");
+        } else {
+        for (int i = 0 ; i < activitysize ; i++) {
+
+            System.out.println("Name:" + activityarray[i].getactivity());
+            System.out.println("Notes:" + activityarray[i].getnotes());
+            System.out.println("Date:" + activityarray[i].getdate());
+            System.out.println("Starttime:" + activityarray[i].getstarttime());
+            System.out.println("Endtime:" + activityarray[i].getendtime());
+        }
+    }
+
+    }
+
+    public void printweightlog() {
+        if(weightsize == 0) {
+            System.out.println("None");
+        } else {
+        for (int i = 0 ; i < weightsize ; i++) {
+
+            System.out.println("Date:" + weightarray[i].getdate());
+            System.out.println("Time:" + weightarray[i].gettime());
+            System.out.println("Weight:" + weightarray[i].getweightinkg());
+            System.out.println("Fat:" + weightarray[i].getfatpercent());
+        }
+    }
+
+    }
+
+    public void printsleep() {
+        if(sleepsize == 0){
+            System.out.println("None");
+        } else {
         for (int i = 0; i < sleepsize; i++) {
-            String[] slesplit = sleeparray[i].getdatestarttime().split(" ");
-            if (slesplit[0].equals(argdate)) {
-                s += "\n" + sleeparray[i].getdatestarttime() + " to " + sleeparray[i].getdateendtime();
-            } else {
-                s += "\n" + "** no sleep time **";
-            }
-        }
 
-        return s;
+            System.out.println("Date:" + sleeparray[i].getdate());
+            System.out.println("Starttime:" + sleeparray[i].getstarttime());
+            System.out.println("Endtime:" + sleeparray[i].getendtime());
+        }
+    }
     }
 }
 
-class Solution {
-    public static void main(String[] args) {
-        SimpleDateFormat uni1 = new SimpleDateFormat("dd/MM/yyyy");
-        Date uni2 = new Date();
 
-        Scanner scn = new Scanner(System.in);
-        Summary summobj = new Summary();
-        while (scn.hasNext()) {
-            String[] input = scn.nextLine().split(" ", 2);
-            switch (input[0]) {
-            case "addfood":
-                String[] foodsplit = input[1].split(",");
-                Foodlog foodobj = new Foodlog(foodsplit[0], Double.parseDouble(foodsplit[1]), foodsplit[2]);
-                summobj.addfoodarray(foodobj);
-                break;
-            case "addwater" :
-                String[] watersplit = input[1].split(",");
-                Waterlog waterobj = new Waterlog(Double.parseDouble(watersplit[0]), watersplit[1]);
-                summobj.addwaterarray(waterobj);
-                break;
-            case "addactivity":
-                String[] activitysplit = input[1].split(",");
-                Physicalact activityobj = new Physicalact(activitysplit[0], activitysplit[1], activitysplit[2], activitysplit[3]);
-                summobj.addactivityarray(activityobj);
-                break;
-            case "addsleep" :
-                String[] sleepsplit = input[1].split(",");
-                Sleep sleepobj = new Sleep(sleepsplit[0], sleepsplit[1]);
-                summobj.addsleeparray(sleepobj);
-                break;
-            case "addweight" :
-                String[] weightsplit = input[1].split(",");
-                Weight weightobj = new Weight(Double.parseDouble(weightsplit[0]), Double.parseDouble(weightsplit[1]), weightsplit[2]);
-                summobj.addweightarray(weightobj);
-                break;
-            case "print" :
-                if (input.length == 0) {
-                    System.out.println(summobj.tostring(uni1.format(uni2)));
-                } else {
-                    System.out.println(summobj.tostring(input[1]));
+
+
+
+//////////////////////////////////////////////////////////////////////////
+    class Solution {
+        public static void main(String[] args) {
+            //SimpleDateFormat uni1 = new SimpleDateFormat("dd/MM/yyyy");
+            //Date uni2 = new Date();
+
+            Scanner scn = new Scanner(System.in);
+            Summary summobj = new Summary();
+            while (scn.hasNext()) {
+                String[] input = scn.nextLine().split(" ", 2);
+                switch (input[0]) {
+                case "Food":
+                    String[] foodsplit = input[1].split(",");
+                    Foodlog foodobj = new Foodlog(foodsplit[0], foodsplit[1], foodsplit[2], foodsplit[3]);
+                    summobj.addfoodarray(foodobj);
+                    break;
+                case "Water" :
+                    String[] watersplit = input[1].split(",");
+                    Waterlog waterobj = new Waterlog(watersplit[0], watersplit[1], watersplit[2]);
+                    summobj.addwaterarray(waterobj);
+                    break;
+                case "PhysicalActivity":
+                    String[] activitysplit = input[1].split(",");
+                    PhysicalActivitylog activityobj = new PhysicalActivitylog(activitysplit[0], activitysplit[1], activitysplit[2], activitysplit[3], activitysplit[4]);
+                    summobj.addactivityarray(activityobj);
+                    break;
+                case "Sleep" :
+                    String[] sleepsplit = input[1].split(",");
+                    Sleeplog sleepobj = new Sleeplog(sleepsplit[0], sleepsplit[1], sleepsplit[2]);
+                    summobj.addsleeparray(sleepobj);
+                    break;
+                case "Weight" :
+                    String[] weightsplit = input[1].split(",");
+                    Weightlog weightobj = new Weightlog(weightsplit[0], weightsplit[1], weightsplit[2], weightsplit[3]);
+                    summobj.addweightarray(weightobj);
+                    break;
+                case "Foodlog" :
+                    System.out.println("Food");
+                    summobj.printfoodlog();
+                    System.out.println();
+                    break;
+                case "Waterlog" :
+                    System.out.println("Water");
+                    summobj.printwaterlog();
+                    System.out.println();
+                    break;
+                case "PhysicalActivitylog" :
+                    System.out.println("PhysicalActivity");
+                    summobj.printphysicalactivity();
+                    System.out.println();
+
+                    break;
+                case "Weightlog" :
+                    System.out.println("Weight");
+                    summobj.printweightlog();
+                    System.out.println();
+                    break;
+                case "Sleeplog" :
+                    System.out.println("Sleep");
+                    summobj.printsleep();
+                    System.out.println();
+                    break;
+                case "Summary" :
+                    System.out.println("Food");
+                    summobj.printfoodlog();
+                     System.out.println("Water");
+                    summobj.printwaterlog();
+                     System.out.println("PhysicalActivity");
+                    summobj.printphysicalactivity();
+                     System.out.println("Weight");
+                    summobj.printweightlog();
+                      System.out.println("Sleep");
+                    summobj.printsleep();
+                    break;
+                default :
+
                 }
-
-                break;
-            default :
-
             }
-        }
 
+        }
     }
-}
 
 
