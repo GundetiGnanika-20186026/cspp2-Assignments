@@ -341,7 +341,9 @@ class Summary {
     }
 
     }
-
+    /**
+     * { function_description }
+     */
     public void printwaterlog() {
         if(watersize == 0){
             System.out.println("None");
