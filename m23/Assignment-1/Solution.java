@@ -89,7 +89,7 @@ class Solution {
                     //System.out.println(final2);
                     scn1.close();
 
-                   // finalobj.plagerism(final1,final2);
+                    finalobj.plagerism(final1,final2);
 
                 }
             }
