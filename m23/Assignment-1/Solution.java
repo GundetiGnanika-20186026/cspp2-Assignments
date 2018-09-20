@@ -72,12 +72,20 @@ class Solution {
 
 					// File file1 = new File(files[i]);
 					Scanner scn = new Scanner(files[i]);
-					String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
+					HashMap<String, Integer> final1 = new HashMap<>();
+					String[] para1;
+					while (scn.hasNext()) {
+						String s1 = scn.useDelimiter("\\A").next();
+						para1 = s1.toLowerCase().split(" ");
+						final1 = Countfreq(para1);
+					}
+
+					// String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
 					// System.out.println(s1);
-					String[] para1 = s1.toLowerCase().split(" ");
+					// String[] para1 = s1.toLowerCase().split(" ");
 					// System.out.println(Arrays.toString(para1));
 					//System.out.println(Arrays.toString(para1));
-					HashMap<String, Integer> final1 = Countfreq(para1);
+					// HashMap<String, Integer> final1 = Countfreq(para1);
 					//System.out.println(final1);
 					scn.close();
 
