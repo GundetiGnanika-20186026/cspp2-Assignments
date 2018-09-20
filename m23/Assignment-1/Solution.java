@@ -41,7 +41,7 @@ class Bagofwords {
 
         }
         double denominator;
-        denominator = Math.sqrt(square1) + Math.sqrt(square2);
+        denominator = Math.sqrt(square1) * Math.sqrt(square2);
 
         double ans = (numerator / denominator);
         System.out.println(ans);
@@ -54,7 +54,7 @@ class Bagofwords {
 class Solution {
 
     public static void main(String[] args) {
-        Bagofwords finalobj = new Bagofwords();
+
         try {
 
             File new1 = new File("Test");
@@ -65,13 +65,15 @@ class Solution {
 
             for (int i = 0; i < files.length; i++) {
 
+
                 for (int j = 0; j < files.length; j++) {
+                    Bagofwords finalobj = new Bagofwords();
 
                     // File file1 = new File(files[i]);
                     Scanner scn = new Scanner(files[i]);
                     String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
                     String[] para1 = s1.toLowerCase().split(" ");
-                    System.out.println(Arrays.toString(para1));
+                    //System.out.println(Arrays.toString(para1));
                     HashMap<String, Integer> final1 = Countfreq(para1);
                     //System.out.println(final1);
                     scn.close();
