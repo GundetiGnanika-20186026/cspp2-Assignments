@@ -69,14 +69,17 @@ class Solution {
 
                     // File file1 = new File(files[i]);
                     Scanner scn = new Scanner(files[i]);
-                    String[] para1 = scn.nextLine().toLowerCase().split(" ");
+                    String s1 = scn.nextLine().replaceAll("[^ A-Za-z0-9]","");
+                    String[] para1 = s1.toLowerCase().split(" ");
                     HashMap<String, Integer> final1 = Countfreq(para1);
                     // //System.out.println(final1);
                     scn.close();
 
                     // File file2 = new File("test2.txt");
                     Scanner scn1 = new Scanner(files[j]);
-                    String[] para2 = scn1.nextLine().split(" ");
+                    String s2 = scn.nextLine().replaceAll("[^ A-Za-z0-9]","");
+                    String[] para2 = s2.toLowerCase().split(" ");
+                    // String[] para2 = scn1.nextLine().split(" ");
                     HashMap<String, Integer> final2 = Countfreq(para2);
                     //System.out.println(final2);
                     scn1.close();
