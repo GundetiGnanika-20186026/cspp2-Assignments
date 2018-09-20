@@ -72,7 +72,7 @@ class Solution {
                     String s1 = scn.nextLine().replaceAll("[^ A-Za-z0-9]","");
                     String[] para1 = s1.toLowerCase().split(" ");
                     HashMap<String, Integer> final1 = Countfreq(para1);
-                    // //System.out.println(final1);
+                    System.out.println(final1);
                     scn.close();
 
                     // File file2 = new File("test2.txt");
@@ -82,7 +82,7 @@ class Solution {
                     String[] para2 = s2.toLowerCase().split(" ");
                     // String[] para2 = scn1.nextLine().split(" ");
                     HashMap<String, Integer> final2 = Countfreq(para2);
-                    //System.out.println(final2);
+                    System.out.println(final2);
                     scn1.close();
                     finalobj.plagerism(final1,final2);
 
