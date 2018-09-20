@@ -111,7 +111,7 @@ class Solution {
 
 
 
-		} catch (IOException io) {
+		} catch (Exception e) {
 			System.out.println("No such file");
 		}
 	}
