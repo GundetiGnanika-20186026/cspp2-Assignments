@@ -59,7 +59,7 @@ class Solution {
 		try {
 			Scanner linescan = new Scanner(System.in);
 			String dirname = linescan.nextLine();
-			System.out.println(dirname);
+			//System.out.println(dirname);
 			File new1 = new File(dirname);
 			File[] files = new1.listFiles();
 			// for(File i : files){
