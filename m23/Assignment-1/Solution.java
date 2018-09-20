@@ -84,7 +84,7 @@ class Solution {
                     String[] para2 = s2.toLowerCase().split(" ");
                     // String[] para2 = scn1.nextLine().split(" ");
                     HashMap<String, Integer> final2 = Countfreq(para2);
-                    System.out.println(final2);
+                    //System.out.println(final2);
                     scn1.close();
                     //finalobj.plagerism(final1,final2);
 
