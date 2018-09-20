@@ -54,7 +54,7 @@ class Bagofwords {
 class Solution {
 
     public static void main(String[] args) {
-
+        Bagofwords finalobj = new Bagofwords();
         try {
 
             File new1 = new File("Test");
@@ -80,9 +80,11 @@ class Solution {
                     HashMap<String, Integer> final2 = Countfreq(para2);
                     //System.out.println(final2);
                     scn1.close();
+                    finalobj.plagerism(final1,final2);
 
                 }
             }
+
 
 
         } catch (Exception e) {
