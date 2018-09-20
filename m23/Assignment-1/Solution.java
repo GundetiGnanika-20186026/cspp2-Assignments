@@ -11,7 +11,7 @@ class Bagofwords {
 		return dict1;
 	}
 
-	public void plagerism(HashMap<String, Integer> finald1, HashMap<String, Integer> finald2) {
+	public long plagerism(HashMap<String, Integer> finald1, HashMap<String, Integer> finald2) {
 		// HashMap<String, ArrayList<Integer>> result = new Hash;
 		//  for(int j = 0;j < finald2.size(); j++) {Map<>();
 		// for(int i = 0; i < finald1.size(); i++) {
@@ -45,7 +45,7 @@ class Bagofwords {
 
 		double ans = (numerator / denominator) * 100;
 		ans = Math.round(ans);
-		System.out.println((long)(ans));
+		return (long)(ans);
 	}
 
 
@@ -107,7 +107,7 @@ class Solution {
 					//System.out.println(final2);
 					scn1.close();
 
-					finalobj.plagerism(final1, final2);
+					System.out.println(finalobj.plagerism(final1, final2));
 
 				}
 			}
