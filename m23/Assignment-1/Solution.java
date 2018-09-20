@@ -57,12 +57,13 @@ class Solution {
     public static void main(String[] args) {
 
         try {
-
-            File new1 = new File("Test");
+             Scanner linescan = new Scanner(System.in);
+             String dirname = linescan.nextLine();
+            File new1 = new File(dirname);
             File[] files = new1.listFiles();
             // for(File i : files){
             //     System.out.println(i);
-            // }
+            // // }
 
             for (int i = 0; i < files.length; i++) {
 
