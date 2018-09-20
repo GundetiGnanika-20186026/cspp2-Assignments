@@ -86,6 +86,7 @@ class Solution {
                     HashMap<String, Integer> final2 = Countfreq(para2);
                     //System.out.println(final2);
                     scn1.close();
+
                     finalobj.plagerism(final1,final2);
 
                 }
