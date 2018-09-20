@@ -78,7 +78,10 @@ class Solution {
 						String s1 = scn.useDelimiter("\\A").next();
 						para1 = s1.toLowerCase().split(" ");
 						final1 = Countfreq(para1);
+						int  keyscount = final1.keySet().size();
+
 					}
+
 
 					// String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
 					// System.out.println(s1);
