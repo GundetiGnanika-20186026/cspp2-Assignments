@@ -71,6 +71,7 @@ class Solution {
             }
             System.out.println();
 			for (int i = 0; i < files.length; i++) {
+				System.out.println(files[i].getName()+"\t");
 				for (int j = 0; j < files.length; j++) {
 					Bagofwords finalobj = new Bagofwords();
 
