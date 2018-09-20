@@ -43,7 +43,7 @@ class Bagofwords {
         double denominator;
         denominator = Math.sqrt(square1) + Math.sqrt(square2);
 
-        double ans = (numerator / denominator)*100;
+        double ans = (numerator / denominator);
         System.out.println(ans);
     }
 
