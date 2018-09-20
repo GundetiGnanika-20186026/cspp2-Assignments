@@ -112,7 +112,7 @@ class Solution {
 					//System.out.println(final2);
 					scn1.close();
 
-					System.out.print(finalobj.plagerism(final1, final2));
+					System.out.print(finalobj.plagerism(final1, final2)+"\t");
 
 				}
 			}
