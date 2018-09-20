@@ -85,10 +85,14 @@ class Solution {
 					Scanner scn1 = new Scanner(files[j]);
 					//String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
 					// String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
-					String s2 = scn1.useDelimiter("\\A").next();
-					String[] para2 = s2.toLowerCase().split(" ");
+					HashMap<String, Integer> final2 = new HashMap<>();
+					String[] para2;
+					while (scn1.hasNext()) {
+						String s2 = scn1.useDelimiter("\\A").next();
+						para2 = s2.toLowerCase().split(" ");
+						final2 = Countfreq(para2);
+					}
 					// String[] para2 = scn1.nextLine().split(" ");
-					HashMap<String, Integer> final2 = Countfreq(para2);
 					//System.out.println(final2);
 					scn1.close();
 
