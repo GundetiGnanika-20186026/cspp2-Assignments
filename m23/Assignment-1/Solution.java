@@ -77,7 +77,7 @@ class Solution {
 
                     // File file2 = new File("test2.txt");
                     Scanner scn1 = new Scanner(files[j]);
-                    String s2 = scn.nextLine().replaceAll("[^ A-Za-z0-9]","");
+                    String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
                     String[] para2 = s2.toLowerCase().split(" ");
                     // String[] para2 = scn1.nextLine().split(" ");
                     HashMap<String, Integer> final2 = Countfreq(para2);
