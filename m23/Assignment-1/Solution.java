@@ -71,7 +71,7 @@ class Solution {
                     Scanner scn = new Scanner(files[i]);
                     String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
                     String[] para1 = s1.toLowerCase().split(" ");
-                    //System.out.println(Arrays.toString(para1));
+                    System.out.println(Arrays.toString(para1));
                     HashMap<String, Integer> final1 = Countfreq(para1);
                     //System.out.println(final1);
                     scn.close();
@@ -87,7 +87,7 @@ class Solution {
                     //System.out.println(final2);
                     scn1.close();
 
-                    finalobj.plagerism(final1,final2);
+                   // finalobj.plagerism(final1,final2);
 
                 }
             }
