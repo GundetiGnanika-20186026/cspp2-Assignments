@@ -32,12 +32,12 @@ class Bagofwords {
 
         int square1 = 0;
         for (String key1 : finald1.keySet()) {
-            square1 += (finald1.get(key1) ^ 2);
+            square1 += Math.pow(finald1.get(key1),2);
 
         }
         int square2 = 0;
         for (String key2 : finald2.keySet()) {
-            square2 += (finald2.get(key2) ^ 2);
+            square2 += Math.pow(finald2.get(key2),2);
 
         }
         double denominator;
