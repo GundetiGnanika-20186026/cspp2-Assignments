@@ -112,7 +112,7 @@ class Solution {
 
 
 		} catch (Exception e) {
-			System.out.println("No such file");
+			System.out.println("empty directory");
 		}
 	}
 	public static  HashMap<String, Integer> Countfreq(String[] array) {
