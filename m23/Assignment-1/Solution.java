@@ -69,23 +69,24 @@ class Solution {
 
                     // File file1 = new File(files[i]);
                     Scanner scn = new Scanner(files[i]);
-                    String s1 = scn.nextLine().replaceAll("[^ A-Za-z0-9]","");
+                    String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
                     String[] para1 = s1.toLowerCase().split(" ");
-                    System.out.println(Arrays.toString(para1));
+                    //System.out.println(Arrays.toString(para1));
                     HashMap<String, Integer> final1 = Countfreq(para1);
-                    System.out.println(final1);
+                    //System.out.println(final1);
                     scn.close();
 
                     // File file2 = new File("test2.txt");
                     Scanner scn1 = new Scanner(files[j]);
-                    String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
+                    //String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
                     //String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
+                    String s2 = scn1.useDelimiter("\\A").next();
                     String[] para2 = s2.toLowerCase().split(" ");
                     // String[] para2 = scn1.nextLine().split(" ");
                     HashMap<String, Integer> final2 = Countfreq(para2);
                     System.out.println(final2);
                     scn1.close();
-                    finalobj.plagerism(final1,final2);
+                    //finalobj.plagerism(final1,final2);
 
                 }
             }
