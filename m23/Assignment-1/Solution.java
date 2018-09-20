@@ -29,6 +29,8 @@ import java.io.*;
         		}
         	}
         }
+
+        //for(String key1:finald1.keySet())
     }
 
 
@@ -41,21 +43,27 @@ class Solution{
 
     try {
 
+
+
 		File file1 = new File("Test");
-		Scanner scn = new Scanner(file1);
-		String[] para1 = scn.nextLine().toLowerCase().split(" ");
-		HashMap<String,Integer> final1 = Countfreq(para1);
-		//System.out.println(final1);
-        scn.close();
+        File[] files = file1.listFiles();
+        for(File i : files){
+            System.out.println(i);
+        }
+		// Scanner scn = new Scanner(file1);
+		// String[] para1 = scn.nextLine().toLowerCase().split(" ");
+		// HashMap<String,Integer> final1 = Countfreq(para1);
+		// //System.out.println(final1);
+  //       scn.close();
 
-		File file2 = new File("test2.txt");
-		Scanner scn1 = new Scanner(file2);
-		String[] para2 = scn1.nextLine().split(" ");
-		HashMap<String,Integer> final2 = Countfreq(para2);
-		//System.out.println(final2);
-		scn1.close();
+		// File file2 = new File("test2.txt");
+		// Scanner scn1 = new Scanner(file2);
+		// String[] para2 = scn1.nextLine().split(" ");
+		// HashMap<String,Integer> final2 = Countfreq(para2);
+		// //System.out.println(final2);
+		// scn1.close();
 
-		} catch (FileNotFoundException e) {
+		} catch (Exception e) {
 		System.out.println("No such file");
 		}
 	}
