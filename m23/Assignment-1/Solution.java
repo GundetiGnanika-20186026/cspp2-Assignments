@@ -41,7 +41,7 @@ class Solution{
 
     try {
 
-		File file1 = new File("test1.txt");
+		File file1 = new File("testcases.txt");
 		Scanner scn = new Scanner(file1);
 		String[] para1 = scn.nextLine().toLowerCase().split(" ");
 		HashMap<String,Integer> final1 = Countfreq(para1);
