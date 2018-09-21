@@ -1,5 +1,7 @@
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+import java.io.File;
+import java.util.Arrays;
+import java.util.HashMap;
 /**
  * Class for bagofwords.
  */
