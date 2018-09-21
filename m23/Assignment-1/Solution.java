@@ -105,7 +105,7 @@ class Solution {
     /**
      * Class for solution.
      */
-    Solution() {};
+    Solution() { };
     /**
      * { function_description }.
      *
@@ -140,7 +140,7 @@ class Solution {
                     String s1 = "";
                     while (scn.hasNext()) {
                         //String s1 = scn.useDelimiter("\\A").next();
-                        String s11 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
+            String s11 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
                         s11 = s11.replaceAll("\\s+", " ");
                         s1 = s1 + s11;
 
@@ -163,14 +163,14 @@ class Solution {
 
                     // File file2 = new File("test2.txt");
                     Scanner scn1 = new Scanner(files[j]);
-                    //String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
-                    // String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
+         //String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
+        // String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
                     HashMap<String, Integer> final2 = new HashMap<>();
                     String[] para2;
                     String s2 = "";
                     while (scn1.hasNext()) {
                         //String s2 = scn1.useDelimiter("\\A").next();
-                        String s22 = scn1.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
+            String s22 = scn1.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
                         s22 = s22.replaceAll("\\s+", " ");
                         s2 = s2 + s22;
                         //System.out.println(s2);
@@ -186,7 +186,7 @@ class Solution {
                     double resultpercent = finalobj.plagerism(final1, final2);
                     resultpercent = Math.round(resultpercent);
                     double max = 0.0;
-                    System.out.print((long)resultpercent + "\t\t");
+                    System.out.print((long) resultpercent + "\t\t");
 
                     if (resultpercent > max && i != j) {
                         max = resultpercent;
@@ -197,8 +197,9 @@ class Solution {
                 }
                 System.out.println();
             }
-            System.out.println("Maximum similarity is between " +
-                               files[a].getName() + " " + "and" + " " + files[b].getName());
+            System.out.println("Maximum similarity is between "
+             +files[a].getName() + " " + "and" + " " + files[b].getName());
+
 
 
 
@@ -216,7 +217,7 @@ class Solution {
      */
     public static  HashMap<String, Integer> Countfreq(final String[] array) {
         Bagofwords bagobj = new Bagofwords();
-        for (int i = 0 ; i < array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             int value = 1;
             if (bagobj.getdict1().containsKey(array[i])) {
                 value = bagobj.getdict1().get(array[i]) + 1;
