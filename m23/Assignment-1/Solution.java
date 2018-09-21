@@ -105,7 +105,7 @@ public class Solution {
     /**
      * Class for solution.
      */
-    Solution() { };
+    private Solution() { };
     /**
      * { function_description }.
      *
