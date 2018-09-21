@@ -50,6 +50,24 @@ class Bagofwords {
 
 
 
+	// public void Stringmatch(HashMap<String, Integer> finald11, HashMap<String, Integer> finald22) {
+ //    	int lcs = 0;
+ //    	for(String key1 : finald11.keySet()){
+ //    		for(String key2 : finald22.keySet()){
+ //    			if(key1.charAt(0).equals(key2.charAt(0))){
+ //    				if(key1.equals(key2)){
+ //    					lcs = key1.length();
+
+ //    				}
+ //    			}
+ //    		}
+ //    	}
+ //    	int lengthoffile =
+
+	// }
+
+
+
 }
 
 class Solution {
@@ -80,7 +98,8 @@ class Solution {
 					HashMap<String, Integer> final1 = new HashMap<>();
 					String[] para1;
 					while (scn.hasNext()) {
-						String s1 = scn.useDelimiter("\\A").next();
+						//String s1 = scn.useDelimiter("\\A").next();
+					    String s1 = scn.nextLine().replaceAll("[^ A-Za-z0-9_ ]","");
 						para1 = s1.toLowerCase().split(" ");
 						final1 = Countfreq(para1);
 						int  keyscount = final1.keySet().size();
@@ -104,7 +123,8 @@ class Solution {
 					HashMap<String, Integer> final2 = new HashMap<>();
 					String[] para2;
 					while (scn1.hasNext()) {
-						String s2 = scn1.useDelimiter("\\A").next();
+						//String s2 = scn1.useDelimiter("\\A").next();
+						String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9_ ]","");
 						para2 = s2.toLowerCase().split(" ");
 						final2 = Countfreq(para2);
 					}
