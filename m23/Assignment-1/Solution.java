@@ -51,19 +51,25 @@ class Bagofwords {
 
 
 	// public void Stringmatch(HashMap<String, Integer> finald11, HashMap<String, Integer> finald22) {
- //    	int lcs = 0;
+ //    int lcs = 0;
+	// int max = 0;
  //    	for(String key1 : finald11.keySet()){
-	//
- //    		for(String key2 : finald22.keySet()){
+	//     	for(String key2 : finald22.keySet()){
  //    			if(key1.charAt(0).equals(key2.charAt(0))){
- //    				if(key1.equals(key2)){
+ //    				if(key1.equals(key2)) {
  //    					lcs = key1.length();
+	//    				}
 
- //    				}
+
  //    			}
+ //    			if (max < lcs)  {
+ //    					max = lcs;
+ //    				}
+
  //    		}
- //    	}
- //    	int lengthoffile =
+
+ //   	    }
+
 
 	// }
 
@@ -74,6 +80,7 @@ class Bagofwords {
 class Solution {
 
 	public static void main(String[] args) {
+		int a = 0,b = 0;
 
 		try {
 			Scanner linescan = new Scanner(System.in);
@@ -143,12 +150,21 @@ class Solution {
 					// String[] para2 = scn1.nextLine().split(" ");
 					//System.out.println(final2);
 					scn1.close();
+					double resultpercent = finalobj.plagerism(final1, final2);
+                    double max = 0;
+					System.out.print(resultpercent+"\t\t");
 
-					System.out.print(finalobj.plagerism(final1, final2)+"\t\t");
+					if(resultpercent > max && i!=j) {
+						max = resultpercent;
+						a = i;
+						b = j;
+					}
 
 				}
 				System.out.println();
 			}
+			System.out.println("Maximum similarity is between "+files[a].getName()+" "+"and"+" "+files[b].getName());
+
 
 
 
