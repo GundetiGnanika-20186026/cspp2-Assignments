@@ -1,16 +1,35 @@
 import java.util.*;
 import java.io.*;
+/**
+ * Class for bagofwords.
+ */
 class Bagofwords {
+	/**
+	 * { var_description }
+	 */
 	private  HashMap<String, Integer> dict1;
-
+    /**
+     * Constructs the object.
+     */
 	Bagofwords() {
 		dict1 = new HashMap<>();
 	}
-
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public HashMap<String, Integer> getdict1() {
 		return dict1;
 	}
-
+    /**
+     * { function_description }
+     *
+     * @param      finald1  The finald 1
+     * @param      finald2  The finald 2
+     *
+     * @return     { description_of_the_return_value }
+     */
 	public long plagerism(HashMap<String, Integer> finald1, HashMap<String, Integer> finald2) {
 		// HashMap<String, ArrayList<Integer>> result = new Hash;
 		//  for(int j = 0;j < finald2.size(); j++) {Map<>();
@@ -76,9 +95,20 @@ class Bagofwords {
 
 
 }
+/**
+ * Class for solution.
+ */
 
 class Solution {
-
+	/**
+	 * Class for solution.
+	 */
+	Solution() {};
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
 	public static void main(String[] args) {
 		int a = 0,b = 0;
 
@@ -151,8 +181,9 @@ class Solution {
 					//System.out.println(final2);
 					scn1.close();
 					double resultpercent = finalobj.plagerism(final1, final2);
-                    double max = 0;
-					System.out.print(resultpercent+"\t\t");
+					resultpercent = Math.round(resultpercent);
+                    double max = 0.0;
+					System.out.print((long)resultpercent+"\t\t");
 
 					if(resultpercent > max && i!=j) {
 						max = resultpercent;
@@ -172,6 +203,13 @@ class Solution {
 			System.out.println("empty directory");
 		}
 	}
+	/**
+	 * { function_description }
+	 *
+	 * @param      array  The array
+	 *
+	 * @return     { description_of_the_return_value }
+	 */
 	public static  HashMap<String, Integer> Countfreq(String[] array) {
 		Bagofwords bagobj = new Bagofwords();
 		for (int i = 0 ; i < array.length; i++) {
