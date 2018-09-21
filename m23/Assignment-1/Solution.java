@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.io.File;
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.HashMap;
 /**
  * Class for bagofwords.
@@ -149,7 +149,7 @@ final  class Solution {
 
                     }
                     para1 = s1.toLowerCase().split(" ");
-                    final1 = Countfreq(para1);
+                    final1 = countfreq(para1);
                     int  keyscount = final1.keySet().size();
 
 
@@ -159,7 +159,7 @@ final  class Solution {
                     // String[] para1 = s1.toLowerCase().split(" ");
                     // System.out.println(Arrays.toString(para1));
                     //System.out.println(Arrays.toString(para1));
-                    // HashMap<String, Integer> final1 = Countfreq(para1);
+                    // HashMap<String, Integer> final1 = countfreq(para1);
                     //System.out.println(final1);
                     scn.close();
 
@@ -178,10 +178,10 @@ final  class Solution {
                         //System.out.println(s2);
                         // para2 = s2.toLowerCase().split(" ");
 
-                        // final2 = Countfreq(para2);
+                        // final2 = countfreq(para2);
                     }
                     para2 = s2.toLowerCase().split(" ");
-                    final2 = Countfreq(para2);
+                    final2 = countfreq(para2);
                     // String[] para2 = scn1.nextLine().split(" ");
                     //System.out.println(final2);
                     scn1.close();
@@ -217,7 +217,7 @@ final  class Solution {
      *
      * @return     { description_of_the_return_value }.
      */
-    public static  HashMap<String, Integer> Countfreq(final String[] array) {
+    public static  HashMap<String, Integer> countfreq(final String[] array) {
         Bagofwords bagobj = new Bagofwords();
         for (int i = 0; i < array.length; i++) {
             int value = 1;
