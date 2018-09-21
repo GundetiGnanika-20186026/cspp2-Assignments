@@ -36,7 +36,7 @@ class Bagofwords {
         //  for(int j = 0;j < finald2.size(); j++) {Map<>();
         // for(int i = 0; i < finald1.size(); i++) {
         //      if(finald1.getKey(i).equals(finald2.getKey(j))){
-        //          result.put(finald1.getKey(i),[finald1.get(i),finald2.get(j)]);
+        //  result.put(finald1.getKey(i),[finald1.get(i),finald2.get(j)]);
         //      }
         //  }
         // }
@@ -62,8 +62,8 @@ class Bagofwords {
         }
         double denominator;
         denominator = Math.sqrt(square1) * Math.sqrt(square2);
-
-        double ans = (numerator / denominator) * 100;
+        final int hun = 100;
+        double ans = (numerator / denominator) * hun;
         ans = Math.round(ans);
         return (long)(ans);
     }
@@ -198,7 +198,7 @@ class Solution {
                 System.out.println();
             }
             System.out.println("Maximum similarity is between "
-             +files[a].getName() + " " + "and" + " " + files[b].getName());
+             + files[a].getName() + " " + "and" + " " + files[b].getName());
 
 
 
