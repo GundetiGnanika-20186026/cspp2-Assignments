@@ -98,15 +98,18 @@ class Solution {
 					Scanner scn = new Scanner(files[i]);
 					HashMap<String, Integer> final1 = new HashMap<>();
 					String[] para1;
+					String s1="";
 					while (scn.hasNext()) {
 						//String s1 = scn.useDelimiter("\\A").next();
-					    String s1 = scn.nextLine().replaceAll("[^A-Za-z0-9_]"," ");
-					    s1 = s1.replaceAll("\\s+"," ");
-						para1 = s1.toLowerCase().split(" ");
-						final1 = Countfreq(para1);
-						int  keyscount = final1.keySet().size();
+					    String s11 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]"," ");
+					    s11 = s11.replaceAll("\\s+"," ");
+					    s1 = s1 +s11;
+
 
 					}
+					para1 = s1.toLowerCase().split(" ");
+						final1 = Countfreq(para1);
+						int  keyscount = final1.keySet().size();
 
 
 					// String s1 = scn.useDelimiter("\\A").next();//nextLine().replaceAll("[^ A-Za-z0-9]","");
@@ -124,15 +127,19 @@ class Solution {
 					// String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
 					HashMap<String, Integer> final2 = new HashMap<>();
 					String[] para2;
+					String s2 ="";
 					while (scn1.hasNext()) {
 						//String s2 = scn1.useDelimiter("\\A").next();
-						String s2 = scn1.nextLine().replaceAll("[^A-Za-z0-9_]"," ");
-						s2 = s2.replaceAll("\\s+"," ");
-						System.out.println(s2);
-						para2 = s2.toLowerCase().split(" ");
+						String s22 = scn1.nextLine().replaceAll("[^A-Za-z0-9_ ]"," ");
+						s22 = s22.replaceAll("\\s+"," ");
+						s2 = s2 + s22;
+						//System.out.println(s2);
+						// para2 = s2.toLowerCase().split(" ");
 
-						final2 = Countfreq(para2);
+						// final2 = Countfreq(para2);
 					}
+					para2 = s2.toLowerCase().split(" ");
+					final2 = Countfreq(para2);
 					// String[] para2 = scn1.nextLine().split(" ");
 					//System.out.println(final2);
 					scn1.close();
