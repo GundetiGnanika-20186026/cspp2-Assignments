@@ -65,7 +65,7 @@ class Bagofwords {
         final int hun = 100;
         double ans = (numerator / denominator) * hun;
         ans = Math.round(ans);
-        return (long)(ans);
+        return (long) (ans);
     }
 
 
@@ -101,7 +101,7 @@ class Bagofwords {
  * Class for solution.
  */
 
-class Solution {
+final class Solution {
     /**
      * Class for solution.
      */
