@@ -101,7 +101,7 @@ class Bagofwords {
  * Class for solution.
  */
 
-final class Solution {
+public class Solution {
     /**
      * Class for solution.
      */
