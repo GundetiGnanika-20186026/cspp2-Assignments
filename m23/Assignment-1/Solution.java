@@ -99,7 +99,7 @@ class Solution {
 					String[] para1;
 					while (scn.hasNext()) {
 						//String s1 = scn.useDelimiter("\\A").next();
-					    String s1 = scn.nextLine().replaceAll("[^ A-Za-z0-9_ ]","");
+					    String s1 = scn.next().replaceAll("[^ A-Za-z0-9_ ]","");
 						para1 = s1.toLowerCase().split(" ");
 						final1 = Countfreq(para1);
 						int  keyscount = final1.keySet().size();
@@ -124,7 +124,7 @@ class Solution {
 					String[] para2;
 					while (scn1.hasNext()) {
 						//String s2 = scn1.useDelimiter("\\A").next();
-						String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9_ ]","");
+						String s2 = scn1.next().replaceAll("[^ A-Za-z0-9_ ]","");
 						para2 = s2.toLowerCase().split(" ");
 						final2 = Countfreq(para2);
 					}
