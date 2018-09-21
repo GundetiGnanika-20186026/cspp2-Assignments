@@ -100,7 +100,7 @@ class Solution {
 					String[] para1;
 					while (scn.hasNext()) {
 						//String s1 = scn.useDelimiter("\\A").next();
-					    String s1 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]","");
+					    String s1 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]"," ");
 					    s1 = s1.replaceAll("\\s","");
 						para1 = s1.toLowerCase().split(" ");
 						final1 = Countfreq(para1);
@@ -126,7 +126,7 @@ class Solution {
 					String[] para2;
 					while (scn1.hasNext()) {
 						//String s2 = scn1.useDelimiter("\\A").next();
-						String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9_ ]","");
+						String s2 = scn1.nextLine().replaceAll("[^A-Za-z0-9_ ]"," ");
 						s2 = s2.replaceAll("\\s","");
 						para2 = s2.toLowerCase().split(" ");
 						final2 = Countfreq(para2);
