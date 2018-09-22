@@ -24,7 +24,7 @@ class Task {
 	 * @param      urgent1    The urgent 1
 	 * @param      status1    The status 1
 	 */
-	Task(String title1, String assigned, int timegiven, boolean important, boolean urgent1, String status1)throws Exception {
+	Task(final String title1, final String assigned, final int timegiven, final boolean important, final boolean urgent1, final String status1)throws Exception {
 		this.title = title1;
 		this.nameofperson = assigned;
 		this.time = timegiven;
@@ -129,21 +129,22 @@ class Todoist {
 	 * Constructs the object.
 	 */
 	Todoist() {
-		taskarray = new Task[30];
+		final int thirty = 30;
+		taskarray = new Task[thirty];
 		size = 0;
 	}
 	/**
 	 * { function_description }
 	 */
 	public void resize() {
-		taskarray = Arrays.copyOf(taskarray, 2 * size);
+		taskarray = Arrays.copyOf(taskarray, (1+1) * size);
 	}
 	/**
 	 * Adds a task.
 	 *
 	 * @param      obj1  The object 1
 	 */
-	public void addTask(Task obj1) {
+	public void addTask(final Task obj1) {
 		if (size == taskarray.length) {
 			resize();
 		}
@@ -158,8 +159,8 @@ class Todoist {
 	 *
 	 * @return     The next task.
 	 */
-	public Task getNextTask(String personname) {
-		for (int i = 0; i < size ; i ++) {
+	public Task getNextTask(final String personname) {
+		for (int i = 0; i < size; i++) {
 			if (taskarray[i].getnameofperson().equals(personname)) {
 				if (taskarray[i].getstatus().equals("todo")) {
 					if (taskarray[i].getimp()) {
@@ -184,9 +185,10 @@ class Todoist {
 		//Task taskobj = new Task();
 		String arrayprint = "";
 		int i;
-		for ( i = 0 ; i < size; i++) {
+		for ( i = 0; i < size; i++) {
 			String str = "";
-			str += taskarray[i].gettitle() + ", " + taskarray[i].getnameofperson() + ", " + taskarray[i].gettime() + ", "; //+imp+", "+urgent+", "+status;
+			str += taskarray[i].gettitle() + ", " + taskarray[i].getnameofperson()
+			+ ", " + taskarray[i].gettime() + ", "; //+imp+", "+urgent+", "+status;
 			if (taskarray[i].getimp()) {
 				str += "Important" + ", ";
 			} else {
