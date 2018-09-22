@@ -5,12 +5,12 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task{
-	String title;
-	String nameofperson;
-	int time;
-	boolean imp;
-	boolean urgent;
-	String status;
+	private String title;
+	private String nameofperson;
+	private int time;
+	private boolean imp;
+	private boolean urgent;
+	private String status;
 	Task(String title1,String assigned, int timegiven, boolean important,boolean urgent1,String status1)throws Exception{
 		this.title = title1;
 		this.nameofperson = assigned;
@@ -28,6 +28,26 @@ class Task{
 			throw new Exception("Title not provided");
 		}
 	}
+
+    public String gettitle(){
+    	return title;
+    }
+    public String getnameofperson(){
+    	return nameofperson;
+    }
+    public int gettime(){
+    	return time;
+    }
+    public boolean getimp(){
+    	return imp;
+    }
+    public boolean geturgent(){
+    	return urgent;
+    }
+    public String getstatus(){
+    	return status;
+    }
+
 
 	public String toString(){
 		String str="";
@@ -58,18 +78,37 @@ class Todoist{
 	Task[] taskarray;
 	int size;
 	Todoist(){
-		taskarray = new Task[15];
+		taskarray = new Task[30];
 		size = 0;
 	}
 	public void resize(){
-		taskarray = Arrays.copyOf(taskarray,2*size);
+		taskarray = Arrays.copyOf(taskarray, 2*size);
 	}
 
-	public void addTask(Task obj){
+	public void addTask(Task obj1){
 		if(size == taskarray.length){
 			resize();
 		}
-		taskarray[size++] = obj;
+		taskarray[size++] = obj1;
+        //System.out.println(Arrays.toString(taskarray));
+
+	}
+
+	public Task getNextTask(String personname){
+	    for(int i = 0; i < size ; i ++){
+	    	if (taskarray[i].getnameofperson().equals(personname)){
+	    		if(taskarray[i].getstatus().equals("todo")){
+	    			if(taskarray[i].getimp()){
+	    				if(!taskarray[i].geturgent()){
+                            return taskarray[i];
+	    				}
+	    			}
+	    		}
+	    	}
+
+	    }
+	    return null;
+
 
 	}
 
@@ -77,23 +116,23 @@ class Todoist{
 		//Task taskobj = new Task();
 		String arrayprint = "";
         int i;
-		for( i = 0 ; i < taskarray.length;i++){
+		for( i = 0 ; i < size;i++){
 			String str="";
-        	str+= taskarray[i].title+", "+taskarray[i].nameofperson+", "+taskarray[i].time+", ";//+imp+", "+urgent+", "+status;
-        	if(taskarray[i].imp){
+        	str += taskarray[i].gettitle()+", "+taskarray[i].getnameofperson()+", "+taskarray[i].gettime()+", ";//+imp+", "+urgent+", "+status;
+        	if(taskarray[i].getimp()){
         		str += "Important"+", ";
         	}
         	else{
         		str += "Not Important" +", ";
        		 }
-        	if(taskarray[i].urgent){
+        	if(taskarray[i].geturgent()){
         		str += "Urgent"+", ";
 
        		 }
         	else {
         		str += "Not Urgent"+", ";
         	}
-        	str += taskarray[i].status;
+        	str += taskarray[i].getstatus();
 
 
 			arrayprint += str +"\n";
@@ -135,9 +174,9 @@ public class TodoistMain {
                 case "print-todoist":
                     System.out.println(todo);
                 break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
+                case "get-next":
+                    System.out.println(todo.getNextTask(tokens[1]));
+                break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[2]);
                 //     Task[] tasks = todo.getNextTask(tokens[1], n);
@@ -205,7 +244,7 @@ public class TodoistMain {
      *
      * @param      args  The command line arguments
      */
-    // public static void main(final String[] args) {
-    //     startTest();
-    // }
+    public static void main(final String[] args) {
+        startTest();
+    }
 }
