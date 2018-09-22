@@ -8,11 +8,29 @@ import java.util.Arrays;
  * Class for task.
  */
 class Task {
+    /**
+     * { var_description }.
+     */
     private String title;
+    /**
+     * { var_description }.
+     */
     private String nameofperson;
+    /**
+     * { var_description }.
+     */
     private int time;
+    /**
+     * { var_description }.
+     */
     private boolean imp;
+    /**
+     * { var_description }.
+     */
     private boolean urgent;
+    /**
+     * { var_description }.
+     */
     private String status;
     /**
      * Constructs the object.
@@ -24,7 +42,9 @@ class Task {
      * @param      urgent1    The urgent 1
      * @param      status1    The status 1
      */
-    Task(final String title1, final String assigned, final int timegiven, final boolean important, final boolean urgent1, final String status1)throws Exception {
+    Task(final String title1, final String assigned, final int timegiven,
+     final boolean important, final boolean urgent1,
+      final String status1)throws Exception {
         this.title = title1;
         this.nameofperson = assigned;
         this.time = timegiven;
@@ -42,7 +62,7 @@ class Task {
         }
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -50,7 +70,7 @@ class Task {
         return title;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -58,7 +78,7 @@ class Task {
         return nameofperson;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -66,7 +86,7 @@ class Task {
         return time;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -74,7 +94,7 @@ class Task {
         return imp;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -82,7 +102,7 @@ class Task {
         return urgent;
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @return     { description_of_the_return_value }
      */
@@ -112,10 +132,6 @@ class Task {
         str += status;
         return str;
     }
-
-
-
-
 }
 //////////////////////////////////////////////////////////////////
 
@@ -123,7 +139,13 @@ class Task {
  * Class for todoist.
  */
 class Todoist {
+    /**
+     * { var_description }.
+     */
     private Task[] taskarray;
+    /**
+     * { var_description }.
+     */
     private int size;
     /**
      * Constructs the object.
@@ -134,7 +156,7 @@ class Todoist {
         size = 0;
     }
     /**
-     * { function_description }
+     * { function_description }.
      */
     public void resize() {
         taskarray = Arrays.copyOf(taskarray, (1 + 1) * size);
@@ -271,7 +293,6 @@ public class TodoistMain {
             System.out.println(e.getMessage());
         }
     }
-
     /**
      * method to test the creation of task object.
      *
@@ -297,12 +318,12 @@ public class TodoistMain {
     public static Task createTask(final String[] tokens) throws Exception {
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[2+1]);
-        boolean important = tokens[2+2].equals("y");
-        boolean urgent = tokens[2+2+1].equals("y");
-        String status = tokens[1+1+1+1+1+1];
+        int timeToComplete = Integer.parseInt(tokens[2 + 1]);
+        boolean important = tokens[2 + 2].equals("y");
+        boolean urgent = tokens[2 + 2 + 1].equals("y");
+        String status = tokens[1 + 1 + 1 + 1 + 1 + 1];
         return new Task(
-                   title, assignedTo, timeToComplete, important, urgent, status);
+    title, assignedTo, timeToComplete, important, urgent, status);
     }
 
     /**
