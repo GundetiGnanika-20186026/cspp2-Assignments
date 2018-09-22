@@ -41,6 +41,7 @@ class Task {
      * @param      important  The important
      * @param      urgent1    The urgent 1
      * @param      status1    The status 1
+     * @throws     Exception     exception
      */
     Task(final String title1, final String assigned, final int timegiven,
      final boolean important, final boolean urgent1,
@@ -117,7 +118,7 @@ class Task {
      */
     public String toString() {
         String str = "";
-        str += title + ", " + nameofperson + ", " + time + ", "; //+imp+", "+urgent+", "+status;
+        str += title + ", " + nameofperson + ", " + time + ", ";
         if (imp) {
             str += "Important" + ", ";
         } else {
@@ -239,7 +240,7 @@ public class TodoistMain {
     /**
      * Constructs the object.
      */
-    TodoistMain() { };
+    private TodoistMain() { };
 
     /**
      * Starts a test.
