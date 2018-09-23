@@ -34,14 +34,7 @@ class Bagofwords {
      */
     public long plagerism(final HashMap<String, Integer> finald1,
                           final  HashMap<String, Integer> finald2) {
-        // HashMap<String, ArrayList<Integer>> result = new Hash;
-        //  for(int j = 0;j < finald2.size(); j++) {Map<>();
-        // for(int i = 0; i < finald1.size(); i++) {
-        //      if(finald1.getKey(i).equals(finald2.getKey(j))){
-        //  result.put(finald1.getKey(i),[finald1.get(i),finald2.get(j)]);
-        //      }
-        //  }
-        // }
+
         double numerator = 0;
         for (String key1 : finald1.keySet()) {
             for (String key2 : finald2.keySet()) {
@@ -65,7 +58,7 @@ class Bagofwords {
         denominator = Math.sqrt(square1) * Math.sqrt(square2);
         final int hun = 100;
         //System.out.print(" " + numerator + " "+ denominator + " " );
-        double ans = ((numerator* hun) / denominator);
+        double ans = ((numerator * hun) / denominator);
         ans = Math.round(ans);
         return (long) (ans);
     }
@@ -116,9 +109,6 @@ final  class Solution {
                     String s1 = null;
                     while (scn.hasNext()) {
                         s1 = scn.useDelimiter("\\A").next();
-                        // String s11 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
-                        //             s11 = s11.replaceAll("\\s+", " ");
-                        //             s1 = s1 + s11;
 
 
                     }
