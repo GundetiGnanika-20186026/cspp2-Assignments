@@ -42,7 +42,7 @@ class Bagofwords {
         //      }
         //  }
         // }
-        int numerator = 0;
+        double numerator = 0;
         for (String key1 : finald1.keySet()) {
             for (String key2 : finald2.keySet()) {
                 if (key1.equals(key2)) {
@@ -64,7 +64,7 @@ class Bagofwords {
         double denominator;
         denominator = Math.sqrt(square1) * Math.sqrt(square2);
         final int hun = 100;
-        System.out.print(" " + numerator + " "+ denominator);
+        System.out.print(" " + numerator + " "+ denominator + " " );
         double ans = (numerator / denominator) * hun;
         ans = Math.round(ans);
         return (long) (ans);
