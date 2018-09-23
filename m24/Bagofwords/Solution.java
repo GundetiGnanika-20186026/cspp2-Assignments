@@ -89,7 +89,7 @@ final  class Solution {
      */
     public static void main(final String[] args) {
         int a = 0, b = 0;
-
+        double max = 0.0;
         try {
             Scanner linescan = new Scanner(System.in);
             String dirname = linescan.nextLine();
@@ -146,9 +146,8 @@ final  class Solution {
                     scn1.close();
                     double resultpercent = finalobj.plagerism(final1, final2);
                     resultpercent = Math.round(resultpercent);
-                    double max = 0.0;
-                    System.out.print((long) resultpercent + "\t\t");
 
+                    System.out.print((long) resultpercent + "\t\t");
                     if (resultpercent > max && i != j) {
                         max = resultpercent;
                         a = i;
