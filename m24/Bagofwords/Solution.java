@@ -64,7 +64,7 @@ class Bagofwords {
         double denominator = 0;
         denominator = Math.sqrt(square1) * Math.sqrt(square2);
         final int hun = 100;
-        System.out.print(" " + numerator + " "+ denominator + " " );
+        //System.out.print(" " + numerator + " "+ denominator + " " );
         double ans = ((numerator* hun) / denominator);
         ans = Math.round(ans);
         return (long) (ans);
@@ -113,7 +113,7 @@ final  class Solution {
                     Scanner scn = new Scanner(files[i]);
                     HashMap<String, Integer> final1 = new HashMap<>();
                     String[] para1;
-                    String s1 = "";
+                    String s1 = null;
                     while (scn.hasNext()) {
                         s1 = scn.useDelimiter("\\A").next();
                         // String s11 = scn.nextLine().replaceAll("[^A-Za-z0-9_ ]", " ");
@@ -122,9 +122,12 @@ final  class Solution {
 
 
                     }
-                    para1 = s1.toLowerCase().split(" ");
-                    final1 = countfreq(para1);
-                    int  keyscount = final1.keySet().size();
+                    if(s1 != null) {
+                         para1 = s1.toLowerCase().split(" ");
+                        final1 = countfreq(para1);
+                        int  keyscount = final1.keySet().size();
+                    }
+
 
 
                     scn.close();
@@ -135,12 +138,16 @@ final  class Solution {
                     // String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
                     HashMap<String, Integer> final2 = new HashMap<>();
                     String[] para2;
-                    String s2 = "";
+                    String s2 = null;
                     while (scn1.hasNext()) {
                         s2 = scn1.useDelimiter("\\A").next();
                     }
-                    para2 = s2.toLowerCase().split(" ");
-                    final2 = countfreq(para2);
+                    if(s2 != null) {
+                        para2 = s2.toLowerCase().split(" ");
+                        final2 = countfreq(para2);
+                    }
+
+
                     // String[] para2 = scn1.nextLine().split(" ");
                     //System.out.println(final2);
                     scn1.close();
