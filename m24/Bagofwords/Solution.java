@@ -61,11 +61,11 @@ class Bagofwords {
         for (String key2 : finald2.keySet()) {
             square2 += Math.pow(finald2.get(key2), 2);
         }
-        double denominator;
+        double denominator = 0;
         denominator = Math.sqrt(square1) * Math.sqrt(square2);
         final int hun = 100;
         System.out.print(" " + numerator + " "+ denominator + " " );
-        double ans = (numerator / denominator) * hun;
+        double ans = ((numerator* hun) / denominator);
         ans = Math.round(ans);
         return (long) (ans);
     }
