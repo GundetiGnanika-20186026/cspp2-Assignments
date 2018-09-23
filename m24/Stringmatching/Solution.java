@@ -1,9 +1,9 @@
 
 import java.util.Scanner;
 import java.io.File;
-
-
-
+/**
+ * solution - main class.
+ */
 public final  class Solution {
     /**
      * Class for solution.
@@ -38,7 +38,7 @@ public final  class Solution {
                     SubString1 obj = new SubString1();
                     double result = obj.plagerism(files[i], files[j]);
 
-                    if (result > maximum && !files[i].getName().equals(files[j].getName())) {
+if (result > maximum && !files[i].getName().equals(files[j].getName())) {
                         maximum = result;
                         file11 = files[i].getName();
                         file22 = files[j].getName();
