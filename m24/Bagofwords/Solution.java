@@ -112,7 +112,7 @@ final  class Solution {
 
 
                     }
-                    if(s1 != null) {
+                    if (s1 != null) {
                          para1 = s1.toLowerCase().split(" ");
                         final1 = countfreq(para1);
                         int  keyscount = final1.keySet().size();
@@ -124,15 +124,15 @@ final  class Solution {
 
                     // File file2 = new File("test2.txt");
                     Scanner scn1 = new Scanner(files[j]);
-                    //String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
-                    // String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
+        //String s2 = scn1.nextLine().replaceAll("[^ A-Za-z0-9]","");
+        // String s2 = scn1.nextLine().replaceAll("[^ \\p{Alpha}]","");
                     HashMap<String, Integer> final2 = new HashMap<>();
                     String[] para2;
                     String s2 = null;
                     while (scn1.hasNext()) {
                         s2 = scn1.useDelimiter("\\A").next();
                     }
-                    if(s2 != null) {
+                    if (s2 != null) {
                         para2 = s2.toLowerCase().split(" ");
                         final2 = countfreq(para2);
                     }
@@ -155,7 +155,7 @@ final  class Solution {
                 System.out.println();
             }
             System.out.println("Maximum similarity is between "
-                               + files[a].getName() + " " + "and" + " " + files[b].getName());
+                + files[a].getName() + " " + "and" + " " + files[b].getName());
 
 
 
